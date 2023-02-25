@@ -72,7 +72,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |S3|ひまわりの約束|向日葵的约定|秦基博|S3ED3 (ED4-5）|
 |S3|学園天国|学园天国|Finger5|S3ED4(E6)|
 |S3|じょいふる|快乐|生物股长（いきものがかり）|S3ED5(E7-8)|
-|S3|サンタが町にやってくる|圣诞老人进城来|Haven Gillespie(原英文作词)J Fred Coots（原英文作曲）|S3ED6(E9)|
+|  S3   | サンタが町にやってくる     | 圣诞老人进城来  | Haven Gillespie（原英文作词）J Fred Coots（原英文作曲） |   S3ED6 (E9)   |
 |S3|スノーマジックファンタジー|雪之魔法幻想|SEKAI NO OWARI|S3ED7(E10-11)|
 |S3|花|花|GENERATIONS from EXILE TRIBE|S3ED8(E12)|
 |Movie|明日への扉|通向未来之门|I WiSH|*ED1|
