@@ -349,7 +349,7 @@ navbar:
     - { key: "anime", link: "/anime/", name: "动画", icon: "iconfont icon-youtube-fill" }
     - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
     - { key: "goods", link: "/goods/", name: "商品/周边", icon: "iconfont icon-docker" }
-    - { key: "fangroup", link: "/fangroup/", name: "社群/同人", icon: "iconfont users" }
+    - { key: "fangroup", link: "/fangroup/", name: "社群/同人", icon: "iconfont icon-users" }
     - { key: "feedback", link: "/feedback/", name: "关于", icon: "iconfont icon-mail" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
