@@ -2,11 +2,13 @@
 abbrlink: ''
 categories: []
 date: 2023.1.23
-img: 'https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg" alt="banner-day.jpg" '
 layout: 本站建设日志
 tags: []
 title: 本站建设日志
 updated: Sat, 25 Feb 2023 09:04:29 GMT
+---
+---
+banner_img: https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg" alt="banner-day.jpg
 ---
 2022.01.23：本站基础框架开放，域名为站长 **@牧丰086** 个人域名的子分支。
 
