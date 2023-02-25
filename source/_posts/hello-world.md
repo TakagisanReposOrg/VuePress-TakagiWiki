@@ -1,43 +1,16 @@
 ---
 abbrlink: ''
+banner_image: https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg
 categories: []
-date: ''
+date: 2023.1.23
 tags: []
-title: Hello World
-updated: Sat, 25 Feb 2023 07:10:48 GMT
+title: 本站建设日志
+updated: Sat, 25 Feb 2023 08:50:53 GMT
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues)
+2022.01.23：本站基础框架开放，域名为站长 **@牧丰086** 个人域名的子分支。
 
-## Quick Start
+2022.01.24：开始构建《擅长捉弄的（原）高木同学》相关内容，开始填充音乐相关内容。
 
-### Create a new post
+2022.01.25：完成音乐专页内容。
 
-```bash
-$ hexo new "My New Post"
-```
-
-More info: [Writings](https://hexo.io/docs/writing.html)
-
-### Run server
-
-```bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-```bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-```bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+2023.2.25：框架由NotionNext转为Hexo静态，优化图片加载问题。
