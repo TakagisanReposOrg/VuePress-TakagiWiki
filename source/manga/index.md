@@ -1,8 +1,8 @@
 ---
 date: ''
-layout: about
+manga: about
 title: ''
-updated: Sat, 25 Feb 2023 07:54:28 GMT
+updated: Sat, 25 Feb 2023 08:00:32 GMT
 ---
 ---
 
