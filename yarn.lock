@@ -756,7 +756,7 @@ hexo@^6.3.0:
     titlecase "^1.1.3"
     warehouse "^4.0.2"
 
-highlight.js@^11.0.1:
+highlight.js@^11.0.1, highlight.js@^11.7.0:
   version "11.7.0"
   resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-11.7.0.tgz"
   integrity sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==
