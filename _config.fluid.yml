@@ -10,7 +10,6 @@
 # You can get more detailed help from the guide
 #---------------------------
 
-
 #---------------------------
 # 全局
 # Global
@@ -426,9 +425,9 @@ footer:
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     擅长捉弄的高木同学 自建资料站 by <a href="https://mufeng086.top" target="_blank" rel="nofollow noopener"><span>牧丰086 | </span></a>
-    Powered by<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo | </span></a>
+    Powered by<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo</span></a>
     <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a><br/>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid</span></a><br/>
     本站内容依照 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0 许可协议</a>提供并展示<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
   '
 
