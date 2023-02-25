@@ -346,11 +346,11 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "manhua", link: "/manhua", icon: "iconfont icon-category-fill" }
-    - { key: "donghua", link: "/donghua/", icon: "iconfont icon-category-fill" }
-    - { key: "music", link: "/music/", icon: "iconfont icon-tags-fill" }
-    - { key: "shangpin", link: "/shangpin/", icon: "iconfont icon-category-fill" }
-    - { key: "fankui", link: "/fankui/", icon: "iconfont icon-category-fill" }
+    - { key: "manhua", link: "/manhua/", name: "漫画及衍生书籍", icon: "iconfont icon-category-fill" }
+    - { key: "donghua", link: "/donghua/", name: "动画", icon: "iconfont icon-category-fill" }
+    - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-tags-fill" }
+    - { key: "shangpin", link: "/shangpin/", name: "商品", icon: "iconfont icon-category-fill" }
+    - { key: "fankui", link: "/fankui/", name: "反馈", icon: "iconfont icon-category-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
