@@ -18,7 +18,7 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/fluid.png
+favicon: https://pic.imgdb.cn/item/63f9abe1f144a01007008483.jpg
 
 # 用于苹果设备的图标
 # Icon for Apple touch
@@ -87,7 +87,7 @@ fun_features:
 
     # 打印速度，数字越大越慢
     # Typing speed, the larger the number, the slower
-    typeSpeed: 70
+    typeSpeed: 40
 
     # 游标字符
     # Cursor character
@@ -240,7 +240,7 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:  # 网页访问统计
-  enable: false
+  enable: true
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
@@ -346,12 +346,11 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "manhua", link: "/manhua/", name: "漫画及衍生书籍", icon: "iconfont icon-category-fill" }
-    - { key: "donghua", link: "/donghua/", name: "动画", icon: "iconfont icon-category-fill" }
-    - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-tags-fill" }
-    - { key: "shangpin", link: "/shangpin/", name: "商品", icon: "iconfont icon-category-fill" }
-    - { key: "fankui", link: "/fankui/", name: "反馈", icon: "iconfont icon-category-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "manga", link: "/manga/", name: "漫画及衍生书籍", icon: "iconfont icon-book" }
+    - { key: "anime", link: "/anime/", name: "动画", icon: "iconfont icon-youtube-fill" }
+    - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
+    - { key: "goods", link: "/goods/", name: "商品", icon: "iconfont icon-docker" }
+    - { key: "feedback", link: "/feedback/", name: "反馈", icon: "iconfont icon-mail" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
