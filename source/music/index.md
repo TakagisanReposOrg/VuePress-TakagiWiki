@@ -6,11 +6,6 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 ---
 # 音乐
 
-icon: fa-solid fa-music
-slug: music
-status: Published
-type: Page
-
 **本页目录（点击相应条目跳转）**
 
 # 1️⃣ 动画片尾曲（ED）
