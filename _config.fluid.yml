@@ -461,12 +461,12 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: http://pic.mufeng086.top/images/2023/02/25/Takagi_Movie_Poster_Original_2_.png" alt="Takagi_Movie_Poster_Original_2_.png
+  banner_img: https://pic.mufeng086.top/images/2023/02/25/IMG_20220611_125820.jpg"
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
   # Available: 0 - 100
-  banner_img_height: 50
+  banner_img_height: 100
 
   # 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
