@@ -13,7 +13,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 （演唱：高木さん(CV:高橋李依)）
 
 （*S3ED4《学園天国》由高橋李依主唱，多位角色声优合唱）
-<font color="#0000dd">**【移动端用户请左右滑动表格】**</font><br />
+<font color="`#006600">**【移动端用户请左右滑动表格】**</font><br />
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
