@@ -13,26 +13,40 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 （演唱：高木さん(CV:高橋李依)）
 
 （*S3ED4《学園天国》由高橋李依主唱，多位角色声优合唱）
+<font color="#000066">【移动端用户请左右滑动表格】</font><br />
 
+<html>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td>
+                <!--左侧内容-->
 「からかい上手の高木さん」Cover Song Collection
 
 （动画第一季翻唱盘）
 
 [![24cacc3a5f29a04252c54a30b26c4d4c.th.jpg](https://pic.mufeng086.top/images/2023/02/25/24cacc3a5f29a04252c54a30b26c4d4c.th.jpg)](https://pic.mufeng086.top/image/WFh)
-
+</td>
+<td>
+<!--中部内容-->
 「からかい上手の高木さん2」Cover Song Collection
 
 （动画第二季翻唱盘）
 
 [![4de98b782902941c9d99c0aa74dc13ee.th.jpg](https://pic.mufeng086.top/images/2023/02/25/4de98b782902941c9d99c0aa74dc13ee.th.jpg)](https://pic.mufeng086.top/image/9me)
-
+</td>
+<td>
+<!--右侧内容-->
 「からかい上手の高木さん3 & 劇場版」Cover Song Collection
 
 （动画第三季&剧场版翻唱盘）
 
 [![2aee53781995b1a20858f530292cd39a.th.jpg](https://pic.mufeng086.top/images/2023/02/25/2aee53781995b1a20858f530292cd39a.th.jpg)](https://pic.mufeng086.top/image/vbV)
+</td>
+</tr>
+</table>
 
-【移动端用户请左右滑动表格】
+</html>
+
 | **季度**   | **日文曲名**                   | **中文译名**          | **原唱**                                                         | **归属**           |
 | ------------ | -------------------------------- | ----------------------- | ------------------------------------------------------------------ | -------------------- |
 | **第一季** | **気まぐれロマンティック**     | **心血来潮的浪漫**    | **生物股长（いきものがかり）**                                   | **S1ED1 (E1-2)**   |
@@ -95,7 +109,6 @@ Island Memories
 【移动端用户请左右滑动表格】
 
 [Untitled](%E9%9F%B3%E4%B9%90%20af2df541a5204969956abf9b83bd1aaf/Untitled%20Database%203a21c40f439640f8a606d8997391d1fa.md)
-
 
 # 3️⃣ 原声带OST
 
