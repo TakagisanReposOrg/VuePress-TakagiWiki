@@ -1,8 +1,9 @@
 ---
 abbrlink: ''
-banner_image: https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg
+banner_img: /source/banner-day.jpg
 categories: []
 date: 2023.1.23
+layout: 本站建设日志
 tags: []
 title: 本站建设日志
 updated: Sat, 25 Feb 2023 08:55:03 GMT
