@@ -108,7 +108,6 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 ゼロセンチメートル(アニメ盤)
 （零厘米（动画盘））（第二季）
 
-
 [![af20e3779cbbaad0125637f8feb907f5.th.jpg](https://pic.mufeng086.top/images/2023/02/25/af20e3779cbbaad0125637f8feb907f5.th.jpg)](https://pic.mufeng086.top/image/CDA)
 
 </td>
@@ -149,29 +148,51 @@ Island Memories
 
 （创作：堤博明）
 
+<html>
+
+<table style="margin-left: auto; margin-right: auto;">
+<tr>
+<td>
+<!--左侧内容-->
+
 「からかい上手の高木さん」Music Collection
 
 [![bb11eb0b942f3bd1f31318ba6ad374b7.th.jpg](https://pic.mufeng086.top/images/2023/02/25/bb11eb0b942f3bd1f31318ba6ad374b7.th.jpg)](https://pic.mufeng086.top/image/HYp)
+
+
+</td>
+<td>
+<!--左中内容-->
 
 「からかい上手の高木さん」Music Collection
 
 [![dd789966ea5900ace097a35c2cf30cd3.th.jpg](https://pic.mufeng086.top/images/2023/02/25/dd789966ea5900ace097a35c2cf30cd3.th.jpg)](https://pic.mufeng086.top/image/k9z)
 
+</td>
+<td>
+<!--右中内容-->
+
 「からかい上手の高木さん3」Music Collection
 
 [![5ff4b92e662b977c14ad3e058fcb5fe2.th.jpg](https://pic.mufeng086.top/images/2023/02/25/5ff4b92e662b977c14ad3e058fcb5fe2.th.jpg)](https://pic.mufeng086.top/image/qjq)
+
+</td>
+<td>
+<!--右侧内容-->
 
 「からかい上手の高木さん」Music Collection
 
 [![176a6c7ca8b47d4493a96f12deea048d.th.jpg](https://pic.mufeng086.top/images/2023/02/25/176a6c7ca8b47d4493a96f12deea048d.th.jpg)](https://pic.mufeng086.top/image/Ph7)
 
+</td>
+</tr>
+</table>
+
+</html>
+
 （*第三季与剧场版OST实体光碟尚未发售，此为网络配信封面）
 
-【移动端用户请左右滑动表格】
-
-[Untitled](%E9%9F%B3%E4%B9%90%20af2df541a5204969956abf9b83bd1aaf/Untitled%20Database%205a60c98189e94b1dae02884112b7622e.md)
-
----
+[ ]
 
 # 4️⃣ “心动记录”手游 - 独占翻唱曲
 
@@ -191,7 +212,4 @@ Island Memories
 |青いベンチ|蓝色长椅|Tegomass(テゴマス)|
 |クリスマス·イブ|平安夜|山下达郎|
 |大阪Lover|大阪情人|DREAMS COME TRUE|
-
-
-
 
