@@ -11,7 +11,7 @@ author: 管理员
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
-# URLs
+# URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://tkgsite.mufeng086.top
 permalink: :year/:month/:day/:title/
