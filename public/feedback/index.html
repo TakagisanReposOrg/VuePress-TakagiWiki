@@ -95,7 +95,37 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -140,7 +170,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/manga/">
                 <i class="iconfont icon-book"></i>
-                <span>漫画及衍生书籍</span>
+                <span>漫画</span>
               </a>
             </li>
           
@@ -176,7 +206,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/goods/">
                 <i class="iconfont icon-docker"></i>
-                <span>商品</span>
+                <span>商品/周边</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/fangroup/">
+                <i class="iconfont icon-users"></i>
+                <span>社群/同人</span>
               </a>
             </li>
           
