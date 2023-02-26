@@ -350,10 +350,10 @@ navbar:
         name: "漫画" ,
         icon: "iconfont icon-book" ,
         submenu: [
-        { key: '高木同学正篇', link: '/manga/takagi-og.md' },
-        { key: '原高木同学', link: '/manga/spinoff-moto.md' },
-        { key: '明天是星期六', link: '/manga/spinoff-tis.md' },
-        { key: '与恋爱相恋的友加里', link: '/manga/spinoff-yukari.md' }
+        { key: '高木同学正篇', link: '/manga/takagi-og/' },
+        { key: '原高木同学', link: '/manga/spinoff-moto/' },
+        { key: '明天是星期六', link: '/manga/spinoff-tis/' },
+        { key: '与恋爱相恋的友加里', link: '/manga/spinoff-yukari/' }
         ]
     }
     - { 
@@ -361,10 +361,10 @@ navbar:
         name: "动画", 
         icon: "iconfont icon-youtube-fill" ,
         submenu: [
-        { key: '动画第一季', link: '/anime/s1.md' },
-        { key: '动画第二季', link: '/anime/s2.md' },
-        { key: '动画第三季', link: '/anime/s3.md' },
-        { key: '剧场版', link: '/anime/movie.md' }
+        { key: '动画第一季', link: '/anime/s1/' },
+        { key: '动画第二季', link: '/anime/s2/' },
+        { key: '动画第三季', link: '/anime/s3/' },
+        { key: '剧场版', link: '/anime/movie/' }
         ]
     }
     - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
@@ -374,10 +374,10 @@ navbar:
         name: "衍生/社群", 
         icon: "iconfont icon-rss" ,
         submenu: [
-        { key: '官方衍生书籍', link: '/derivative/related-books.md' },
-        { key: '高木相关软件/游戏', link: '/derivative/related-software.md' },
-        { key: '同人作品', link: '/derivative/related-creation.md' },
-        { key: '社群', link: '/derivative/fangroup.md' }
+        { key: '官方衍生书籍', link: '/derivative/related-books/' },
+        { key: '高木相关软件/游戏', link: '/derivative/related-software/' },
+        { key: '同人作品', link: '/derivative/related-creation/' },
+        { key: '社群', link: '/derivative/fangroup/' }
         ]
     }
     - { 
@@ -385,8 +385,8 @@ navbar:
         name: "商品/周边", 
         icon: "iconfont icon-docker" ,
         submenu: [
-        { key: '官方商品特典', link: '/goods/offical' },
-        { key: '周边商品', link: '/goods/ip-derivative.md' }
+        { key: '官方商品特典', link: '/goods/offical/' },
+        { key: '周边商品', link: '/goods/ip-derivative/' }
         ]
     }
     - { key: "feedback", link: "/feedback/", name: "关于", icon: "iconfont icon-mail" }
