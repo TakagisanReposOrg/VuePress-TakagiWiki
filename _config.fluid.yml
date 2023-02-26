@@ -345,11 +345,50 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "manga", link: "/manga/", name: "漫画", icon: "iconfont icon-book" }
-    - { key: "anime", link: "/anime/", name: "动画", icon: "iconfont icon-youtube-fill" }
+    - { 
+        key: "manga",
+        name: "漫画" ,
+        icon: "iconfont icon-book" ,
+        submenu: [
+        { key: '高木同学正篇', link: '/manga/takagi-od.md' },
+        { key: '原高木同学', link: '/manga/spinoff-moto.md' },
+        { key: '明天是星期六', link: '/manga/spinoff-tis.md' },
+        { key: '与恋爱相连的友加里', link: '/manga/spinoff-yukari.md' }
+        ]
+    }
+    - { 
+        key: "anime", 
+        name: "动画", 
+        icon: "iconfont icon-youtube-fill" ,
+        submenu: [
+        { key: '动画第一季', link: '/anime/s1.md' },
+        { key: '动画第二季', link: '/anime/s2.md' },
+        { key: '动画第三季', link: '/anime/s3.md' },
+        { key: '剧场版', link: '/anime/movie.md' }
+        ]
+    }
     - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
-    - { key: "goods", link: "/goods/", name: "商品/周边", icon: "iconfont icon-docker" }
-    - { key: "fangroup", link: "/fangroup/", name: "社群/同人", icon: "iconfont icon-users" }
+    - { key: "roles", link: "/roles/", name: "角色", icon: "iconfont icon-users" }
+    - { 
+        key: "derivative", 
+        name: "衍生/社群", 
+        icon: "iconfont icon-rss" ,
+        submenu: [
+        { key: '官方衍生书籍', link: '/derivative/related-books.md' },
+        { key: '高木相关软件/游戏', link: '/derivative/related-software.md' },
+        { key: '同人作品', link: '/derivative/related-creation.md' },
+        { key: '社群', link: '/derivative/fangrop.md' }
+        ]
+    }
+    - { 
+        key: "goods", 
+        name: "商品/周边", 
+        icon: "iconfont icon-docker" ,
+        submenu: [
+        { key: '官方商品特典', link: '/goods/offical' },
+        { key: '周边商品', link: '/goods/ip-derivative.md' }
+        ]
+    }
     - { key: "feedback", link: "/feedback/", name: "关于", icon: "iconfont icon-mail" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
