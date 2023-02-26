@@ -361,10 +361,10 @@ navbar:
         name: "动画", 
         icon: "iconfont icon-youtube-fill" ,
         submenu: [
-        { key: '动画第一季', link: '/anime/s1.md' },
-        { key: '动画第二季', link: '/anime/s2.md' },
-        { key: '动画第三季', link: '/anime/s3.md' },
-        { key: '剧场版', link: '/anime/movie.md' }
+        { key: '动画第一季', link: '/anime/s1/' },
+        { key: '动画第二季', link: '/anime/s2/' },
+        { key: '动画第三季', link: '/anime/s3/' },
+        { key: '剧场版', link: '/anime/movie/' }
         ]
     }
     - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
