@@ -350,10 +350,10 @@ navbar:
         name: "漫画" ,
         icon: "iconfont icon-book" ,
         submenu: [
-        { key: '高木同学正篇', link: '/manga/takagi-od.md' },
+        { key: '高木同学正篇', link: '/manga/takagi-og.md' },
         { key: '原高木同学', link: '/manga/spinoff-moto.md' },
         { key: '明天是星期六', link: '/manga/spinoff-tis.md' },
-        { key: '与恋爱相连的友加里', link: '/manga/spinoff-yukari.md' }
+        { key: '与恋爱相恋的友加里', link: '/manga/spinoff-yukari.md' }
         ]
     }
     - { 
@@ -377,7 +377,7 @@ navbar:
         { key: '官方衍生书籍', link: '/derivative/related-books.md' },
         { key: '高木相关软件/游戏', link: '/derivative/related-software.md' },
         { key: '同人作品', link: '/derivative/related-creation.md' },
-        { key: '社群', link: '/derivative/fangrop.md' }
+        { key: '社群', link: '/derivative/fangroup.md' }
         ]
     }
     - { 
