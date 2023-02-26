@@ -1,5 +1,5 @@
 #---------------------------
-# Hexo Theme Fluid
+# Hexo Theme Fluids（触发部署）
 # Author: Fluid-dev
 # Github: https://github.com/fluid-dev/hexo-theme-fluid
 #
@@ -345,10 +345,11 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "manga", link: "/manga/", name: "漫画及衍生书籍", icon: "iconfont icon-book" }
+    - { key: "manga", link: "/manga/", name: "漫画", icon: "iconfont icon-book" }
     - { key: "anime", link: "/anime/", name: "动画", icon: "iconfont icon-youtube-fill" }
     - { key: "music", link: "/music/", name: "音乐", icon: "iconfont icon-music" }
-    - { key: "goods", link: "/goods/", name: "商品", icon: "iconfont icon-docker" }
+    - { key: "goods", link: "/goods/", name: "商品/周边", icon: "iconfont icon-docker" }
+    - { key: "fangroup", link: "/fangroup/", name: "社群/同人", icon: "iconfont icon-users" }
     - { key: "feedback", link: "/feedback/", name: "关于", icon: "iconfont icon-mail" }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
