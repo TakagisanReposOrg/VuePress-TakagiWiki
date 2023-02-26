@@ -14,6 +14,7 @@
   "dependencies": {
     "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
     "hexo": "^6.3.0",
+    "hexo-blog-encrypt": "^3.1.6",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -22,6 +23,8 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
+    "hexo-spoiler": "^1.7.3",
+    "hexo-tag-hint": "^0.3.1",
     "hexo-theme-fluid": "^1.9.4",
     "hexo-theme-landscape": "^0.0.3",
     "highlight.js": "^11.7.0"
