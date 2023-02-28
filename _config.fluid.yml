@@ -372,7 +372,7 @@ navbar:
     - { 
         key: "derivative", 
         name: "衍生/社群", 
-        icon: "iconfont icon-rss"，
+        icon: "iconfont icon-rss", 
         submenu: [
         { key: '官方衍生书籍', link: '/derivative/related-books/', icon: "iconfont icon-book" },
         { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: "iconfont icon-music" },
