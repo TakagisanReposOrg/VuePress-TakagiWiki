@@ -372,7 +372,7 @@ navbar:
     - { 
         key: "derivative", 
         name: "衍生/社群", 
-        icon: "iconfont icon-rss" ,
+        icon: "iconfont icon-rss"，
         submenu: [
         { key: '官方衍生书籍', link: '/derivative/related-books/', icon: "iconfont icon-book" },
         { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: "iconfont icon-music" },
@@ -383,16 +383,16 @@ navbar:
     - { 
         key: "goods", 
         name: "商品&周边", 
-        icon: "iconfont icon-docker" ,
+        icon: "iconfont icon-docker",
         submenu: [
         { key: '官方商品&特典', link: '/goods/offical/' },
         { key: '第三方周边', link: '/goods/ip-derivative/' }
         ]
     }
     - { 
-        key: "other", 
+        key: "other"
         name: "其他", 
-        icon: "iconfont icon-th-large", 
+        icon: "iconfont icon-th-large" ,
         submenu: [
           { key: '本站信息'， link: '/other/intro/', icon: "iconfont icon-mail" },
           { key: '内容建设日志'， link: '/other/process/', icon: "iconfont icon-plan" },
