@@ -1,5 +1,6 @@
 ---
 date: ''
+<<<<<<< HEAD:source/other/intro/index.md
 layout: 本站信息
 title: 本站信息
 updated: Sat, 28 Feb 2023 20:33:59 GMT
@@ -23,6 +24,8 @@ QQ：1875153961
 （来意请改为“高木资料站反馈”）
 
 ---
+本站部分内容参考 <img src="https://pic.mufeng086.top/images/2023/02/26/60px-Fandom_fire_logo.svg.png" alt="60px-Fandom_fire_logo.svg.png" border="0" width="15" /> Fandom社区 [擅长捉弄的高木同学](
+https://karakai-jouzu-no-takagi-san.fandom.com/zh/wiki/擅长捉弄的高木同学) 中的相关文章（基于 [CC-BY-SA](https://www.fandom.com/zh/licensing-zh) 许可协议）
 
 本站部分内容参考 <img src="https://pic.mufeng086.top/images/2023/02/26/60px-Fandom_fire_logo.svg.png" alt="60px-Fandom_fire_logo.svg.png" border="0" width="15" /> Fandom社区 [擅长捉弄的高木同学](https://karakai-jouzu-no-takagi-san.fandom.com/zh/wiki/擅长捉弄的高木同学) 中的相关文章（基于 [CC-BY-SA](https://www.fandom.com/zh/licensing-zh) 许可协议）
 
