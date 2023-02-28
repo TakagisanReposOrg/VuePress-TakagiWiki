@@ -347,19 +347,19 @@ navbar:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { 
         key: "manga",
-        name: "漫画" ,
-        icon: "iconfont icon-books" ,
+        name: "漫画",
+        icon: "iconfont icon-books",
         submenu: [
-        { key: '高木同学正篇', link: '/manga/takagi-og/',  },
+        { key: '高木同学正篇', link: '/manga/takagi-og/' },
         { key: '原高木同学', link: '/manga/spinoff-moto/' },
         { key: '明天是星期六', link: '/manga/spinoff-tis/' },
         { key: '与恋爱相恋的友加里', link: '/manga/spinoff-yukari/' }
         ]
     }
     - { 
-        key: "anime", 
+        key: "anime",
         name: "动画", 
-        icon: "iconfont icon-youtube-fill" ,
+        icon: "iconfont icon-youtube-fill",
         submenu: [
         { key: '动画第一季', link: '/anime/s1/' },
         { key: '动画第二季', link: '/anime/s2/' },
@@ -390,7 +390,7 @@ navbar:
         ]
     }
     - { 
-        key: "other"
+        key: "other",
         name: "其他", 
         icon: "iconfont icon-th-large" ,
         submenu: [
