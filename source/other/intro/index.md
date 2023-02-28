@@ -1,6 +1,5 @@
 ---
 date: ''
-<<<<<<< HEAD:source/other/intro/index.md
 layout: 本站信息
 title: 本站信息
 updated: Sat, 28 Feb 2023 20:33:59 GMT
