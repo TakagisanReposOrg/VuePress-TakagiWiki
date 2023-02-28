@@ -394,9 +394,9 @@ navbar:
         name: "其他",
         icon: "iconfont icon-th-large",
         submenu: [
-          { key: '本站信息'， link: '/other/intro/', icon: 'iconfont icon-mail' },
-          { key: '内容建设日志'， link: '/other/process/', icon: 'iconfont icon-plan' },
-          { key: '合作-资源盘'， link: 'https://cloud.takagi.icu/takagi', icon: 'iconfont icon-mini-program-fill' }
+          { key: '本站信息', link: '/other/intro/', icon: 'iconfont icon-mail' },
+          { key: '内容建设日志', link: '/other/process/', icon: 'iconfont icon-plan' },
+          { key: '合作-资源盘', link: 'https://cloud.takagi.icu/takagi', icon: 'iconfont icon-mini-program-fill' }
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
