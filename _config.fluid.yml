@@ -392,7 +392,7 @@ navbar:
     - { 
         key: "other", 
         name: "其他", 
-        icon: "iconfont icon-th-large" 
+        icon: "iconfont icon-th-large", 
         submenu: [
           { key: '本站信息'， link: '/other/intro/', icon: "iconfont icon-mail" }
           { key: '内容建设日志'， link: '/other/process/', icon: "iconfont icon-plan" }
