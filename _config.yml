@@ -61,8 +61,8 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: '/other/process'
-  per_page: 0
+  path: '/'
+  per_page: 5
   order_by: -date
 
 # Category & Tag

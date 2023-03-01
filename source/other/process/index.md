@@ -1,7 +1,6 @@
 ---
 banner_img: https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg
 title: 本站建设日志
-permalink: index.html
 ---
 2022.01.23：本站基础框架开放，域名为站长 **@牧丰086** 个人域名的子分支。
 
