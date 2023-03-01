@@ -14,13 +14,13 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
         <tr>
             <td>
                 <!--左侧内容-->
-                作者推特-章节彩图（2023.3.1）
-                <a href="https://pic.mufeng086.top/image/QLM"><img src="https://pic.mufeng086.top/images/2023/03/01/fff6a63035a851aa62af481d181182d7321425686.md.jpg" alt="fff6a63035a851aa62af481d181182d7321425686.jpg" border="0" /></a>
+                作者推特-章节彩图（2023.3.1）<br/>
+                <a href="https://pic.mufeng086.top/image/QLM"><img src="https://pic.mufeng086.top/images/2023/03/01/fff6a63035a851aa62af481d181182d7321425686.th.jpg" alt="fff6a63035a851aa62af481d181182d7321425686.jpg" border="0" /></a>
             </td>
             <td>
                 <!--右侧内容-->
                 最新单行本（日版）
-                <a href="https://pic.mufeng086.top/image/Sri"><img src="https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg" alt="sale-jp-vol16.jpg" border="0" /></a>
+                <a href="https://pic.mufeng086.top/image/Sri"><img src="https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.th.jpg" alt="sale-jp-vol16.jpg" border="0" /></a>
             </td>
         </tr>
     </table>
