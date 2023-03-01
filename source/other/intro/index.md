@@ -26,6 +26,4 @@ QQ：1875153961
 本站部分内容参考 <img src="https://pic.mufeng086.top/images/2023/02/26/60px-Fandom_fire_logo.svg.png" alt="60px-Fandom_fire_logo.svg.png" border="0" width="15" /> Fandom社区 [擅长捉弄的高木同学](
 https://karakai-jouzu-no-takagi-san.fandom.com/zh/wiki/擅长捉弄的高木同学) 中的相关文章（基于 [CC-BY-SA](https://www.fandom.com/zh/licensing-zh) 许可协议）
 
-本站部分内容参考 <img src="https://pic.mufeng086.top/images/2023/02/26/60px-Fandom_fire_logo.svg.png" alt="60px-Fandom_fire_logo.svg.png" border="0" width="15" /> Fandom社区 [擅长捉弄的高木同学](https://karakai-jouzu-no-takagi-san.fandom.com/zh/wiki/擅长捉弄的高木同学) 中的相关文章（基于 [CC-BY-SA](https://www.fandom.com/zh/licensing-zh) 许可协议）
-
 本站采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可。![https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
