@@ -4,8 +4,8 @@ layout: music
 title: 音乐
 updated: Sat, 25 Feb 2023 09:49:23 GMT
 ---
-**音乐（点击下方条目跳转）**
-[TOC]
+**本页分为四个部分：
+动画片尾曲（ED）、主题曲（OP）&插曲、原声带OST、“心动记录”手游 - 独占翻唱曲**
 
 
 
@@ -15,37 +15,12 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 
 （*S3ED4《学園天国》由高橋李依主唱，多位角色声优合唱）
 
-<html>
-    <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td>
-                <!--左侧内容-->
-「からかい上手の高木さん」Cover Song Collection
-（动画第一季翻唱盘）
-
-[![24cacc3a5f29a04252c54a30b26c4d4c.th.jpg](https://pic.mufeng086.top/images/2023/02/25/24cacc3a5f29a04252c54a30b26c4d4c.th.jpg)](https://pic.mufeng086.top/image/WFh)
-
-</td>
-<td>
-<!--中部内容-->
-「からかい上手の高木さん2」Cover Song Collection
-（动画第二季翻唱盘）
-
-[![4de98b782902941c9d99c0aa74dc13ee.th.jpg](https://pic.mufeng086.top/images/2023/02/25/4de98b782902941c9d99c0aa74dc13ee.th.jpg)](https://pic.mufeng086.top/image/9me)
-
-</td>
-<td>
-<!--右侧内容-->
-「からかい上手の高木さん3 & 劇場版」Cover Song Collection
-（动画第三季&剧场版翻唱盘）
-
-[![2aee53781995b1a20858f530292cd39a.th.jpg](https://pic.mufeng086.top/images/2023/02/25/2aee53781995b1a20858f530292cd39a.th.jpg)](https://pic.mufeng086.top/image/vbV)
-
-</td>
-</tr>
-</table>
-
-</html>
+|「からかい上手の高木さん」Cover Song Collection|「からかい上手の高木さん2」Cover Song Collection|「からかい上手の高木さん3 & 劇場版」Cover Song Collection|
+|:--|:--|:--|
+|动画第一季翻唱盘|动画第二季翻唱盘|动画第三季&剧场版翻唱盘|
+|[![24cacc3a5f29a04252c54a30b26c4d4c.md.jpg](https://pic.mufeng086.top/images/2023/02/25/24cacc3a5f29a04252c54a30b26c4d4c.md.jpg)](https://pic.mufeng086.top/image/WFh)|[![4de98b782902941c9d99c0aa74dc13ee.md.jpg](https://pic.mufeng086.top/images/2023/02/25/4de98b782902941c9d99c0aa74dc13ee.md.jpg)](https://pic.mufeng086.top/image/9me)|[![2aee53781995b1a20858f530292cd39a.md.jpg](https://pic.mufeng086.top/images/2023/02/25/2aee53781995b1a20858f530292cd39a.md.jpg)](https://pic.mufeng086.top/image/vbV)|
+<br/>
+曲目表：
 
 |季度|日文曲名|中文译名|原唱|归属|
 |:--|:--|:--|:--|:--|
@@ -56,7 +31,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |S1|小さな恋のうた|小小恋歌|MONGOL800 |S1ED5 (E9-10)|
 |S1|愛唄|爱歌|GReeeeN|S1ED6(E11)|
 |S1|出逢った頃のように|仿若相逢时|Every Little Thing|S1ED7(E12)|
-|S2|奏（かなで)|奏|无限开关（スキマスイッチ）|S2ED1 (E1)|
+|S2|奏（かなで）|奏|无限开关（スキマスイッチ）|S2ED1 (E1)|
 |S2|粉雪|粉雪|Remioromen|S2ED2(E2)|
 |S2|キセキ|奇迹|GReeeeN|S2ED3(E3-4)|
 |S2|ありがとう|感谢|生物股长（いきものがかり）|S2ED4(E5-6)|
@@ -67,7 +42,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |S2|100万回の「l love you」|100万次说“爱你”|Rake |（CD特典曲）|
 |S3|夢で逢えたら|若在梦中相逢|大泷咏一|S3ED1(E1)|
 |S3|Over Drive|Over Drive|JUDY AND MARY |S3ED2 (ED2-3)|
-|S3|ひまわりの約束|向日葵的约定|秦基博|S3ED3 (ED4-5）|
+|S3|ひまわりの約束|向日葵的约定|秦基博|S3ED3（ED4-5）|
 |S3|学園天国|学园天国|Finger5|S3ED4(E6)|
 |S3|じょいふる|快乐|生物股长（いきものがかり）|S3ED5(E7-8)|
 |  S3   | サンタが町にやってくる     | 圣诞老人进城来  | Haven Gillespie（原英文作词）J Fred Coots（原英文作曲） |   S3ED6 (E9)   |
@@ -88,38 +63,12 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 
 （*仅录入动画专辑，不录入歌手专辑）
 
-<html>
-
-<table style="margin-left: auto; margin-right: auto;">
-<tr>
-<td>
-<!--左侧内容-->
-
-言わないけどね。(アニメ盤)
-（虽然不会说出口。（动画盘））（第一季）
-[![306c82696d739ec74f1d8780b9df8713.th.jpg](https://pic.mufeng086.top/images/2023/02/25/306c82696d739ec74f1d8780b9df8713.th.jpg)](https://pic.mufeng086.top/image/gId)
-
-</td>
-<td>
-<!--中部内容-->
-
-ゼロセンチメートル(アニメ盤)
-（零厘米（动画盘））（第二季）
-[![af20e3779cbbaad0125637f8feb907f5.th.jpg](https://pic.mufeng086.top/images/2023/02/25/af20e3779cbbaad0125637f8feb907f5.th.jpg)](https://pic.mufeng086.top/image/CDA)
-
-</td>
-<td>
-<!--右侧内容-->
-
-Island Memories
-（小岛回忆）（第三季 & 剧场版）
-![ddf6fa965d911844da59162f3d15d78e.th.jpg](https://pic.mufeng086.top/images/2023/02/25/ddf6fa965d911844da59162f3d15d78e.th.jpg)
-
-</td>
-</tr>
-</table>
-
-</html>
+|言わないけどね。(アニメ盤)|ゼロセンチメートル(アニメ盤)|Island Memories|
+|:--|:--|:--|
+|虽然不会说出口。（动画盘）（第一季）|零厘米（动画盘）（第二季）|Island Memories（第三季&剧场版）|
+|[![306c82696d739ec74f1d8780b9df8713.md.jpg](https://pic.mufeng086.top/images/2023/02/25/306c82696d739ec74f1d8780b9df8713.md.jpg)](https://pic.mufeng086.top/image/gId)|[![af20e3779cbbaad0125637f8feb907f5.md.jpg](https://pic.mufeng086.top/images/2023/02/25/af20e3779cbbaad0125637f8feb907f5.md.jpg)](https://pic.mufeng086.top/image/CDA)|![S3movie-origin-album.jpg](https://pic.mufeng086.top/images/2023/03/03/S3movie-origin-album.jpg)|
+<br/>
+曲目表：
 
 【移动端用户请左右滑动表格】
 
@@ -143,49 +92,15 @@ Island Memories
 
 （创作：堤博明）
 
-<html>
+|「からかい上手の高木さん」Music Collection|「からかい上手の高木さん2」Music Collection|「からかい上手の高木さん3」Music Collection|劇場版『からかい上手の高木さん』Music Collection|
+|:--|:--|:--|:--|
+|动画第一季原声带|动画第二季原声带|动画第三季原声带|剧场版原声带|
+|[![bb11eb0b942f3bd1f31318ba6ad374b7.md.jpg](https://pic.mufeng086.top/images/2023/02/25/bb11eb0b942f3bd1f31318ba6ad374b7.md.jpg)](https://pic.mufeng086.top/image/HYp)|[![dd789966ea5900ace097a35c2cf30cd3.md.jpg](https://pic.mufeng086.top/images/2023/02/25/dd789966ea5900ace097a35c2cf30cd3.md.jpg)](https://pic.mufeng086.top/image/k9z)|[![5ff4b92e662b977c14ad3e058fcb5fe2.md.jpg](https://pic.mufeng086.top/images/2023/02/25/5ff4b92e662b977c14ad3e058fcb5fe2.md.jpg)](https://pic.mufeng086.top/image/qjq)|[![176a6c7ca8b47d4493a96f12deea048d.md.jpg](https://pic.mufeng086.top/images/2023/02/25/176a6c7ca8b47d4493a96f12deea048d.md.jpg)](https://pic.mufeng086.top/image/Ph7)|
+<br/>
 
-<table style="margin-left: auto; margin-right: auto;">
-<tr>
-<td>
-<!--左侧内容-->
+**（第三季与剧场版OST实体光碟尚未发售，此为网络配信版专辑封面）**
 
-「からかい上手の高木さん」Music Collection
-
-[![bb11eb0b942f3bd1f31318ba6ad374b7.th.jpg](https://pic.mufeng086.top/images/2023/02/25/bb11eb0b942f3bd1f31318ba6ad374b7.th.jpg)](https://pic.mufeng086.top/image/HYp)
-
-
-</td>
-<td>
-<!--左中内容-->
-
-「からかい上手の高木さん」Music Collection
-
-[![dd789966ea5900ace097a35c2cf30cd3.th.jpg](https://pic.mufeng086.top/images/2023/02/25/dd789966ea5900ace097a35c2cf30cd3.th.jpg)](https://pic.mufeng086.top/image/k9z)
-
-</td>
-<td>
-<!--右中内容-->
-
-「からかい上手の高木さん3」Music Collection
-
-[![5ff4b92e662b977c14ad3e058fcb5fe2.th.jpg](https://pic.mufeng086.top/images/2023/02/25/5ff4b92e662b977c14ad3e058fcb5fe2.th.jpg)](https://pic.mufeng086.top/image/qjq)
-
-</td>
-<td>
-<!--右侧内容-->
-
-「からかい上手の高木さん」Music Collection
-
-[![176a6c7ca8b47d4493a96f12deea048d.th.jpg](https://pic.mufeng086.top/images/2023/02/25/176a6c7ca8b47d4493a96f12deea048d.th.jpg)](https://pic.mufeng086.top/image/Ph7)
-
-</td>
-</tr>
-</table>
-
-</html>
-
-（*第三季与剧场版OST实体光碟尚未发售，此为网络配信封面）
+曲目表：
 
 |季度|日文曲名|中文译名|
 |:--|:--|:--|
