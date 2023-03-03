@@ -66,7 +66,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |言わないけどね。(アニメ盤)|ゼロセンチメートル(アニメ盤)|Island Memories|
 |:--|:--|:--|
 |虽然不会说出口。（动画盘）（第一季）|零厘米（动画盘）（第二季）|Island Memories（第三季&剧场版）|
-|[![306c82696d739ec74f1d8780b9df8713.md.jpg](https://pic.mufeng086.top/images/2023/02/25/306c82696d739ec74f1d8780b9df8713.md.jpg)](https://pic.mufeng086.top/image/gId)|[![af20e3779cbbaad0125637f8feb907f5.md.jpg](https://pic.mufeng086.top/images/2023/02/25/af20e3779cbbaad0125637f8feb907f5.md.jpg)](https://pic.mufeng086.top/image/CDA)|![S3movie-origin-album.jpg](https://pic.mufeng086.top/images/2023/03/03/S3movie-origin-album.jpg)|
+|[![306c82696d739ec74f1d8780b9df8713.md.jpg](https://pic.mufeng086.top/images/2023/02/25/306c82696d739ec74f1d8780b9df8713.md.jpg)](https://pic.mufeng086.top/image/gId)|[![af20e3779cbbaad0125637f8feb907f5.md.jpg](https://pic.mufeng086.top/images/2023/02/25/af20e3779cbbaad0125637f8feb907f5.md.jpg)](https://pic.mufeng086.top/image/CDA)|[![S3movie-origin-album.md.jpg](https://pic.mufeng086.top/images/2023/03/03/S3movie-origin-album.md.jpg)](https://pic.mufeng086.top/image/BVw)|
 <br/>
 曲目表：
 
