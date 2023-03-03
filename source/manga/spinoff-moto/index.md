@@ -9,24 +9,12 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 
 2017年，原作漫画刊载杂志《月刊少年Sunday》举办一场名为“高木同学杯”（高木さん杯）的企划，主要内容是招募基于该作品题材而创作的衍生漫画并基于优秀作品以相应支持。在本次活动中，《擅长捉弄的（原）高木同学》为被选拔出的两部作品之一。本作在 マンガワン(MangaOne) 平台连载，目前已更新266话、发售单行本16册。
 
-<html>
-    <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td>
-                <!--左侧内容-->
-                作者推特-章节彩图（2023.3.1）<br/>
-                <a href="https://pic.mufeng086.top/image/QLM"><img src="https://pic.mufeng086.top/images/2023/03/01/fff6a63035a851aa62af481d181182d7321425686.th.jpg" alt="fff6a63035a851aa62af481d181182d7321425686.jpg" border="0" /></a>
-            </td>
-            <td>
-                <!--右侧内容-->
-                最新单行本（日版）<br/>
-                <a href="https://pic.mufeng086.top/image/Sri"><img src="https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.th.jpg" alt="sale-jp-vol16.jpg" border="0" /></a>
-            </td>
-        </tr>
-    </table>
-</html>
-<br/>
-**[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差，但不影响理解。**
+| 作者推特-章节彩图（2023.3.1）                                | 日版最新单行本-16卷                                          | 台版最新单行本-16卷                                          |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [![fff6a63035a851aa62af481d181182d7321425686.md.jpg](https://pic.mufeng086.top/images/2023/03/01/fff6a63035a851aa62af481d181182d7321425686.md.jpg)](https://pic.mufeng086.top/image/QLM) | [![sale-jp-vol16.md.jpg](https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg)](https://pic.mufeng086.top/image/Sri) | [![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/tKY) |
+
+**[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
+中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差，但不影响理解。**
 
 目前话数对照表： 
 
