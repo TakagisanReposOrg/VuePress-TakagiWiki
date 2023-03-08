@@ -22,7 +22,7 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 | [![3315561aa26e9a975791daed0dca944b321425686.md.jpg](https://pic.mufeng086.top/images/2023/03/08/3315561aa26e9a975791daed0dca944b321425686.md.jpg)](https://pic.mufeng086.top/image/naG) | [![sale-jp-vol16.md.jpg](https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg)](https://pic.mufeng086.top/image/Sri) |[![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/xae)|
 
 **[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
-中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差，但不影响理解。**
+中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差。**
 
 目前话数对照表： 
 
