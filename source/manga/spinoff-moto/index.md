@@ -19,7 +19,7 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 
 | 作者推特-章节彩图（2023.3.1）                                | 日版最新单行本-16卷                                          | 台版最新单行本-16卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![fff6a63035a851aa62af481d181182d7321425686.md.jpg](https://pic.mufeng086.top/images/2023/03/01/fff6a63035a851aa62af481d181182d7321425686.md.jpg)](https://pic.mufeng086.top/image/QLM) | [![sale-jp-vol16.md.jpg](https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg)](https://pic.mufeng086.top/image/Sri) |[![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/xae)|
+| [![3315561aa26e9a975791daed0dca944b321425686.md.jpg](https://pic.mufeng086.top/images/2023/03/08/3315561aa26e9a975791daed0dca944b321425686.md.jpg)](https://pic.mufeng086.top/image/naG) | [![sale-jp-vol16.md.jpg](https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg)](https://pic.mufeng086.top/image/Sri) |[![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/xae)|
 
 **[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
 中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差，但不影响理解。**
@@ -294,3 +294,4 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 |264|節分|节分|节分|2023.2.15 上午 12:00:00|
 |265|バレンタイン|情人节|情人节|2023.2.22 上午 12:00:00|
 |266|ドリンクバー|饮料吧|饮料吧|2022.3.1 上午 12:00:00|
+|267|ホワイトデー|白色情人节|白色情人节|2022.3.8 上午 12:00:00|
