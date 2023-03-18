@@ -4,11 +4,12 @@ layout: 本站信息
 title: 本站信息
 updated: Sat, 25 Feb 2023 09:49:24 GMT
 ---
-**本站是以“擅长捉弄的高木同学”作品相关信息与文字图片等客观公开信息资料为内容主体的汇总站点，遵循非商用原则。**
+**本站是以“擅长捉弄的高木同学”作品相关信息与文字图片等客观公开信息资料为内容主体的汇总站点，不涉及具体版权影视作品本身文件内容。**
 
-**本站站长：@[牧丰086↗️](https://mufeng086.top)**
+**本站站长：@[牧丰086↗️](https://mufeng086.top)** ；**技术支持：@[一只鬆↗️](https://takagi.icu)**
 
-**技术支持：@[一只鬆↗️](https://takagi.icu)**
+**本站为非商用纯公益性内容信息站点，不接受由于本站服务对站长的赞助等行为。**
+[![QQ20230306150424.md.jpg](https://pic.mufeng086.top/images/2023/03/18/QQ20230306150424.md.jpg)](https://pic.mufeng086.top/image/PLQ6)
 
 如有意见建议、相关内容补充等，欢迎通过以下方式取得联系：
 
@@ -22,6 +23,7 @@ QQ：1875153961
 
 （来意请改为“高木资料站反馈”）
 
+(All questions, feedback, copyright events, please send email to the site maintainer: MuFeng086@gmail.com)
 ---
 本站部分内容参考 <img src="https://pic.mufeng086.top/images/2023/02/26/60px-Fandom_fire_logo.svg.png" alt="60px-Fandom_fire_logo.svg.png" border="0" width="15" /> Fandom社区 [擅长捉弄的高木同学](
 https://karakai-jouzu-no-takagi-san.fandom.com/zh/wiki/擅长捉弄的高木同学) 中的相关文章（基于 [CC-BY-SA](https://www.fandom.com/zh/licensing-zh) 许可协议）
