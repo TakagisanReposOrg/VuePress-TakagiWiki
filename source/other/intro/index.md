@@ -8,8 +8,6 @@ updated: Sat, 25 Feb 2023 09:49:24 GMT
 
 **本站站长：@[牧丰086↗️](https://mufeng086.top)** ；**技术支持：@[一只鬆↗️](https://takagi.icu)**
 
-[![QQ20230306150424.th.jpg](https://pic.mufeng086.top/images/2023/03/18/QQ20230306150424.th.jpg)](https://pic.mufeng086.top/image/PLQ6)
-
 📨 反馈 / 联络：
 
 1️⃣ 邮件反馈：feedback@takagi3.cn↗️
@@ -17,6 +15,8 @@ updated: Sat, 25 Feb 2023 09:49:24 GMT
 2️⃣ 即时联系：QQ：1875153961（来意请改为“高木资料站反馈”）
 
 (All questions, feedback, copyright events, please send email to the site maintainer: feedback@takagi3.cn)
+
+
 
 [🪙 自愿支持多个民间高木站点的良性运营](https://bbs.takagi3.cn/wp-content/uploads/2023/03/QR-code.png)
 
