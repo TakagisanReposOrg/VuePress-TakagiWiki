@@ -397,7 +397,7 @@ navbar:
           { key: '本站信息', link: '/other/intro/', icon: 'iconfont icon-mail' },
           { key: '内容建设日志', link: '/other/process/', icon: 'iconfont icon-plan' },
           { key: '合作-资源盘', link: 'https://takagi.zhisite.top/zh-CN/', icon: 'iconfont icon-mini-program-fill' },
-          { key: '共享云图库', link: 'https://shareimg.mufeng086.top/', icon: 'iconfont icon-mini-program-fill' }
+          { key: '共享图仓', link: 'https://shareimg.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' }
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
