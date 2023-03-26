@@ -16,9 +16,9 @@ updated: Sat, 25 Feb 2023 09:49:24 GMT
 
 (All questions, feedback, copyright events, please send email to the site maintainer: feedback@takagi3.cn)
 
+<br/>
 
-
-[🪙 自愿支持多个民间高木站点的良性运营](https://bbs.takagi3.cn/wp-content/uploads/2023/03/QR-code.png)
+[→ 🪙 自愿支持多个民间高木站点的良性运营](https://pic.mufeng086.top/images/2023/03/19/QR-code.png)
 
 
 ---
