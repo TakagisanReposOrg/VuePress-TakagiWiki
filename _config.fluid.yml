@@ -374,10 +374,10 @@ navbar:
         name: "衍生/社群", 
         icon: "iconfont icon-rss", 
         submenu: [
-        { key: '官方衍生书籍', link: '/derivative/related-books/', icon: "iconfont icon-book" }, 
-        { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: "iconfont icon-codeforces" }, 
-        { key: '同人作品', link: '/derivative/related-creation/', icon: "iconfont icon-bookmark" }, 
-        { key: '粉丝圈', link: '/derivative/fangroup/', icon: "iconfont icon-friends" }
+        { key: '官方衍生书籍', link: '/derivative/related-books/', icon: 'iconfont icon-book' }, 
+        { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: 'iconfont icon-mobilealt' }, 
+        { key: '同人作品', link: '/derivative/related-creation/', icon: 'iconfont icon-bookmark' }, 
+        { key: '粉丝圈', link: '/derivative/fangroup/', icon: 'iconfont icon-friends' }
         ]
     }
     - { 
@@ -398,7 +398,8 @@ navbar:
           { key: '内容建设日志', link: '/other/process/', icon: 'iconfont icon-plan' },
           { key: '合作-资源盘', link: 'https://takagi.zhisite.top/zh-CN/', icon: 'iconfont icon-mini-program-fill' },
           { key: '共享图仓', link: 'https://shareimg.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' },
-          { key: 'Fan社区', link: 'https://club.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' }
+          { key: 'Fan社区', link: 'https://club.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' },
+          { key: '站点监控', link: 'http://103.228.170.121:3001/status', icon: 'iconfont icon-codeforces' }
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
