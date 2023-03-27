@@ -375,7 +375,7 @@ navbar:
         icon: "iconfont icon-rss", 
         submenu: [
         { key: '官方衍生书籍', link: '/derivative/related-books/', icon: 'iconfont icon-book' }, 
-        { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: 'iconfont icon-mobilealt' }, 
+        { key: '高木相关软件/游戏', link: '/derivative/related-software/', icon: 'iconfont icon-mobile' }, 
         { key: '同人作品', link: '/derivative/related-creation/', icon: 'iconfont icon-bookmark' }, 
         { key: '粉丝圈', link: '/derivative/fangroup/', icon: 'iconfont icon-friends' }
         ]
