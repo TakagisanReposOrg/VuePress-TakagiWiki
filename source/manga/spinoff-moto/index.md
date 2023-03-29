@@ -17,9 +17,9 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 2. 第三季第5集开头，有成年高木在家中阳台的镜头。
 3. 2022年6月上映的剧场版中，片尾曲后的彩蛋部分为成人后的一家设定剧情，剧情内容呼应剧场版前述。
 
-| 作者推特-章节彩图（2023.3.8）                                | 日版最新单行本-16卷                                          | 台版最新单行本-16卷                                          |
+| 作者推特-章节彩图（2023.3.29）                                | 日版最新单行本-18卷                                          | 台版最新单行本-16卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![3315561aa26e9a975791daed0dca944b321425686.md.jpg](https://pic.mufeng086.top/images/2023/03/08/3315561aa26e9a975791daed0dca944b321425686.md.jpg)](https://pic.mufeng086.top/image/naG) | [![sale-jp-vol16.md.jpg](https://pic.mufeng086.top/images/2023/03/01/sale-jp-vol16.md.jpg)](https://pic.mufeng086.top/image/Sri) |[![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/xae)|
+|[![FsTs19MaMAAi7Fg.md.jpg](https://pic.mufeng086.top/images/2023/03/29/FsTs19MaMAAi7Fg.md.jpg)](https://pic.mufeng086.top/image/PgWN) |[![sale-jp-vol18.jpg](https://pic.mufeng086.top/images/2023/03/29/sale-jp-vol18.jpg)](https://pic.mufeng086.top/image/Pu0M) |[![sale-tw-vol-9.jpg](https://pic.mufeng086.top/images/2023/03/03/sale-tw-vol-9.jpg)](https://pic.mufeng086.top/image/xae)|
 
 **[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
 中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差。**
@@ -295,3 +295,6 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 |265|バレンタイン|情人节|情人节|2023.2.22 上午 12:00:00|
 |266|ドリンクバー|饮料吧|饮料吧|2022.3.1 上午 12:00:00|
 |267|ホワイトデー|白色情人节|白色情人节|2022.3.8 上午 12:00:00|
+|268|ホワイトデー②|白色情人节②|白色情人节②|2022.3.15 上午 12:00:00|
+|269|ババ抜き|抽鬼牌|抽鬼牌|2022.3.22 上午 12:00:00|
+|270|だるまさん|木头人|木头人|2022.3.29 上午 12:00:00|
