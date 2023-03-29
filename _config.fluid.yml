@@ -399,7 +399,7 @@ navbar:
           { key: '合作-资源盘', link: 'https://takagi.zhisite.top/zh-CN/', icon: 'iconfont icon-mini-program-fill' },
           { key: '共享图仓', link: 'https://shareimg.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' },
           { key: 'Fan社区', link: 'https://club.takagi3.cn/', icon: 'iconfont icon-mini-program-fill' },
-          { key: '站点监控', link: 'http://103.228.170.121:3001/status', icon: 'iconfont icon-codeforces' }
+          { key: '站点监控', link: 'http://status.mufeng086.top/', icon: 'iconfont icon-codeforces' }
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
