@@ -18,7 +18,7 @@ updated: Sat, 25 Feb 2023 09:49:24 GMT
 
 <br/>
 
-[🪙 自愿支持多个民间高木站点的良性运营 ←](https://pic.mufeng086.top/images/2023/03/19/QR-code.png)
+[🪙 自愿赞助](https://mufeng086.top/support)
 
 
 ---
