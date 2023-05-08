@@ -477,7 +477,7 @@ footer:
     | Powered by<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid</span></a><br/>
-    本站内容依照 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0 许可协议</a>提供并展示<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://pic.mufeng086.top/images/2023/03/03/BY-NC-SA-mini.png" /></a>
+    本站内容依照 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0 许可协议</a>提供并展示<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://pic.mufeng086.com/i/2023/05/08/64588c2c25b03.png" /></a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -511,7 +511,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: https://pic.mufeng086.top/images/2023/02/25/beta-banner.jpg
+  banner_img: https://pic.mufeng086.com/i/2023/05/08/64588c27cb22e.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
