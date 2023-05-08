@@ -1,5 +1,6 @@
 ---
 date: ''
+banner_img: "https://pic.mufeng086.com/i/2023/05/08/64588c2b6f3fe.jpg"
 layout: 本站信息
 title: 本站信息
 updated: Sat, 25 Feb 2023 09:49:24 GMT

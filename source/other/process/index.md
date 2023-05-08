@@ -1,5 +1,5 @@
 ---
-banner_img: https://pic.mufeng086.top/images/2023/02/25/banner-day.jpg
+banner_img: "https://pic.mufeng086.com/i/2023/05/08/64588c2647b10.jpg"
 title: 内容建设日志
 ---
 2022.01.23：本站基础框架开放，域名为站长 **@牧丰086** 个人域名的子分支。
