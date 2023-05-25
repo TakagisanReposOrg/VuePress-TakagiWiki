@@ -1,6 +1,6 @@
 ---
 date: ''
-banner_img: "https://pic.mufeng086.com/i/2023/05/08/64588c2c17e0a.jpg"
+banner_img: https://pic.mufeng086.com/i/2023/05/08/64588c2c17e0a.jpg
 layout: manga
 title: 衍生-原高木同学
 updated: Sat, 25 Feb 2023 08:03:09 GMT

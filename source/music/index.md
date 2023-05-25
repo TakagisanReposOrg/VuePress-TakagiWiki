@@ -1,6 +1,6 @@
 ---
 date: ''
-banner_img: "https://pic.mufeng086.com/i/2023/05/08/64588c2dc76db.jpg"
+banner_img: https://pic.mufeng086.com/i/2023/05/08/64588c2dc76db.jpg
 layout: music
 title: 音乐
 updated: Sat, 25 Feb 2023 09:49:23 GMT
@@ -280,7 +280,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |Movie|ハナと勝負|和小花一决胜负|
 |Movie|終わりたくない|不想结束|
 |Movie|ハナとの別れ|和小花的分别|
-|Movie|西片から高木さんへ|从小平到高木同学|
+|Movie|西片から高木さんへ|从西片到高木同学|
 |Movie|高木さんから西片へ|从高木同学到西片|
 |Movie|からかい上手の高木さん|擅长捉弄的高木同学|
 |Movie|家族揃って|一家人|

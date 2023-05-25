@@ -1,6 +1,6 @@
 ---
 date: ''
-banner_img: "https://pic.imgdb.cn/item/64033609f144a01007cb94b1.jpg"
+banner_img: https://pic.imgdb.cn/item/64033609f144a01007cb94b1.jpg
 layout: derivative
 title: 社群
 updated: Sat, 25 Feb 2023 16:21:39 GMT
