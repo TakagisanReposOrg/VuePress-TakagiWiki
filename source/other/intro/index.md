@@ -19,7 +19,7 @@ updated: Sat, 25 Feb 2023 09:49:24 GMT
 
 <br/>
 
-[🪙 自愿赞助](https://mufeng086.top/support)
+[🪙 自愿赞助](https://mufeng086.com/support)
 
 
 ---
