@@ -19,7 +19,7 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 
 | 作者推特-章节彩图（2023.5.24）                                | 日版最新单行本-18卷                                          | 台版最新单行本-16卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|![Fwz2BibagAI5aZu8f7948985d353a10.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/05/25/Fwz2BibagAI5aZu8f7948985d353a10.jpg)|![sale-jp-vol18.jpg](https://pic.mufeng086.com/i/2023/05/08/64588d23c543d.jpg)|![sale-tw-vol-9.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c2d2b693.jpg)|
+|[![Fwz2BibagAI5aZu8f7948985d353a10.md.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/05/25/Fwz2BibagAI5aZu8f7948985d353a10.md.jpg)](https://shareimg.takagi3.cn/image/CJMc)|![sale-jp-vol18.jpg](https://pic.mufeng086.com/i/2023/05/08/64588d23c543d.jpg)|![sale-tw-vol-9.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c2d2b693.jpg)|
 
 **[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
 中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差。**
