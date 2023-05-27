@@ -396,7 +396,7 @@ navbar:
         submenu: [
           { key: '本站信息', link: '/other/intro/', icon: 'iconfont icon-mail' },
           { key: '内容建设日志', link: '/other/process/', icon: 'iconfont icon-plan' },
-          { key: '高木站点导航', link: 'https://sitemap.mufeng086.com', icon: 'iconfont icon-map' },
+          { key: '高木站点导航', link: 'https://takagi3.cn', icon: 'iconfont icon-map' },
         ]
       }
     #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
