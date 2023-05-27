@@ -239,7 +239,7 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:  # 网页访问统计
-  enable: false
+  enable: enable
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
@@ -271,7 +271,7 @@ web_analytics:  # 网页访问统计
   # 51.la 站点统计 ID
   # 51.la analytics
   # See: https://www.51.la/user/site/index
-  woyaola:  # 51.la 站点统计 ID，参见
+  woyaola: 21664147 # 51.la 站点统计 ID，参见
 
   # 友盟/cnzz 站点统计 web_id
   # cnzz analytics
@@ -281,8 +281,8 @@ web_analytics:  # 网页访问统计
   # LeanCloud 计数统计，可用于 PV UV 展示，如果 `web_analytics: enable` 没有开启，PV UV 展示只会查询不会增加
   # LeanCloud count statistics, which can be used for PV UV display. If `web_analytics: enable` is false, PV UV display will only query and not increase
   leancloud:
-    app_id:
-    app_key:
+    app_id: wzvzTSA15x9qJ54WZMhkl88x-MdYXbMMI
+    app_key: bMSYEtvLJeNy3sVUxxR9fR6p
     # REST API 服务器地址，国际版不填
     # Only the Chinese mainland users need to set
     server_url:
@@ -291,7 +291,7 @@ web_analytics:  # 网页访问统计
     path: window.location.pathname
     # 开启后不统计本地路径( localhost 与 127.0.0.1 )
     # If true, ignore localhost & 127.0.0.1
-    ignore_local: false
+    ignore_local: true
 
 # 对页面中的图片和评论插件进行懒加载处理，可见范围外的元素不会提前加载
 # Lazy loading of images and comment plugin on the page
@@ -483,12 +483,12 @@ footer:
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
   statistics:
-    enable: false
+    enable: true
 
     # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
     # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
     # Options: busuanzi | leancloud
-    source: "busuanzi"
+    source: "leancloud"
 
   # 国内大陆服务器的备案信息
   # For Chinese mainland website policy, other areas keep disable
