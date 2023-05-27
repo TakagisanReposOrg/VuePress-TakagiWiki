@@ -239,7 +239,7 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:  # 网页访问统计
-  enable: enable
+  enable: true
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
@@ -271,7 +271,7 @@ web_analytics:  # 网页访问统计
   # 51.la 站点统计 ID
   # 51.la analytics
   # See: https://www.51.la/user/site/index
-  woyaola: 21664147 # 51.la 站点统计 ID，参见
+  woyaola: 21664147
 
   # 友盟/cnzz 站点统计 web_id
   # cnzz analytics
@@ -627,11 +627,11 @@ post:
     # 浏览量计数
     # Number of visits
     views:
-      enable: false
+      enable: true
       # 统计数据来源
       # Data Source
       # Options: busuanzi | leancloud
-      source: "busuanzi"
+      source: "leancloud"
 
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
