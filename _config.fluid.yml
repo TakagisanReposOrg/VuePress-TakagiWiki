@@ -473,14 +473,14 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    擅长捉弄的高木同学 自建资料站 by <a href="https://mufeng086.com" target="_blank" rel="nofollow noopener"><span>轻虹空雨 </span></a>
-    | Powered by<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo</span></a>
+    擅长捉弄的高木同学 自建资料站 by <a href="https://mufeng086.com" target="_blank" rel="nofollow noopener"><span>轻虹空雨</span></a><br/>
+    Powered by<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo</span></a>
     <i class="iconfont icon-love">fluid</i><br/>
     <a target="_blank" title="51la网站统计" href="https://v6.51.la/land/K58IqOrf6lKMxjBH"><img src="https://sdk.51.la/icon/1-1.png"></a> 
     <a target="_blank" title="Google Analytics" href="https://analytics.google.com/analytics/web/#/p379357727"><img src="https://pic.imgdb.cn/item/6476d9f1f024cca1737cb0ec.png" ></a>
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({id:"K58IqOrf6lKMxjBH",ck:"K58IqOrf6lKMxjBH"})</script>
-    <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/K58IqOrf6lKMxjBH/quote.js?theme=0&f=12&display=0,0,0,0,0,0,0,1"></script>
+    <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/K58IqOrf6lKMxjBH/quote.js?theme=0&f=12&display=0,0,1,0,0,0,0,1"></script>
   '
 
   # 展示网站的 PV、UV 统计数
