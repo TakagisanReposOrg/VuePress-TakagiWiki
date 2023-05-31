@@ -17,9 +17,9 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 2. 第三季第5集开头，有成年高木在家中阳台的镜头。
 3. 2022年6月上映的剧场版中，片尾曲后的彩蛋部分为成人后的一家设定剧情，剧情内容与剧场版前段的送虫部分呼应。
 
-| 作者推特-章节彩图（2023.5.24）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
+| 作者推特-章节彩图（2023.5.31）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|[![Fwz2BibagAI5aZu8f7948985d353a10.md.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/05/25/Fwz2BibagAI5aZu8f7948985d353a10.md.jpg)](https://shareimg.takagi3.cn/image/CJMc)|![sale-jp-vol18.jpg](https://pic.mufeng086.com/i/2023/05/08/64588d23c543d.jpg)|![sale-tw-vol-10.jpg](https://pic.mufeng086.com/i/2023/05/25/646eff56bd1b7.jpg)|
+|[![FxadsGhaEAAwGPPee9101dae35dcec6.md.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/05/31/FxadsGhaEAAwGPPee9101dae35dcec6.md.jpg)](http://shareimg.takagi3.cn/image/z4Yi)|![sale-jp-vol18.jpg](https://pic.mufeng086.com/i/2023/05/08/64588d23c543d.jpg)|![sale-tw-vol-10.jpg](https://pic.mufeng086.com/i/2023/05/25/646eff56bd1b7.jpg)|
 
 **[ ! ] 下表内数据存在目前无法解决的缺失、错位、错误等问题，后续适时会尝试解决，敬请谅解。
 中文译名基于日文主题、漫画剧情理解而选定，可能有所偏差。**
@@ -305,4 +305,4 @@ updated: Sat, 25 Feb 2023 08:03:09 GMT
 |275|仕事の時間|工作时间|工作时间|2023.5.10 上午 12:00:00|
 |276|昔の写真|过去的照片|过去的照片|2023.5.17 上午 12:00:00|
 |277|入れ替わり|互换|互换|2023.5.24 上午 12:00:00|
-
+|278|ドーナツ|甜甜圈|甜甜圈|2023.5.31 上午 12:00:00|
