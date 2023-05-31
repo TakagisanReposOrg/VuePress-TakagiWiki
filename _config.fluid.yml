@@ -474,9 +474,9 @@ footer:
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     擅长捉弄的高木同学 自建资料站 2023<br/>
-    搭建&维护：<a href="https://mufeng086.com" target="_blank" rel="nofollow noopener"><span>轻虹空雨</span></a> | <br/>
+    搭建&维护：<a href="https://mufeng086.com" target="_blank" rel="nofollow noopener"><span>轻虹空雨</span></a> | 
     由 <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span> Hexo</span></a>
-    <i class="iconfont icon-love"></i><a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 驱动<br/>
+    <i class="iconfont icon-love"></i><a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span> Fluid</span></a> 驱动<br/>
     <a target="_blank" title="51la网站统计" href="https://v6.51.la/land/K58IqOrf6lKMxjBH"><img src="https://sdk.51.la/icon/1-1.png"></a> 
     <a target="_blank" title="Google Analytics" href="https://analytics.google.com/analytics/web/#/p379357727"><img src="https://pic.imgdb.cn/item/6476d9f1f024cca1737cb0ec.png" ></a>
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
