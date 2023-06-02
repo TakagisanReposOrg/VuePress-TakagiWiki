@@ -1,0 +1,34 @@
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sese-btn {
+  position: relative;
+  z-index: 0;
+
+  @apply transition;
+
+  &:hover {
+    @apply shadow;
+  }
+}
+
+.press-icon-btn {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 50%;
+
+  div {
+    font-size: 1.2rem;
+  }
+}
