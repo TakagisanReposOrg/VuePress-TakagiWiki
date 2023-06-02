@@ -1,4 +1,2 @@
-# 你可以像这样自定义 i18n
-intro:
-  desc: Valaxy 模版
-  hi: 你好，Valaxy
+gallery:
+  tip: 搜索
