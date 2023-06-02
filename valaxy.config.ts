@@ -34,11 +34,11 @@ export default defineValaxyConfig<PressTheme.Config>({
     ],
     nav: [
       {
-        text: 'Docs',
+        text: 'Musics',
         items: [
           {
-            text: 'Getting Started',
-            link: '/guide/getting-started',
+            text: '音乐',
+            link: '/music',
           },
           {
             text: 'Migration from Hexo',

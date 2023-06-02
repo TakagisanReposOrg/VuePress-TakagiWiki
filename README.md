@@ -6,11 +6,11 @@ Example: [valaxy.site](https://valaxy.site)
 
 ```bash
 # install
-npm i
+pnpm i
 # or pnpm i
 
-# start
-npm run dev
+# start（启动请使用pnpm指令！＠一只鬆）
+pnpm run dev
 # or pnpm dev
 ```
 
@@ -51,4 +51,5 @@ In most cases, you only need to work in the `pages` folder.
 - `vercel.json`: for [vercel](https://vercel.com/)  
 ＠一只鬆
 新文档分支测试
-npm i --save-dev @types/node
+pnpm run dev是预览指令，目前暂时先测试music页面
+＠2023.06.02 12:00
