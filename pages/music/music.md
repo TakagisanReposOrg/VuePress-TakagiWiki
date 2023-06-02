@@ -1,10 +1,14 @@
 ---
-date: ''
-banner_img: https://pic.mufeng086.com/i/2023/05/08/64588c2dc76db.jpg
+end: false
+categories:
+  - music
 layout: music
-title: 音乐
-updated: Sat, 25 Feb 2023 09:49:23 GMT
+title: music
+title_zh-CN: 音乐
 ---
+::: zh-CN
+::: tip
+
 **本页分为四个部分：
 动画片尾曲（ED）、主题曲（OP）&插曲、原声带OST、“心动记录”手游 - 独占翻唱曲**
 
@@ -305,3 +309,7 @@ updated: Sat, 25 Feb 2023 09:49:23 GMT
 |クリスマス·イブ|平安夜|山下达郎|
 |大阪Lover|大阪情人|DREAMS COME TRUE|
 
+:::
+
+<ThemeGallery :themes="frontmatter.themes" />
+<br />
