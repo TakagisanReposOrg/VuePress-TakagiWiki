@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../base/var" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  background-color: transparent;
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}
+
+hr {
+  background-color: var(--smc-c-primary, #333);
+  height: map.get($hr, "height");
+  margin: 1.5rem 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 6px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1c6c7;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dl {
+  padding: 0;
+  dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 600;
+  }
+  dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+}
+
+summary {
+  outline: none;
+}

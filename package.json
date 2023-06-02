@@ -1,33 +1,20 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "takagisite",
+  "version": "0.14.30",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
-  },
-  "hexo": {
-    "version": "6.3.0"
+    "build": "npm run build:ssg && npm run rss",
+    "build:spa": "valaxy build",
+    "build:ssg": "valaxy build --ssg",
+    "dev": "valaxy",
+    "rss": "valaxy rss",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
-    "hexo": "^6.3.0",
-    "hexo-blog-encrypt": "^3.1.6",
-    "hexo-generator-alias": "^1.0.0",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-stylus": "^2.1.0",
-    "hexo-server": "^3.0.0",
-    "hexo-spoiler": "^1.7.3",
-    "hexo-tag-hint": "^0.3.1",
-    "hexo-theme-fluid": "^1.9.4",
-    "hexo-theme-landscape": "^0.0.3",
-    "highlight.js": "^11.7.0"
+    "valaxy": "0.14.30",
+    "valaxy-theme-yun": "0.14.30"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
   }
 }

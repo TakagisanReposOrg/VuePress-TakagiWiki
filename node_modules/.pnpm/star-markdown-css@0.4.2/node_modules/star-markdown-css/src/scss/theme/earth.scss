@@ -1,0 +1,7 @@
+@forward "../base/_var" with (
+  $colors: (
+    "primary": #70b7fd,
+  )
+);
+
+@use "../base/markdown";
