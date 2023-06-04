@@ -33,7 +33,50 @@ export default defineUserConfig({
         text: "音乐",
         children: [
           { text: "动画片尾曲", link: "/docs/music/ED.md" },
+          { text: "动画主题曲", link: "/docs/music/OP.md" },import { defineUserConfig } from "vuepress";
+import type { DefaultThemeOptions } from "vuepress";
+import recoTheme from "vuepress-theme-reco";
+
+export default defineUserConfig({
+  title: "擅长捉弄的高木同学 自建资料站",
+  description: "动漫《擅长捉弄的高木同学》的自建资料站点，基于Vue",
+  theme: recoTheme({
+    style: "@vuepress-reco/style-default",
+    logo: "/logo.png",
+    author: "一只鬆",
+    authorAvatar: "/head.png",
+    docsRepo: "https://github.com/yzsong06/TakagiWikiSiteCNVue",
+    docsBranch: "main",
+    docsDir: "example",
+    lastUpdatedText: "",
+    // series 为原 sidebar
+    series: {
+      "/docs/theme-reco/": [
+        {
+          text: "module one",
+          children: ["home", "theme"],
+        },
+        {
+          text: "module two",
+          children: ["api", "plugin"],
+        },
+      ],
+    },
+    navbar: [
+      { text: "首页", link: "/" },
+      {
+        text: "音乐",
+        children: [
+          { text: "动画片尾曲", link: "/docs/music/ED.md" },
           { text: "动画主题曲", link: "/docs/music/OP.md" },
+          { text: "原声带OST", link: "/docs/music/OST.md" },
+          { text: "手游“心动记录”", link: "/docs/music/GAME.md" },
+        ],
+      },
+    ],
+    bulletin: {
+      body: [
+        {
           { text: "原声带OST", link: "/docs/music/OST.md" },
           { text: "手游“心动记录”", link: "/docs/music/GAME.md" },
         ],
