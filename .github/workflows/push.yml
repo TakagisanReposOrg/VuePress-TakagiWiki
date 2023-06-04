@@ -1,5 +1,5 @@
 # name 可以自定义
-name: Deploy GitHub Pages
+name: 部署测试框架站点
 
 # 触发条件：在 push 到 main/master 分支后，新的 Github 项目 应该都是 main，而之前的项目一般都是 master
 on:
@@ -14,17 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 拉取代码
-      - name: Checkout
+      - name: 从Github仓库拉取代码
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+      - name: 切换测试分支
+        run: git branch Test
 
       # 生成静态文件
-      - name: Build
+      - name: 生成站点静态文件
         run: yarn build
 
       # 部署到 GitHub Pages
-      - name: Deploy
+      - name: 部署站点静态文件到 Github Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
