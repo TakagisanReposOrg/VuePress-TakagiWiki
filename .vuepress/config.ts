@@ -3,15 +3,15 @@ import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
-  title: "vuepress-theme-reco",
-  description: "Just playing around",
+  title: "擅长捉弄的高木同学 自建资料站新框架测试",
+  description: "动漫《擅长捉弄的高木同学》的自建资料站点，新框架测试",
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
     author: "reco_luan",
     authorAvatar: "/head.png",
-    docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
-    docsBranch: "main",
+    docsRepo: "https://github.com/MuFeng086/Takagisite",
+    docsBranch: "Test",
     docsDir: "example",
     lastUpdatedText: "",
     // series 为原 sidebar
@@ -28,14 +28,14 @@ export default defineUserConfig({
       ],
     },
     navbar: [
-      { text: "Home", link: "/" },
-      { text: "Categories", link: "/categories/reco/1/" },
-      { text: "Tags", link: "/tags/tag1/1/" },
+      { text: "首页", link: "/" },
       {
-        text: "Docs",
+        text: "音乐",
         children: [
-          { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
-          { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
+          { text: "动画片尾曲", link: "/docs/music/ED.md" },
+          { text: "原高木同学", link: "/blogs/other/guide" },
+          { text: "明天是星期六", link: "/blogs/other/guide" },
+          { text: "与恋爱相恋的友加里", link: "/blogs/other/guide" },
         ],
       },
     ],
@@ -43,7 +43,7 @@ export default defineUserConfig({
       body: [
         {
           type: "text",
-          content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
+          content: `🎉🎉🎉 动漫《擅长捉弄的高木同学》自建资料站,Vue新框架测试站点`,
           style: "font-size: 12px;",
         },
         {
@@ -51,15 +51,14 @@ export default defineUserConfig({
         },
         {
           type: "title",
-          content: "QQ 群",
+          content: "维护者及联系方式",
         },
         {
           type: "text",
           content: `
           <ul>
-            <li>QQ群1：1037296104</li>
-            <li>QQ群2：1061561395</li>
-            <li>QQ群3：962687802</li>
+            <li>一只鬆：2319665062@qq.com</li>
+            <li>官方反馈：Feedback@takagi3.cn</li>
           </ul>`,
           style: "font-size: 12px;",
         },
@@ -68,14 +67,14 @@ export default defineUserConfig({
         },
         {
           type: "title",
-          content: "GitHub",
+          content: "维护者GitHub",
         },
         {
           type: "text",
           content: `
           <ul>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/issues">Issues<a/></li>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/discussions/1">Discussions<a/></li>
+            <li><a href="https://github.com/yzsong06">一只鬆<a/></li>
+            <li><a href="https://github.com/MuFeng086">牧丰<a/></li>
           </ul>`,
           style: "font-size: 12px;",
         },
@@ -86,8 +85,8 @@ export default defineUserConfig({
           type: "buttongroup",
           children: [
             {
-              text: "打赏",
-              link: "/docs/others/donate.html",
+              text: "自愿赞助👍",
+              link: "https://mufeng086.com/support",
             },
           ],
         },
