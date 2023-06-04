@@ -3,15 +3,15 @@ import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
-  title: "擅长捉弄的高木同学 自建资料站新框架测试",
-  description: "动漫《擅长捉弄的高木同学》的自建资料站点，新框架测试",
+  title: "擅长捉弄的高木同学 自建资料站",
+  description: "动漫《擅长捉弄的高木同学》的自建资料站点，基于Vue",
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
-    author: "reco_luan",
+    author: "一只鬆",
     authorAvatar: "/head.png",
-    docsRepo: "https://github.com/MuFeng086/Takagisite",
-    docsBranch: "Test",
+    docsRepo: "https://github.com/yzsong06/TakagiWikiSiteCNVue",
+    docsBranch: "main",
     docsDir: "example",
     lastUpdatedText: "",
     // series 为原 sidebar
@@ -85,7 +85,7 @@ export default defineUserConfig({
           type: "buttongroup",
           children: [
             {
-              text: "自愿赞助👍",
+              text: "赞助",
               link: "https://mufeng086.com/support",
             },
           ],
