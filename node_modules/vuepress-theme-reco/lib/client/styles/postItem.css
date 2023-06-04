@@ -1,0 +1,31 @@
+.post-item-container {
+  @apply mb-8 p-6;
+
+  .title {
+    @apply relative mb-2 inline-block text-lg font-medium;
+
+    &:after {
+      @apply absolute left-0 -bottom-2 w-full;
+      content: "";
+      height: 2px;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      transition: 0.3s ease-in-out;
+      @apply bg-reco-primary;
+    }
+
+    &:hover a {
+      @apply text-reco-primary;
+    }
+
+    &:hover:after {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+
+  .page-info {
+    @apply mt-2;
+  }
+}

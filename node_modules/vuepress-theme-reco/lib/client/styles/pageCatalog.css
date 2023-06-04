@@ -1,0 +1,53 @@
+.page-catalog-container {
+  @apply ml-10 pl-6 pr-10 pt-4 w-56 fixed z-10 top-16 bottom-16 right-0 hidden overflow-y-auto;
+  @apply lg:block;
+
+  .tip {
+    @apply font-extrabold;
+  }
+
+  ul {
+    @apply list-none pl-0;
+
+    .page-catalog-menu-depth_2 {
+      @apply py-2 font-semibold text-sm;
+      @apply border-t border-dashed border-reco-border-lightmode;
+      &.active, &:hover {
+        .page-catalog-item {
+          @apply text-reco-primary;
+        }
+      }
+    }
+
+    .page-catalog-menu-depth_3 {
+      @apply py-1.5 relative text-xs transition-all duration-500;
+      .page-catalog-item {
+        @apply text-lighter;
+      }
+      &::before {
+        @apply absolute inset-y-0 left-0 m-auto block w-0 h-0 rounded-1/2 transition-all duration-500;
+        @apply bg-reco-primary;
+        content: '';
+      }
+      &:hover {
+        .page-catalog-item {
+          @apply text-reco-primary;
+        }
+      }
+      &.active {
+        @apply pl-3;
+        a {
+          @apply text-reco-primary;
+        }
+        &::before {
+          @apply w-1 h-1;
+        }
+      }
+    }
+  }
+}
+
+/* 兼容 */
+.page-catalog-container ul .page-catalog-menu-depth_2 {
+  @apply dark:border-reco-border-darkmode;
+}

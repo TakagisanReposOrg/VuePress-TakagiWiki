@@ -1,0 +1,22 @@
+.search-box {
+  input {
+    background: url('../assets/search.svg') 0.4rem 0.3rem no-repeat;
+    background-size: 1.2rem 1.2rem;
+    @apply pr-0 rounded-lg bg-block border-block border text-basic !important;
+    @apply focus:border-reco-primary !important;
+  }
+  .suggestions {
+    @apply bg-basic border-block !important;
+    .suggestion {
+      a {
+        @apply text-basic;
+      }
+      &.focus {
+        @apply bg-block;
+        a {
+          @apply text-reco-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.page-info {
+  @apply flex flex-wrap;
+  .xicon-container{
+    @apply text-lighter;
+    &:not(:last-child) {
+      @apply mr-5;
+    }
+    a:not(:last-child) {
+      @apply mr-2;
+    }
+  }
+}

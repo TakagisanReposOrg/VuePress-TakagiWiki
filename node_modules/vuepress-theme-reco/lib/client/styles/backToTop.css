@@ -1,0 +1,3 @@
+.back-to-top {
+  @apply bg-reco-primary hover:bg-reco-primary/90 !important;
+}

@@ -1,0 +1,29 @@
+.navbar-links {
+  @apply md:ml-6;
+
+  .navbar-links__item {
+    @apply block md:inline-block py-0;
+
+    &:not(:first-child) {
+      @apply ml-0 md:ml-6;
+    }
+
+    > .link {
+      @apply flex items-center text-sm font-semibold;
+      .xicon-container {
+        @apply mr-0.5;
+      }
+    }
+
+    /* 选中高亮，不可以移动 */
+    .router-link-active {
+      @apply text-reco-primary !important;
+    }
+  }
+
+  &.mobile {
+    .navbar-links__item {
+      @apply py-4 border-basic-bottom;
+    }
+  }
+}

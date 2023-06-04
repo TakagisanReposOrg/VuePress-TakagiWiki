@@ -1,0 +1,50 @@
+.banner-brand__wrapper {
+  @apply w-screen flex justify-center items-center -mt-16;
+  @apply md:h-screen;
+  .banner-brand__content {
+    @apply block box-border px-6 mt-32 max-w-screen-md;
+    @apply md:mt-0;
+    .title {
+      @apply mb-6 text-5xl text-left bg-gradient-to-r from-reco-primary to-red-500 !important;
+      @apply md:text-7xl !important;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .description {
+      @apply text-2xl;
+      @apply md:text-4xl;
+    }
+    .tagline {
+      @apply text-lighter;
+    }
+    .btn-group {
+      @apply list-none mt-8 pl-0 text-left;
+      .xicon-container {
+        @apply mb-4 px-4 h-10 leading-none align-middle border-block rounded-lg bg-reco-primary/90 cursor-pointer font-semibold text-white;
+        @apply dark:text-reco-text-darkmode;
+        @apply hover:border-reco-primary !important;
+        &.plain {
+          @apply bg-block;
+        }
+        &.text {
+          @apply bg-transparent px-0 border-0 text-reco-primary !important;
+        }
+        &:not(:last-child) {
+          @apply mr-4;
+        }
+      }
+    }
+    .social-links {
+      @apply mt-4 box-border flex flex-wrap p-2 pl-0 text-center;
+      @apply md:text-left;
+      .social-item {
+        @apply text-center list-none transition-transform;
+        @apply hover:scale-110;
+        width: 39px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+}

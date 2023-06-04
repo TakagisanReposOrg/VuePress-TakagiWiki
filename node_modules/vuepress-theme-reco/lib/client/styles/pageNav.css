@@ -1,0 +1,29 @@
+.page-nav {
+  @apply pt-4 pb-0;
+  .inner {
+    @apply border-t border-solid border-reco-border-lightmode mt-0 pt-4 overflow-hidden;
+    @apply md:flex md:justify-between;
+    @apply dark:border-reco-border-darkmode;
+    &.hasPrev {
+      @apply md:justify-start;
+    }
+    &.hasNext {
+      @apply md:justify-end;
+    }
+    &.hasPrev.hasNext {
+      @apply md:justify-between;
+      .next {
+        @apply md:ml-4;
+      }
+    }
+  }
+  .next {
+    @apply text-right;
+  }
+  .page-nav-item {
+    @apply mt-4 p-4 block cursor-pointer border rounded-lg border-solid border-reco-border-lightmode font-semibold text-reco-primary;
+    @apply md:w-2/4;
+    @apply dark:border-reco-border-darkmode;
+    @apply hover:border-reco-primary;
+  }
+}

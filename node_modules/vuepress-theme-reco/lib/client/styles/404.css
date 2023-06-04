@@ -1,0 +1,18 @@
+.page-404-wrapper {
+  @apply w-screen h-screen flex flex-col justify-center items-center;
+  @apply md:flex-row;
+  .content {
+    @apply mr-0 mb-20 text-center;
+    @apply md:mr-40 md:mb-0;
+    h1 {
+      @apply text-9xl !important;
+    }
+    .xicon-container {
+      @apply inline-block px-6 py-2 border border-solid border-reco-primary rounded-lg bg-reco-primary/90 cursor-pointer font-semibold text-white;
+      @apply dark:text-reco-text-darkmode;
+    }
+  }
+  img {
+    @apply h-80;
+  }
+}

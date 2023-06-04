@@ -1,0 +1,16 @@
+.mobile-menus-container {
+  @apply transition-all duration-500 px-14 pt-20 fixed z-20 top-0 left-0 right-0 bottom-0 bg-basic overflow-y-auto;
+  @apply -translate-y-full;
+
+  .navbar-links {
+    @apply mb-8;
+  }
+
+  .appearance {
+    @apply flex items-center justify-center py-3 bg-block border-block text-center;
+
+    svg {
+      @apply ml-6;
+    }
+  }
+}
