@@ -11,7 +11,6 @@ date:  2023/06/03
 |「からかい上手の高木さん」Cover Song Collection|「からかい上手の高木さん2」Cover Song Collection|「からかい上手の高木さん3 & 劇場版」Cover Song Collection|
 |:--|:--|:--|
 |动画第一季翻唱盘|动画第二季翻唱盘|动画第三季&剧场版翻唱盘|
-|![](/site_images/music/ed-s1.jpg)|![4de98b782902941c9d99c0aa74dc13ee.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c237e760.jpg)|![2aee53781995b1a20858f530292cd39a.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c21f2ed6.jpg)|
 <br/>
 曲目表：
 
