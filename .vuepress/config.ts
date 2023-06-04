@@ -33,9 +33,9 @@ export default defineUserConfig({
         text: "音乐",
         children: [
           { text: "动画片尾曲", link: "/docs/music/ED.md" },
-          { text: "原高木同学", link: "/blogs/other/guide" },
-          { text: "明天是星期六", link: "/blogs/other/guide" },
-          { text: "与恋爱相恋的友加里", link: "/blogs/other/guide" },
+          { text: "动画主题曲", link: "/docs/music/OP.md" },
+          { text: "原声带OST", link: "/docs/music/OST.md" },
+          { text: "手游“心动记录”", link: "/docs/music/GAME.md" },
         ],
       },
     ],
@@ -43,7 +43,7 @@ export default defineUserConfig({
       body: [
         {
           type: "text",
-          content: `🎉🎉🎉 动漫《擅长捉弄的高木同学》自建资料站,Vue新框架测试站点`,
+          content: `🎉🎉🎉 动漫《擅长捉弄的高木同学》自建资料站`,
           style: "font-size: 12px;",
         },
         {
@@ -58,7 +58,7 @@ export default defineUserConfig({
           content: `
           <ul>
             <li>一只鬆：2319665062@qq.com</li>
-            <li>官方反馈：Feedback@takagi3.cn</li>
+            <li>反馈邮箱：yzsong06@outlook.com</li>
           </ul>`,
           style: "font-size: 12px;",
         },
@@ -86,7 +86,7 @@ export default defineUserConfig({
           children: [
             {
               text: "赞助",
-              link: "https://mufeng086.com/support",
+              link: "",
             },
           ],
         },
