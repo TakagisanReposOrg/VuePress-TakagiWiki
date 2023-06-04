@@ -21,12 +21,15 @@ jobs:
       - name: 切换测试分支
         run: git checkout Test
 
-      # 生成静态文件
-      - name: 生成站点静态文件
-        run: yarn build
+      # 安装相关依赖？
+      - name: 安装依赖
+        run: yarn install
+        
+      - name: 生成静态文件
+        run: vuepress build
 
       # 部署到 GitHub Pages
-      - name: 部署站点静态文件到 Github Pages
+      - name: 部署站点到 Github Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
