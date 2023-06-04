@@ -34,7 +34,7 @@ actionLink: /views/other/about
 
 编辑指引：遵循Markdown语法、尊重其他现有界面的布局风格，以客观公开可见可查的内容为基础进行内容填充。
 
-文档位置：【例】“音乐”页，则文档文件为 source/music/index.md
+文档位置：【例】“音乐”相关页面，则文档文件存放在 docs/music
 
 ------
 
