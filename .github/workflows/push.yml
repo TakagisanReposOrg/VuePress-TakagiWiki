@@ -19,7 +19,7 @@ jobs:
         with:
           persist-credentials: false
       - name: 切换测试分支
-        run: git branch Test
+        run: git checkout Test
 
       # 生成静态文件
       - name: 生成站点静态文件
