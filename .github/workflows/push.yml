@@ -18,10 +18,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-      # 安装相关依赖？
-      - name: 安装依赖
-        run: yarn install
-        
+  
       - name: 生成静态文件
         run: yarn build
 
@@ -31,4 +28,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
           BRANCH: gh-pages # 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件
-          FOLDER: docs/.vuepress/dist # vuepress 生成的静态文件存放的地方
+          FOLDER: /.vuepress/dist # vuepress 生成的静态文件存放的地方
