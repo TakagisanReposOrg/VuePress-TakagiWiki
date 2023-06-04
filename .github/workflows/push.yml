@@ -5,7 +5,7 @@ name: 部署测试框架站点
 on:
   push:
     branches:
-      - Test
+      - main
 
 # 任务
 jobs:
