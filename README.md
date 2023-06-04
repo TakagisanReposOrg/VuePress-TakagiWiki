@@ -24,7 +24,7 @@ actionLink: /views/other/about
 
 基于静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。仓库实际所有人、资料站站长&运维：[@一只鬆](https://www.takagi.icu/)
 
-本站点内容基于Vuepress部署，Hexo部署项目Github仓库（[@青虹空雨](https://github.com/MuFeng086)）：https://github.com/MuFeng086/TakagiWikiSiteCN
+本站点内容基于Vuepress部署，Hexo部署项目Github仓库（[@青虹空雨](https://github.com/MuFeng086)）：[点此访问仓库](https://github.com/yzsong06/TakagiWikiCN)
 
 ------
 
