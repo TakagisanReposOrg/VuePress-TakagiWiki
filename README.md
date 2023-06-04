@@ -8,7 +8,7 @@ bannerBrand:
   bgImage: '/homepage.jpg'
   title: 高木同学自建资料站
   description: 因为热爱，所以坚持
-  tagline: 基于VuePress部署，给予每一个来到这里的访客更加美好与快速便捷的体验
+  tagline: 基于VuePress部署，给予每一个来到这里的站点访客更加美好与快速便捷的体验
   buttons:
     - { text: Guide, link: '/docs/guide/introduce' }
     - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
@@ -22,9 +22,9 @@ actionText: About
 actionLink: /views/other/about
 ---
 
-基于静态博客搭建的《擅长捉弄的高木同学》相关信息资料站。仓库实际所有人、资料站站长&运维：[@一只鬆](https://www.takagi.icu/)
+基于静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。仓库实际所有人、资料站站长&运维：[@一只鬆](https://www.takagi.icu/)
 
-本仓库内容基于Vuepress部署，Hexo部署项目（[@青虹空雨](https://github.com/MuFeng086)）：https://github.com/MuFeng086/TakagiWikiSiteCN
+本站点内容基于Vuepress部署，Hexo部署项目Github仓库（[@青虹空雨](https://github.com/MuFeng086)）：https://github.com/MuFeng086/TakagiWikiSiteCN
 
 ------
 
