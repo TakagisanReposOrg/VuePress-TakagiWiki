@@ -9,7 +9,7 @@ features:
     details: 相比大部分静态框架，Vue拥有更好的访问时性能体验，Hexo版资料站请查看由[@青虹空雨](https://wiki.takagi3.cn)维护的资料站
     
   - title: 内容文档开源
-    details: [本文档站点仓库](https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki/)开源，即全站内容文档亦为开源。所有人均可对本站内容进行PR提交编辑（除核心布局配置文件等以外文档）
+    details: [本文档站点仓库](https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki/)开源，即全站内容文档亦为开源。所有人均可对本站内容进行PR提交编辑
 
   - title: 更纯粹的阅读体验
     details: VuePress相比其他静态站点框架，本身专门为文档阅读定制，将会拥有更纯粹的资料阅读体验
@@ -19,6 +19,8 @@ features:
 
   - title: BY-NC-SA许可
     details: 对于本站所有内容的复制、转载、引用等均由 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可
+    
+footer: BY-NC-SA Licensed | Copyright © 2023-present [TakagiWikiSite](https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki/edit/main/README.md)
 ---
 
 基于静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。仓库实际所有人、资料站站长&运维：[@一只鬆](https://www.takagi.icu/)
