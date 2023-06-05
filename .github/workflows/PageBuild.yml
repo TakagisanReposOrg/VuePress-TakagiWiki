@@ -1,7 +1,6 @@
 # name 可以自定义
 name: 部署标准版站点
 
-# 触发条件：在 push 到 main/master 分支后，新的 Github 项目 应该都是 main，而之前的项目一般都是 master
 on:
   push:
     branches:
@@ -22,7 +21,7 @@ jobs:
       - name: 生成静态文件
         run: yarn build
 
-      # 部署到 GitHub Pages
+      # 部署到 公开页面
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
