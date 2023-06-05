@@ -41,12 +41,12 @@ export default hopeTheme({
 
   plugins: {
     // You should generate and use your own comment service
-    comment: {
-      provider: "Giscus",
-      repo: "yzsong06/TakagiWikiSiteCNVue",
-      repoId: "R_kgDOJrF6hQ",
-      category: "Announcements",
-      categoryId: "DIC_kwDOJrF6hc4CW-t-",
+    //comment: {
+      //provider: "Giscus",
+      //repo: "yzsong06/TakagiWikiSiteCNVue",
+      //repoId: "R_kgDOJrF6hQ",
+      //category: "Announcements",
+      //categoryId: "DIC_kwDOJrF6hc4CW-t-",
     },
 
     // All features are enabled for demo, only preserve features you need here
