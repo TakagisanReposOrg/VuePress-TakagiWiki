@@ -3,7 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://wiki.cdn.takagi.icu",
+  hostname: "https://wiki.takagi.icu",
 
   author: {
     name: "一只鬆",
@@ -24,7 +24,7 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
-  footer: "默认页脚",
+  footer: "基于Vuepress Beta2版本，Hope主题",
 
   displayFooter: true,
 
@@ -43,10 +43,10 @@ export default hopeTheme({
     // You should generate and use your own comment service
     comment: {
       provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
+      repo: "yzsong06/TakagiWikiSiteCNVue",
+      repoId: "R_kgDOJrF6hQ",
       category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+      categoryId: "DIC_kwDOJrF6hc4CW-t-",
     },
 
     // All features are enabled for demo, only preserve features you need here
