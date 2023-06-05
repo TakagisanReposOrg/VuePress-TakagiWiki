@@ -4,14 +4,8 @@ heroText: 高木同学自建资料站
 heroImage: /Takagi_Movie_Poster_Original_2_.png
 bgImage: https://npm.elemecdn.com/filetakagiwikicn/source/wiki/wikibanner.webp
 
-footer: BY-NC-SA Licensed | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
-</span> 
-
-<span id="busuanzi_container_site_uv">
-  本站访客数<span id="busuanzi_value_site_uv"></span>人次
-</span> 
+footer: BY-NC-SA Licensed | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span> 
 ---
 
 基于静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。  
