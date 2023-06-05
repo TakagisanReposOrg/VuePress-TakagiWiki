@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/logo.svg",
+  logo: "/Takagi_Movie_Poster_Original_2_.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
