@@ -1,5 +1,6 @@
 ---
 home: true
+banner: ./homepage.jpg
 modules:
   - MdContent
   - Footer
