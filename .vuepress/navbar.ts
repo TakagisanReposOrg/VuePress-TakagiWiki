@@ -69,6 +69,28 @@ export default navbar([
         ],
   },
   {
+    text: "衍生/社群",
+    prefix: "/docs/derivative/",
+    children: [
+      {
+        text: "官方衍生书籍",
+        link: "Related-Book.md",
+      },
+      {
+        text: "相关软件&游戏",
+        link: "Related-Software.md",
+      },
+      {
+        text: "高木同人作品",
+        link: "Related-Createion.md",
+      },
+      {
+        text: "高木粉丝圈",
+        link: "FanGroup.md",
+      },
+        ],
+  },
+  {
     text: "V2 文档",
     icon: "book",
     link: "https://theme-hope.vuejs.press/zh/",
