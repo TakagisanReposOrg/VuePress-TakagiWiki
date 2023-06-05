@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+import { Sidebar } from "./sidebar.js";
 
 export default hopeTheme({
   hostname: "https://wiki.takagi.icu",
@@ -22,7 +22,7 @@ export default hopeTheme({
   navbar,
 
   // sidebar
-  sidebar,
+  sidebar: Sidebar,
 
   footer: "基于Vuepress Beta2版本，Hope主题",
 
@@ -38,11 +38,9 @@ export default hopeTheme({
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-
+  blog: {
+  },
   plugins: {
-    blog: {
-    
-    }
 
     // You should generate and use your own comment service
     //comment: {
@@ -51,49 +49,6 @@ export default hopeTheme({
       //repoId: "R_kgDOJrF6hQ",
       //category: "Announcements",
       //categoryId: "DIC_kwDOJrF6hc4CW-t-",
-    },
-
-    // All features are enabled for demo, only preserve features you need here
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      chart: true,
-      codetabs: true,
-      demo: true,
-      echarts: true,
-      figure: true,
-      flowchart: true,
-      gfm: true,
-      imgLazyload: true,
-      imgSize: true,
-      include: true,
-      katex: true,
-      mark: true,
-      mermaid: true,
-      playground: {
-        presets: ["ts", "vue"],
-      },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
-      vuePlayground: true,
     },
 
     // uncomment these if you want a pwa

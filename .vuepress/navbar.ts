@@ -4,7 +4,8 @@ export default navbar([
 
   {
     text: "音乐",
-    prefix: "/docs/music/",
+    icon: "music",
+    prefix: "/music/",
     children: [
       {
         text: "动画片尾曲",
@@ -26,7 +27,8 @@ export default navbar([
   },
   {
     text: "漫画",
-    prefix: "/docs/manga/",
+    icon: "book",
+    prefix: "/manga/",
     children: [
       {
         text: "高木同学正篇",
@@ -48,7 +50,8 @@ export default navbar([
   },
   {
     text: "动画",
-    prefix: "/docs/anime/",
+    icon: "video",
+    prefix: "/anime/",
     children: [
       {
         text: "第一季",
@@ -70,7 +73,8 @@ export default navbar([
   },
   {
     text: "衍生/社群",
-    prefix: "/docs/derivative/",
+    icon: "users",
+    prefix: "/derivative/",
     children: [
       {
         text: "官方衍生书籍",
@@ -91,8 +95,18 @@ export default navbar([
         ],
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "衍生/周边",
+    icon: "shopping-cart",
+    prefix: "/goods/",
+    children: [
+      {
+        text: "官方商品&特典",
+        link: "Offical.md",
+      },
+      {
+        text: "IP授权周边产品",
+        link: "Officalip.md",
+      },
+        ],
   },
 ]);

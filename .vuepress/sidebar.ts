@@ -1,46 +1,37 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export default sidebar({
-     sidebar: [
+export const Sidebar = sidebar({
+  "/": [
     {
       text: "音乐",
-      prefix: "/docs/",
-      children: [
-          "ED.md" ,
-          "OP.md" ,
-          "OST.md" ,
-          "GAME.md" ,
-      ],
+      icon: "music",
+      prefix: "music/",
+      link: "music/",
+      children: "structure",
     },
     {
       text: "漫画",
-      prefix: "/docs/",
-      children: [
-          "Takagi-OG.md" ,
-          "Spinoff-Moto.md" ,
-          "Spinoff-Tis.md" ,
-          "Spinoff-Yukari.md" ,
-      ],
+      icon: "book",
+      prefix: "manga/",
+      children: "structure",
     },
     {
       text: "动画",
-      prefix: "/docs/",
-      children: [
-          "S1.md" ,
-          "S2.md" ,
-          "S3.md" ,
-          "Movie.md" ,
-      ],
+      icon: "video",
+      prefix: "anime/",
+      children: "structure",
     },
     {
       text: "衍生/社群",
-      prefix: "/docs/",
-      children: [
-          "Related-Book.md" ,
-          "Related-Software.md" ,
-          "Related-Creation.md" ,
-          "FanGroup.md" ,
-      ],
+      icon: "users",
+      prefix: "derivative/",
+      children: "structure",
+    },
+    {
+      text: "商品/周边",
+      icon: "shopping-cart",
+      prefix: "goods/",
+      children: "structure",
     },
   ],
 });
