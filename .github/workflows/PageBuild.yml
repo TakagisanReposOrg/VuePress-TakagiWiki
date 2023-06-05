@@ -23,9 +23,10 @@ jobs:
         run: yarn build
 
       # 部署到 GitHub Pages
-      - name: 部署站点到 Gh-Page分支
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
-          BRANCH: gh-pages # 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件
-          FOLDER: .vuepress/dist # vuepress 生成的静态文件存放的地方
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:yzsong06/TakagiWikiSiteCNVuePage.git
+          BRANCH: gh-pages
+          FOLDER: ./vuepress/dist
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
