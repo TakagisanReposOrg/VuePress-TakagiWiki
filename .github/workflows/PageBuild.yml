@@ -1,5 +1,5 @@
 # name 可以自定义
-name: 部署站点
+name: 部署标准版站点
 
 # 触发条件：在 push 到 main/master 分支后，新的 Github 项目 应该都是 main，而之前的项目一般都是 master
 on:
@@ -23,7 +23,7 @@ jobs:
         run: yarn build
 
       # 部署到 GitHub Pages
-      - name: 部署站点到 Github Pages
+      - name: 部署站点到 Gh-Page分支
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
