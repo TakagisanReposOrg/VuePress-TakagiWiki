@@ -27,5 +27,5 @@ jobs:
         env:
           REPO: git@github.com:yzsong06/TakagiWikiSiteCNVuePage.git
           BRANCH: main
-          FOLDER: ./vuepress/dist
+          FOLDER: ./vuepress/.dist
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
