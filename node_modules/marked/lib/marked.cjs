@@ -1,5 +1,5 @@
 /**
- * marked v4.2.12 - a markdown parser
+ * marked v4.3.0 - a markdown parser
  * Copyright (c) 2011-2023, Christopher Jeffrey. (MIT Licensed)
  * https://github.com/markedjs/marked
  */
@@ -27,6 +27,20 @@ function _createClass(Constructor, protoProps, staticProps) {
     writable: false
   });
   return Constructor;
+}
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
 }
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -84,6 +98,7 @@ function getDefaults() {
     headerIds: true,
     headerPrefix: '',
     highlight: null,
+    hooks: null,
     langPrefix: 'language-',
     mangle: true,
     pedantic: false,
@@ -238,20 +253,6 @@ function resolveUrl(base, href) {
 var noopTest = {
   exec: function noopTest() {}
 };
-function merge(obj) {
-  var i = 1,
-    target,
-    key;
-  for (; i < arguments.length; i++) {
-    target = arguments[i];
-    for (key in target) {
-      if (Object.prototype.hasOwnProperty.call(target, key)) {
-        obj[key] = target[key];
-      }
-    }
-  }
-  return obj;
-}
 function splitCells(tableRow, count) {
   // ensure that every cell-delimiting pipe has a space
   // before it to distinguish it from an escaped pipe
@@ -1101,7 +1102,7 @@ var Tokenizer = /*#__PURE__*/function () {
 var block = {
   newline: /^(?: *(?:\n|$))+/,
   code: /^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,
-  fences: /^ {0,3}(`{3,}(?=[^`\n]*\n)|~{3,})([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~`]* *(?=\n|$)|$)/,
+  fences: /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,
   hr: /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,
   heading: /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,
   blockquote: /^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,
@@ -1143,13 +1144,13 @@ block.blockquote = edit(block.blockquote).replace('paragraph', block.paragraph).
  * Normal Block Grammar
  */
 
-block.normal = merge({}, block);
+block.normal = _extends({}, block);
 
 /**
  * GFM Block Grammar
  */
 
-block.gfm = merge({}, block.normal, {
+block.gfm = _extends({}, block.normal, {
   table: '^ *([^\\n ].*\\|.*)\\n' // Header
   + ' {0,3}(?:\\| *)?(:?-+:? *(?:\\| *:?-+:? *)*)(?:\\| *)?' // Align
   + '(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)' // Cells
@@ -1167,7 +1168,7 @@ block.gfm.paragraph = edit(block._paragraph).replace('hr', block.hr).replace('he
  * Pedantic grammar (original John Gruber's loose markdown specification)
  */
 
-block.pedantic = merge({}, block.normal, {
+block.pedantic = _extends({}, block.normal, {
   html: edit('^ *(?:comment *(?:\\n|\\s*$)' + '|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)' // closed tag
   + '|<tag(?:"[^"]*"|\'[^\']*\'|\\s[^\'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))').replace('comment', block._comment).replace(/tag/g, '(?!(?:' + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub' + '|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)' + '\\b)\\w+(?!:|[^\\w\\s@]*@)\\b').getRegex(),
   def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,
@@ -1242,13 +1243,13 @@ inline.reflinkSearch = edit(inline.reflinkSearch, 'g').replace('reflink', inline
  * Normal Inline Grammar
  */
 
-inline.normal = merge({}, inline);
+inline.normal = _extends({}, inline);
 
 /**
  * Pedantic Inline Grammar
  */
 
-inline.pedantic = merge({}, inline.normal, {
+inline.pedantic = _extends({}, inline.normal, {
   strong: {
     start: /^__|\*\*/,
     middle: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,
@@ -1269,7 +1270,7 @@ inline.pedantic = merge({}, inline.normal, {
  * GFM Inline Grammar
  */
 
-inline.gfm = merge({}, inline.normal, {
+inline.gfm = _extends({}, inline.normal, {
   escape: edit(inline.escape).replace('])', '~|])').getRegex(),
   _extended_email: /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/,
   url: /^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,
@@ -1282,7 +1283,7 @@ inline.gfm.url = edit(inline.gfm.url, 'i').replace('email', inline.gfm._extended
  * GFM + Line Breaks Inline Grammar
  */
 
-inline.breaks = merge({}, inline.gfm, {
+inline.breaks = _extends({}, inline.gfm, {
   br: edit(inline.br).replace('{2,}', '*').getRegex(),
   text: edit(inline.gfm.text).replace('\\b_', '\\b_| {2,}\\n').replace(/\{2,\}/g, '*').getRegex()
 });
@@ -2357,98 +2358,170 @@ var Parser = /*#__PURE__*/function () {
   return Parser;
 }();
 
+var Hooks = /*#__PURE__*/function () {
+  function Hooks(options) {
+    this.options = options || exports.defaults;
+  }
+  var _proto = Hooks.prototype;
+  /**
+   * Process markdown before marked
+   */
+  _proto.preprocess = function preprocess(markdown) {
+    return markdown;
+  }
+
+  /**
+   * Process HTML after marked is finished
+   */;
+  _proto.postprocess = function postprocess(html) {
+    return html;
+  };
+  return Hooks;
+}();
+Hooks.passThroughHooks = new Set(['preprocess', 'postprocess']);
+
+function onError(silent, async, callback) {
+  return function (e) {
+    e.message += '\nPlease report this to https://github.com/markedjs/marked.';
+    if (silent) {
+      var msg = '<p>An error occurred:</p><pre>' + escape(e.message + '', true) + '</pre>';
+      if (async) {
+        return Promise.resolve(msg);
+      }
+      if (callback) {
+        callback(null, msg);
+        return;
+      }
+      return msg;
+    }
+    if (async) {
+      return Promise.reject(e);
+    }
+    if (callback) {
+      callback(e);
+      return;
+    }
+    throw e;
+  };
+}
+function parseMarkdown(lexer, parser) {
+  return function (src, opt, callback) {
+    if (typeof opt === 'function') {
+      callback = opt;
+      opt = null;
+    }
+    var origOpt = _extends({}, opt);
+    opt = _extends({}, marked.defaults, origOpt);
+    var throwError = onError(opt.silent, opt.async, callback);
+
+    // throw error in case of non string input
+    if (typeof src === 'undefined' || src === null) {
+      return throwError(new Error('marked(): input parameter is undefined or null'));
+    }
+    if (typeof src !== 'string') {
+      return throwError(new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected'));
+    }
+    checkSanitizeDeprecation(opt);
+    if (opt.hooks) {
+      opt.hooks.options = opt;
+    }
+    if (callback) {
+      var highlight = opt.highlight;
+      var tokens;
+      try {
+        if (opt.hooks) {
+          src = opt.hooks.preprocess(src);
+        }
+        tokens = lexer(src, opt);
+      } catch (e) {
+        return throwError(e);
+      }
+      var done = function done(err) {
+        var out;
+        if (!err) {
+          try {
+            if (opt.walkTokens) {
+              marked.walkTokens(tokens, opt.walkTokens);
+            }
+            out = parser(tokens, opt);
+            if (opt.hooks) {
+              out = opt.hooks.postprocess(out);
+            }
+          } catch (e) {
+            err = e;
+          }
+        }
+        opt.highlight = highlight;
+        return err ? throwError(err) : callback(null, out);
+      };
+      if (!highlight || highlight.length < 3) {
+        return done();
+      }
+      delete opt.highlight;
+      if (!tokens.length) return done();
+      var pending = 0;
+      marked.walkTokens(tokens, function (token) {
+        if (token.type === 'code') {
+          pending++;
+          setTimeout(function () {
+            highlight(token.text, token.lang, function (err, code) {
+              if (err) {
+                return done(err);
+              }
+              if (code != null && code !== token.text) {
+                token.text = code;
+                token.escaped = true;
+              }
+              pending--;
+              if (pending === 0) {
+                done();
+              }
+            });
+          }, 0);
+        }
+      });
+      if (pending === 0) {
+        done();
+      }
+      return;
+    }
+    if (opt.async) {
+      return Promise.resolve(opt.hooks ? opt.hooks.preprocess(src) : src).then(function (src) {
+        return lexer(src, opt);
+      }).then(function (tokens) {
+        return opt.walkTokens ? Promise.all(marked.walkTokens(tokens, opt.walkTokens)).then(function () {
+          return tokens;
+        }) : tokens;
+      }).then(function (tokens) {
+        return parser(tokens, opt);
+      }).then(function (html) {
+        return opt.hooks ? opt.hooks.postprocess(html) : html;
+      })["catch"](throwError);
+    }
+    try {
+      if (opt.hooks) {
+        src = opt.hooks.preprocess(src);
+      }
+      var _tokens = lexer(src, opt);
+      if (opt.walkTokens) {
+        marked.walkTokens(_tokens, opt.walkTokens);
+      }
+      var html = parser(_tokens, opt);
+      if (opt.hooks) {
+        html = opt.hooks.postprocess(html);
+      }
+      return html;
+    } catch (e) {
+      return throwError(e);
+    }
+  };
+}
+
 /**
  * Marked
  */
 function marked(src, opt, callback) {
-  // throw error in case of non string input
-  if (typeof src === 'undefined' || src === null) {
-    throw new Error('marked(): input parameter is undefined or null');
-  }
-  if (typeof src !== 'string') {
-    throw new Error('marked(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
-  }
-  if (typeof opt === 'function') {
-    callback = opt;
-    opt = null;
-  }
-  opt = merge({}, marked.defaults, opt || {});
-  checkSanitizeDeprecation(opt);
-  if (callback) {
-    var highlight = opt.highlight;
-    var tokens;
-    try {
-      tokens = Lexer.lex(src, opt);
-    } catch (e) {
-      return callback(e);
-    }
-    var done = function done(err) {
-      var out;
-      if (!err) {
-        try {
-          if (opt.walkTokens) {
-            marked.walkTokens(tokens, opt.walkTokens);
-          }
-          out = Parser.parse(tokens, opt);
-        } catch (e) {
-          err = e;
-        }
-      }
-      opt.highlight = highlight;
-      return err ? callback(err) : callback(null, out);
-    };
-    if (!highlight || highlight.length < 3) {
-      return done();
-    }
-    delete opt.highlight;
-    if (!tokens.length) return done();
-    var pending = 0;
-    marked.walkTokens(tokens, function (token) {
-      if (token.type === 'code') {
-        pending++;
-        setTimeout(function () {
-          highlight(token.text, token.lang, function (err, code) {
-            if (err) {
-              return done(err);
-            }
-            if (code != null && code !== token.text) {
-              token.text = code;
-              token.escaped = true;
-            }
-            pending--;
-            if (pending === 0) {
-              done();
-            }
-          });
-        }, 0);
-      }
-    });
-    if (pending === 0) {
-      done();
-    }
-    return;
-  }
-  function onError(e) {
-    e.message += '\nPlease report this to https://github.com/markedjs/marked.';
-    if (opt.silent) {
-      return '<p>An error occurred:</p><pre>' + escape(e.message + '', true) + '</pre>';
-    }
-    throw e;
-  }
-  try {
-    var _tokens = Lexer.lex(src, opt);
-    if (opt.walkTokens) {
-      if (opt.async) {
-        return Promise.all(marked.walkTokens(_tokens, opt.walkTokens)).then(function () {
-          return Parser.parse(_tokens, opt);
-        })["catch"](onError);
-      }
-      marked.walkTokens(_tokens, opt.walkTokens);
-    }
-    return Parser.parse(_tokens, opt);
-  } catch (e) {
-    onError(e);
-  }
+  return parseMarkdown(Lexer.lex, Parser.parse)(src, opt, callback);
 }
 
 /**
@@ -2456,7 +2529,7 @@ function marked(src, opt, callback) {
  */
 
 marked.options = marked.setOptions = function (opt) {
-  merge(marked.defaults, opt);
+  marked.defaults = _extends({}, marked.defaults, opt);
   changeDefaults(marked.defaults);
   return marked;
 };
@@ -2477,10 +2550,10 @@ marked.use = function () {
   }
   args.forEach(function (pack) {
     // copy options to new object
-    var opts = merge({}, pack);
+    var opts = _extends({}, pack);
 
     // set async to true if it was set to true before
-    opts.async = marked.defaults.async || opts.async;
+    opts.async = marked.defaults.async || opts.async || false;
 
     // ==-- Parse "addon" extensions --== //
     if (pack.extensions) {
@@ -2590,6 +2663,42 @@ marked.use = function () {
       })();
     }
 
+    // ==-- Parse Hooks extensions --== //
+    if (pack.hooks) {
+      (function () {
+        var hooks = marked.defaults.hooks || new Hooks();
+        var _loop3 = function _loop3(prop) {
+          var prevHook = hooks[prop];
+          if (Hooks.passThroughHooks.has(prop)) {
+            hooks[prop] = function (arg) {
+              if (marked.defaults.async) {
+                return Promise.resolve(pack.hooks[prop].call(hooks, arg)).then(function (ret) {
+                  return prevHook.call(hooks, ret);
+                });
+              }
+              var ret = pack.hooks[prop].call(hooks, arg);
+              return prevHook.call(hooks, ret);
+            };
+          } else {
+            hooks[prop] = function () {
+              for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
+                args[_key5] = arguments[_key5];
+              }
+              var ret = pack.hooks[prop].apply(hooks, args);
+              if (ret === false) {
+                ret = prevHook.apply(hooks, args);
+              }
+              return ret;
+            };
+          }
+        };
+        for (var prop in pack.hooks) {
+          _loop3(prop);
+        }
+        opts.hooks = hooks;
+      })();
+    }
+
     // ==-- Parse WalkTokens extensions --== //
     if (pack.walkTokens) {
       var _walkTokens = marked.defaults.walkTokens;
@@ -2612,7 +2721,7 @@ marked.use = function () {
 
 marked.walkTokens = function (tokens, callback) {
   var values = [];
-  var _loop3 = function _loop3() {
+  var _loop4 = function _loop4() {
     var token = _step.value;
     values = values.concat(callback.call(marked, token));
     switch (token.type) {
@@ -2650,7 +2759,7 @@ marked.walkTokens = function (tokens, callback) {
     }
   };
   for (var _iterator = _createForOfIteratorHelperLoose(tokens), _step; !(_step = _iterator()).done;) {
-    _loop3();
+    _loop4();
   }
   return values;
 };
@@ -2659,30 +2768,7 @@ marked.walkTokens = function (tokens, callback) {
  * Parse Inline
  * @param {string} src
  */
-marked.parseInline = function (src, opt) {
-  // throw error in case of non string input
-  if (typeof src === 'undefined' || src === null) {
-    throw new Error('marked.parseInline(): input parameter is undefined or null');
-  }
-  if (typeof src !== 'string') {
-    throw new Error('marked.parseInline(): input parameter is of type ' + Object.prototype.toString.call(src) + ', string expected');
-  }
-  opt = merge({}, marked.defaults, opt || {});
-  checkSanitizeDeprecation(opt);
-  try {
-    var tokens = Lexer.lexInline(src, opt);
-    if (opt.walkTokens) {
-      marked.walkTokens(tokens, opt.walkTokens);
-    }
-    return Parser.parseInline(tokens, opt);
-  } catch (e) {
-    e.message += '\nPlease report this to https://github.com/markedjs/marked.';
-    if (opt.silent) {
-      return '<p>An error occurred:</p><pre>' + escape(e.message + '', true) + '</pre>';
-    }
-    throw e;
-  }
-};
+marked.parseInline = parseMarkdown(Lexer.lexInline, Parser.parseInline);
 
 /**
  * Expose
@@ -2695,6 +2781,7 @@ marked.Lexer = Lexer;
 marked.lexer = Lexer.lex;
 marked.Tokenizer = Tokenizer;
 marked.Slugger = Slugger;
+marked.Hooks = Hooks;
 marked.parse = marked;
 var options = marked.options;
 var setOptions = marked.setOptions;
@@ -2705,6 +2792,7 @@ var parse = marked;
 var parser = Parser.parse;
 var lexer = Lexer.lex;
 
+exports.Hooks = Hooks;
 exports.Lexer = Lexer;
 exports.Parser = Parser;
 exports.Renderer = Renderer;
