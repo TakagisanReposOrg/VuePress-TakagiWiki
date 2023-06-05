@@ -4,7 +4,7 @@ export default sidebar({
      sidebar: [
     {
       text: "音乐",
-      prefix: "/docs/music/",
+      prefix: "/docs/",
       children: [
           "ED.md" ,
           "OP.md" ,
@@ -14,7 +14,7 @@ export default sidebar({
     },
     {
       text: "漫画",
-      prefix: "/docs/manga/",
+      prefix: "/docs/",
       children: [
           "Takagi-OG.md" ,
           "Spinoff-Moto.md" ,
@@ -24,7 +24,7 @@ export default sidebar({
     },
     {
       text: "动画",
-      prefix: "/docs/anime/",
+      prefix: "/docs/",
       children: [
           "S1.md" ,
           "S2.md" ,
@@ -34,7 +34,7 @@ export default sidebar({
     },
     {
       text: "衍生/社群",
-      prefix: "/docs/derivative/",
+      prefix: "/docs/",
       children: [
           "Related-Book.md" ,
           "Related-Software.md" ,
