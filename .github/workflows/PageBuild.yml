@@ -19,7 +19,7 @@ jobs:
           persist-credentials: false
   
       - name: 生成静态文件
-        run: yarn build
+        run: pnpm build
 
       # 部署到 公开页面
       - name: Deploy
