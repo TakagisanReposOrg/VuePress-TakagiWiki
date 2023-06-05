@@ -26,6 +26,6 @@ jobs:
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: git@github.com:yzsong06/TakagiWikiSiteCNVuePage.git
-          BRANCH: gh-pages
+          BRANCH: main
           FOLDER: ./vuepress/dist
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
