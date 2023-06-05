@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "/Takagi_Movie_Poster_Original_2_.png",
 
-  repo: "yzsong06/TakagiWikiSiteCNVue",
+  repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
 
   docsDir: "src",
 
