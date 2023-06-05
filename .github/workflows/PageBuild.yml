@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-  
+      - run: npm i pnpm
+      
       - name: 生成静态文件
         run: pnpm build
 
