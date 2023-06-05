@@ -20,7 +20,7 @@ export default navbar([
       },
       {
         text: "手游 “心动记录”",
-        link: "ED.md",
+        link: "GAME.md",
       },
         ],
   },
