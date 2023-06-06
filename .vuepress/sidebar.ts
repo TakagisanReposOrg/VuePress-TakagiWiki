@@ -39,5 +39,11 @@ export const Sidebar = sidebar({
       prefix: "goods/",
       children: "structure",
     },
+    {
+      text: "其他",
+      icon: "square",
+      prefix: "other/",
+      children: "structure",
+    },
   ],
 });
