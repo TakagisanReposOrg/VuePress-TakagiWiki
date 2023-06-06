@@ -16,8 +16,6 @@ export default hopeTheme({
 
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
 
-  docsDir: "src",
-
   // navbar
   navbar,
 
