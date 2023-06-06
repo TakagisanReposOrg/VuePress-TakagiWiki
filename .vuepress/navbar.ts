@@ -72,6 +72,21 @@ export default navbar([
         ],
   },
   {
+    text: "角色",
+    icon: "user",
+    prefix: "/body/",
+    children: [
+      {
+        text: "高木正篇角色",
+        link: "Takagi-OG.md",
+      },
+      {
+        text: "高木番外角色",
+        link: "Takagi-OH.md",
+      },
+        ],
+  },
+  {
     text: "衍生/社群",
     icon: "users",
     prefix: "/derivative/",
@@ -106,6 +121,25 @@ export default navbar([
       {
         text: "IP授权周边产品",
         link: "Officalip.md",
+      },
+        ],
+  },
+  {
+    text: "其他",
+    icon: "square",
+    prefix: "/other/",
+    children: [
+      {
+        text: "关于",
+        link: "Info.md",
+      },
+      {
+        text: "站点建设日志",
+        link: "Action.md",
+      },
+      {
+        text: "赞助站点",
+        link: "Pay.md",
       },
         ],
   },

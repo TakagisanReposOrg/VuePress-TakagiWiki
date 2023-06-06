@@ -22,6 +22,12 @@ export const Sidebar = sidebar({
       children: "structure",
     },
     {
+      text: "角色",
+      icon: "user",
+      prefix: "body/",
+      children: "structure",
+    },
+    {
       text: "衍生/社群",
       icon: "users",
       prefix: "derivative/",
