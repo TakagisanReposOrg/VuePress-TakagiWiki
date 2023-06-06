@@ -22,7 +22,7 @@ export default hopeTheme({
   // sidebar
   sidebar: Sidebar,
 
-  footer: "基于Vuepress Beta2版本，Hope主题",
+  footer: "《擅长捉弄的高木同学》自建资料站Vue版",
 
   displayFooter: true,
 
@@ -36,10 +36,8 @@ export default hopeTheme({
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-  blog: {
-  },
   plugins: {
-
+    
     // You should generate and use your own comment service
     //comment: {
       //provider: "Giscus",

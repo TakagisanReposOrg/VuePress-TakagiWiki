@@ -1,3 +1,11 @@
+---
+home: true
+icon: home
+hexoText: 高木同学自建资料站
+bgImage: https://npm.elemecdn.com/filetakagiwikicn/source/wiki/wikibanner.webp
+footer: BY-NC-SA Licensed | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span> 
+---
 
 基于静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。  
 
@@ -17,7 +25,7 @@
 
 PR提交编辑指引：遵循Markdown语法、尊重其他现有界面的布局风格，以客观公开可见可查的内容为基础进行内容填充。
 
-文档位置：【例】“音乐”相关页面，则文档文件存放在 docs/music，编辑内部相应名称文档以执行更改
+文档位置：【例】“音乐”相关页面，则文档文件存放在 /music，编辑内部相应名称文档以执行更改
 
 ------
 ## 提交指引
