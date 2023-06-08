@@ -3,7 +3,7 @@ title: 前言
 author: 一只鬆
 ---
 
-Hi,我是[一只鬆](https://githuub.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/MuFeng086)所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagiWikiSitesCN/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki)）。
+Hi,我是[一只鬆](https://githuub.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/MuFeng086) 所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagiWikiSitesCN/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki)）。
 
 站点建设速度目前来看并不快，主要也是我们这个项目其实人也不多（目前主要就我跟牧丰和南栀），而且在分工上基本就是我管站点框架功能类，牧丰可能比较全能（Doge）、而南栀主要只是写内容。主要也是因为我并不是很擅长写文档内容。
 
@@ -22,7 +22,7 @@ Hi,我是[一只鬆](https://githuub.com/yzsong06)，这个资料站项目建立
 
 ## 编辑指引
 
-** 1. 不同编辑者身份**
+**1. 不同编辑者身份**
 
 此处我们需要分两种分情况：**短期/少量编辑者**（适用于看到问题顺带帮忙解决的）、**长期编辑者/合作者**（可多次帮忙完善或提供意见建议者）
 
@@ -37,7 +37,7 @@ Hi,我是[一只鬆](https://githuub.com/yzsong06)，这个资料站项目建立
 如果需要长期多次修改，可联系本站或仓库管理员申请将你拉入协作者，加入协作者身份后，您可直接对仓库内容进行更改无需通过拉去提交等较为复杂和低时效性的流程。
 但因为协作者权限可直接修改全部内容的权限所在，因此对于权限的放行我们持谨慎态度，敬请理解。
 
-**2. 如何编辑
+**2. 如何编辑**
 
 文档全部兼容Markdown语法，请尊重其他现有界面的布局风格，以客观公开可见可查的内容为基础进行内容填充。
 

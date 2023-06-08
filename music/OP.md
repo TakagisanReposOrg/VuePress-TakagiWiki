@@ -1,6 +1,6 @@
 ---
 title: 主题曲（OP）& 插曲
-author: 牧丰
+author: 轻虹空雨
 ---
 
 （创作 & 演唱：大原由衣子(大原ゆい子)）
@@ -10,11 +10,8 @@ author: 牧丰
 |言わないけどね。(アニメ盤)|ゼロセンチメートル(アニメ盤)|Island Memories|
 |:--|:--|:--|
 |虽然不会说出口。（动画盘）（第一季）|零厘米（动画盘）（第二季）|Island Memories（第三季&剧场版）|
-|![306c82696d739ec74f1d8780b9df8713.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c2a4fa54.jpg)|![af20e3779cbbaad0125637f8feb907f5.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c2bd5ea6.jpg)|![S3movie-origin-album.jpg](https://pic.mufeng086.com/i/2023/05/08/64588d221f02c.jpg)|
 <br/>
 曲目表：
-
-【移动端用户请左右滑动表格】
 
 |季度|日文曲名|中文译名|归属|
 |:--|:--|:--|:--|
