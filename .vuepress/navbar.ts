@@ -3,6 +3,17 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
 
   {
+    text: "指南",
+    icon: "compass",
+    prefix: "/make/",
+    children: [
+      {
+        text: "前言",
+        link: "Start.md",
+      },
+        ],
+  },
+  {
     text: "音乐",
     icon: "music",
     prefix: "/music/",

@@ -3,6 +3,13 @@ import { sidebar } from "vuepress-theme-hope";
 export const Sidebar = sidebar({
   "/": [
     {
+      text: "指南",
+      icon: "compass",
+      prefix: "make/",
+      link: "make/",
+      children: "structure",
+    },
+    {
       text: "音乐",
       icon: "music",
       prefix: "music/",
