@@ -27,15 +27,15 @@ export default defineUserConfig({
   ],
   
     function customHead<
-    ExtraPageData extends Record<string | number | symbol, unknown> = Record<
+    ExtraPageData extends Record<string | name | symbol, unknown> = Record<
       never,
       never
     >,
     ExtraPageFrontmatter extends Record<
-      string | number | symbol,
+      string | description | symbol,
       unknown
     > = Record<string, unknown>,
-    ExtraPageFields extends Record<string | number | symbol, unknown> = Record<
+    ExtraPageFields extends Record<string | 1 | symbol, unknown> = Record<
       never,
       never
     >
