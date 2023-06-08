@@ -25,6 +25,27 @@ export default defineUserConfig({
       // appId, apiKey 和 indexName 是必填的
     }}),
   ],
+  
+    function customHead<
+    ExtraPageData extends Record<string | number | symbol, unknown> = Record<
+      never,
+      never
+    >,
+    ExtraPageFrontmatter extends Record<
+      string | number | symbol,
+      unknown
+    > = Record<string, unknown>,
+    ExtraPageFields extends Record<string | number | symbol, unknown> = Record<
+      never,
+      never
+    >
+  >(
+    head: HeadConfig[],
+    /** 页面对象 */
+    page: Page<ExtraPageData, ExtraPageFrontmatter, ExtraPageFields>,
+    /** VuePress App */
+    app: App
+  ): void;
 
   // Enable it with pwa
   // shouldPrefetch: false,
