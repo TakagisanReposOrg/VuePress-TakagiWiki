@@ -12,7 +12,7 @@ author: 牧丰
 
 | 作者推特-章节彩图（2023.6.7）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|[![](https://pic.imgdb.cn/item/648169a91ddac507cc76d398.jpg)](http://shareimg.takagi3.cn/image/z4Yi)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
+|[![pCksHde.md.jpg](https://s1.ax1x.com/2023/06/08/pCksHde.md.jpg)](https://imgse.com/i/pCksHde)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
 <br/>
 动画改编情况：
 
