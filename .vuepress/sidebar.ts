@@ -31,7 +31,7 @@ export const Sidebar = sidebar({
     {
       text: "角色",
       icon: "user",
-      prefix: "body/",
+      prefix: "role/",
       children: "structure",
     },
     {

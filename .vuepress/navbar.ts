@@ -85,7 +85,7 @@ export default navbar([
   {
     text: "角色",
     icon: "user",
-    prefix: "/body/",
+    prefix: "/role/",
     children: [
       {
         text: "高木正篇角色",
