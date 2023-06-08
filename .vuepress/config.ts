@@ -26,6 +26,11 @@ export default defineUserConfig({
     }}),
   ],
   
+  head:
+  - - meta
+    - name: keywords
+      content: SEO plugin
+  
     function customHead<
     ExtraPageData extends Record<string | name | symbol, unknown> = Record<
       never,
