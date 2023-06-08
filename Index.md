@@ -3,6 +3,17 @@ home: true
 icon: home
 hexoText: 高木同学自建资料站
 bgImage: https://npm.elemecdn.com/filetakagiwikicn/source/wiki/wikibanner.webp
+actions:
+  - text: 站点指南 🧭
+    link: /make/Start.html
+    type: primary
+
+  - text: 赞助 💡
+    link: /other/Pay.html
+
+  - text: 站点仓库
+    link: https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki
+    
 footer: BY-NC-SA Licensed | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">
     本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span> 
 ---
