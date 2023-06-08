@@ -26,32 +26,7 @@ export default defineUserConfig({
     }}),
   ],
   
-  head:
-  - - meta
-    - name: keywords
-      content: SEO plugin
-  
-    function customHead<
-    ExtraPageData extends Record<string | name | symbol, unknown> = Record<
-      never,
-      never
-    >,
-    ExtraPageFrontmatter extends Record<
-      string | description | symbol,
-      unknown
-    > = Record<string, unknown>,
-    ExtraPageFields extends Record<string | 1 | symbol, unknown> = Record<
-      never,
-      never
-    >
-  >(
-    head: HeadConfig[],
-    /** 页面对象 */
-    page: Page<ExtraPageData, ExtraPageFrontmatter, ExtraPageFields>,
-    /** VuePress App */
-    app: App
-  ): void;
-
+ 
   // Enable it with pwa
   // shouldPrefetch: false,
 });
