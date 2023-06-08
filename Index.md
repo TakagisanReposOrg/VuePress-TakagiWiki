@@ -11,9 +11,9 @@ footer: BY-NC-SA Licensed | <script async src="//busuanzi.ibruce.info/busuanzi/2
 
 仓库实际所有人、资料站站长&运维：[@一只鬆](https://www.takagi.icu/)
 
-本站点内容基于VuePress部署，Hexo部署项目（[@轻虹空雨](https://github.com/MuFeng086)）：(https://github.com/TakagiWikiSitesCN/Hexo-TakagiWiki)
+本站点内容基于VuePress部署，Hexo部署项目（已封档，项目已转移给Vuepress继续运营）（[@轻虹空雨](https://github.com/MuFeng086)）：[仓库地址](https://github.com/TakagiWikiSitesCN/Hexo-TakagiWiki)
 
-另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：(https://github.com/TakagiWikiSitesCN)
+另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：[组织地址](https://github.com/TakagiWikiSitesCN)
 
 ------
 
