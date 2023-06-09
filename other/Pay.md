@@ -5,4 +5,4 @@ title: 赞助&部分贡献者
 
 1. [一只鬆的赞助页](https://www.takagi.icu/pay)
 3. [轻虹空雨的赞助页](https://mufeng086.com/support)
-4. [南栀的赞助页](https://litkg.com/index.php/archives/1/)
+4. [南栀的赞助页](https://litkg.com/?page_id=16)
