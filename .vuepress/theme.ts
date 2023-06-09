@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/TakagiLogo.png",
+  logo: "logo.png",
 
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
 
