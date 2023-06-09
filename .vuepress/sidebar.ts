@@ -26,7 +26,12 @@ export const Sidebar = sidebar({
       text: "动画",
       icon: "video",
       prefix: "anime/",
-      children: "structure",
+      children: [
+        "S1/",
+        "S2",
+        "S3",
+        "Movie",
+      ],
     },
     {
       text: "角色",
