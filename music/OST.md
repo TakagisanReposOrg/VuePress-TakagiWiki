@@ -8,7 +8,6 @@ author: 轻虹空雨
 |「からかい上手の高木さん」Music Collection|「からかい上手の高木さん2」Music Collection|「からかい上手の高木さん3」Music Collection|劇場版『からかい上手の高木さん』Music Collection|
 |:--|:--|:--|:--|
 |动画第一季原声带|动画第二季原声带|动画第三季原声带|剧场版原声带|
-|![bb11eb0b942f3bd1f31318ba6ad374b7.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c26bb5a6.jpg)|![dd789966ea5900ace097a35c2cf30cd3.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c21e0e6c.jpg)|![5ff4b92e662b977c14ad3e058fcb5fe2.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c250fe2d.jpg)|![176a6c7ca8b47d4493a96f12deea048d.jpg](https://pic.mufeng086.com/i/2023/05/08/64588c2616f4b.jpg)|
 <br/>
 
 **（第三季与剧场版OST实体光碟尚未发售，此为网络配信版专辑封面）**
