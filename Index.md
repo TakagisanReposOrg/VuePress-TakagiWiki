@@ -2,7 +2,8 @@
 home: true
 icon: home
 hexoText: 高木同学自建资料站
-bgImage: https://npm.elemecdn.com/filetakagiwikicn/source/wiki/wikibanner.webp
+bgImage: https://pic.imgdb.cn/item/648567221ddac507cc631d7f.webp
+bgImagedark: https://pic.imgdb.cn/item/648567211ddac507cc631d53.webp
 actions:
   - text: 站点指南
     link: /make/Start.html
