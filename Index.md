@@ -15,6 +15,47 @@ actions:
   - text: 站点仓库
     link: https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki
 
+features:
+  - title: 音乐
+    icon: music
+    details: 高木动画音乐及手游音乐
+    link: /music/
+
+  - title: 漫画
+    icon: book
+    details: 高木正篇及其番外与周边同人漫画
+    link: /manga/
+
+  - title: 动画
+    icon: video
+    details: 《擅长捉弄的高木同学》番剧动画
+    link: /video/
+
+  - title: 角色
+    icon: user
+    details: 高木正篇及番外与同人角色
+    link: /role/
+
+  - title: 衍生/社群
+    icon: users
+    details: 高木周边衍生社区社群及同人作品相关
+    link: /derivative/
+
+  - title: 衍生/周边
+    icon: shopping-cart
+    details: 官方及周边授权商品或特典
+    link: /goods/
+
+  - title: 站点指南
+    icon: guide
+    details: 本资料站相关内容完善及使用指南
+    link: /guide/
+
+  - title: 其他
+    icon: square
+    details: 其他有关建设本资料站的相关支持
+    link: /other/
+
 footer: 《擅长捉弄的高木同学》自建资料站 | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">
     本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span> 
 ---
