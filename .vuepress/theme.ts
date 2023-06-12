@@ -14,6 +14,8 @@ export default hopeTheme({
 
   logo: "logo.png",
 
+	fullscreen: true,
+
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
 
   // navbar
