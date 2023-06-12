@@ -5,8 +5,8 @@ export const Sidebar = sidebar({
     {
       text: "指南",
       icon: "compass",
-      prefix: "make/",
-      link: "make/",
+      prefix: "guide/",
+      link: "guide/",
       children: "structure",
     },
     {

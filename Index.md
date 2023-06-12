@@ -47,7 +47,7 @@ features:
     link: /goods/
 
   - title: 站点指南
-    icon: guide
+    icon: compass
     details: 本资料站相关内容完善及使用指南
     link: /guide/
 
