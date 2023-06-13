@@ -1,8 +1,27 @@
 ---
 title: 赞助&部分贡献者
 ---
-站点目前有多位维护者：
 
-[一只鬆的赞助页](https://www.takagi.icu/pay)
-[轻虹空雨的赞助页](https://mufeng086.com/support)
-[南栀的赞助页](https://litkg.com/?page_id=16)
+```card
+title: 一只鬆
+desc: 心有多宽，世界就会有多远
+logo: https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp
+link: https://www.takagi.icu/pay
+color: rgba(253, 230, 138, 0.15)
+```
+
+```card
+title: 轻虹空雨
+desc: 热爱依然，生活仍然
+logo: https://docimg6.docs.qq.com/image/AgAAC6u-TVPb2bHz_1ZPq4BgNNA2B7yz.jpeg
+link: https://mufeng086.com/support
+color: rgba(253, 230, 138, 0.15)
+```
+
+```card
+title: 南栀
+desc: 高木同学天下第一！
+logo: http://q.qlogo.cn/headimg_dl?dst_uin=2360372707&spec=640&img_type=png
+link: https://litkg.com/?page_id=16
+color: rgba(253, 230, 138, 0.15)
+```

@@ -39,7 +39,9 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
   plugins: {
-    
+    mdEnhance: {
+        card: true
+      },
     // You should generate and use your own comment service
     //comment: {
       //provider: "Giscus",
