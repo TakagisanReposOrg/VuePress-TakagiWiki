@@ -20,7 +20,12 @@ export const Sidebar = sidebar({
       text: "漫画",
       icon: "book",
       prefix: "manga/",
-      children: "structure",
+      children: [
+        "Takagi-OG",
+        "Spinoff-Moto",
+        "Spinoff-Tis",
+        "Spinoff-Yukari",
+      ],
     },
     {
       text: "动画",
@@ -37,13 +42,21 @@ export const Sidebar = sidebar({
       text: "角色",
       icon: "user",
       prefix: "role/",
-      children: "structure",
+      children: [
+        "Takagi-OG",
+        "Takagi-OH"
+      ],
     },
     {
       text: "衍生/社群",
       icon: "users",
       prefix: "derivative/",
-      children: "structure",
+      children: [
+        "Related-Book",
+        "Related-Software",
+        "FanGroup",
+        "Related-Creation",
+      ],
     },
     {
       text: "商品/周边",

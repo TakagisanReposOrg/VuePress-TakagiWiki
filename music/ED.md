@@ -10,6 +10,7 @@ author: 轻虹空雨
 |「からかい上手の高木さん」Cover Song Collection|「からかい上手の高木さん2」Cover Song Collection|「からかい上手の高木さん3 & 劇場版」Cover Song Collection|
 |:--|:--|:--|
 |动画第一季翻唱盘|动画第二季翻唱盘|动画第三季&剧场版翻唱盘|
+
 <br/>
 曲目表：
 
