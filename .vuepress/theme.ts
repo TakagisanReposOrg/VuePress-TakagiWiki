@@ -44,6 +44,7 @@ export default hopeTheme({
     mdEnhancePlugin({
       // 启用自定义容器
       container: true,
+      // 开启卡片支持
       card: true,
     }),
   ],
