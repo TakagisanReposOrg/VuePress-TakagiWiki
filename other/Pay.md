@@ -13,7 +13,7 @@ color: rgba(253, 230, 138, 0.15)
 ```card
 title: 轻虹空雨
 desc: 热爱依然，生活仍然
-logo: https://docimg6.docs.qq.com/image/AgAAC6u-TVPb2bHz_1ZPq4BgNNA2B7yz.jpeg
+logo: https://pic.imgdb.cn/item/645c58bc0d2dde577762b1fc.jpg
 link: https://mufeng086.com/support
 color: rgba(253, 230, 138, 0.15)
 ```

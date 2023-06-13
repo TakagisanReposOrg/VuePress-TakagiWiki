@@ -41,6 +41,9 @@ export default hopeTheme({
   plugins: {
     mdEnhance: {
         card: true
+				//启用卡片支持
+				// 启用自定义容器
+      	container: true,
       },
     // You should generate and use your own comment service
     //comment: {
