@@ -1,3 +1,4 @@
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import { Sidebar } from "./sidebar.js";
@@ -38,13 +39,15 @@ export default hopeTheme({
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-  plugins: {
-    mdEnhance: {
-        card: true
-				//启用卡片支持
-				// 启用自定义容器
-      	container: true,
-      },
+
+  plugins: [
+    mdEnhancePlugin({
+      // 启用自定义容器
+      container: true,
+      card: true,
+    }),
+  ],
+
     // You should generate and use your own comment service
     //comment: {
       //provider: "Giscus",
@@ -52,7 +55,6 @@ export default hopeTheme({
       //repoId: "R_kgDOJrF6hQ",
       //category: "Announcements",
       //categoryId: "DIC_kwDOJrF6hc4CW-t-",
-    },
 
     // uncomment these if you want a pwa
     // pwa: {
