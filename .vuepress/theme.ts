@@ -41,15 +41,16 @@ export default hopeTheme({
   plugins: {
     mdEnhance: {
         card: true,
+				//启用卡片支持
       	container: true,
+				//启用自定义容器支持
       },
-    // You should generate and use your own comment service
-    //comment: {
-      //provider: "Giscus",
-      //repo: "yzsong06/TakagiWikiSiteCNVue",
-      //repoId: "R_kgDOJrF6hQ",
-      //category: "Announcements",
-      //categoryId: "DIC_kwDOJrF6hc4CW-t-",
+    comment: {
+      provider: "Giscus",
+      repo: "TakagisanArchiveRepos/VuePress-TakagiWiki",
+      repoId: "R_kgDOJreHww",
+    	category: "评论区（Gistus General）",
+      categoryId: "DIC_kwDOJreHw84CW--T",
     },
 
     // uncomment these if you want a pwa
@@ -109,4 +110,4 @@ export default hopeTheme({
     //   },
     // },
   },
-);
+});
