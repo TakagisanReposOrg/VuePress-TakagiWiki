@@ -137,7 +137,7 @@ export default navbar([
         link: "Action.md",
       },
       {
-        text: "赞助站点",
+        text: "赞助/贡献者",
         link: "Pay.md",
       },
         ],

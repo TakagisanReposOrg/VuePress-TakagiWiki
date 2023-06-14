@@ -9,11 +9,11 @@ actions:
     link: /make/Start.html
     type: primary
 
-  - text: 赞助我们
+  - text: 赞助/贡献者
     link: /other/Pay.html
 
   - text: 站点仓库
-    link: https://github.com/TakagiWikiSitesCN/VuePress-TakagiWiki
+    link: https://github.com/TakagisanArchiveRepos/VuePress-TakagiWiki
 
 features:
   - title: 音乐

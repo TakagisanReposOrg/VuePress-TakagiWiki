@@ -52,6 +52,12 @@ export default hopeTheme({
     	category: "评论区（Gistus General）",
       categoryId: "DIC_kwDOJreHw84CW--T",
     },
+		components: {
+        // 你想使用的组件
+        components: [
+          "SiteInfo",
+        ],
+      },
 
     // uncomment these if you want a pwa
     // pwa: {
