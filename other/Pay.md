@@ -23,7 +23,7 @@ preview="https://img.zcool.cn/community/013c9459e08304a80121ae0c371ae5.jpg@3000w
 <SiteInfo
   name="南栀"
   desc="高木同学天下第一！"
-  url="https://litkg.com/?page_id=16"
+  url="https://litkg.com/index.php/start-page.html"
 logo="http://q.qlogo.cn/headimg_dl?dst_uin=2360372707&spec=640&img_type=png"
 	repo="https://github.com/nanzhi63"
 preview="https://img.zcool.cn/community/013c9459e08304a80121ae0c371ae5.jpg@3000w_1l_0o_100sh.jpg"
