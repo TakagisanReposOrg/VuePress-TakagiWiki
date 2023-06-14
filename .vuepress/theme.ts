@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "logo.png",
 
-	fullscreen: true,
+  fullscreen: true,
 
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
 
@@ -40,24 +40,30 @@ export default hopeTheme({
   },
   plugins: {
     mdEnhance: {
-        card: true,
-				//启用卡片支持
-      	container: true,
-				//启用自定义容器支持
-      },
-    comment: {
-      provider: "Giscus",
-      repo: "TakagisanArchiveRepos/VuePress-TakagiWiki",
-      repoId: "R_kgDOJreHww",
-    	category: "评论区（Gistus General）",
-      categoryId: "DIC_kwDOJreHw84CW--T",
+      card: true,
+      //启用卡片支持
+      container: true,
+      //启用自定义容器支持
     },
-		components: {
-        // 你想使用的组件
-        components: [
-          "SiteInfo",
-        ],
-      },
+    comment: {
+      provider: "Waline",
+      serverURL: "https://wikicomment.zeabur.app",
+      dark: 'auto',
+      commentSorting: 'hottest',
+      meta: ['nick', 'mail'],
+      requiredMeta: ['nick'],
+      login: "enable",
+      wordLimit: 0,
+      pageSize: 5,
+      copyright: true,
+      recaptchaV3Key: "6LddA5cmAAAAAEHTA18Jt_4m8EpllBxfZMmmBefo",
+    },
+    components: {
+      // 你想使用的组件
+      components: [
+        "SiteInfo",
+      ],
+    },
 
     // uncomment these if you want a pwa
     // pwa: {
