@@ -48,6 +48,7 @@ export default hopeTheme({
     comment: {
       provider: "Waline",
       serverURL: "https://tkgwikiwaline.mufeng086.com/",
+      emoji: ['//unpkg.com/@waline/emojis@1.1.0/bilibili'],
       dark: 'auto',
       commentSorting: 'hottest',
       meta: ['nick', 'mail'],
