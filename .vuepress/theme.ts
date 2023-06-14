@@ -47,7 +47,7 @@ export default hopeTheme({
     },
     comment: {
       provider: "Waline",
-      serverURL: "https://wikicomment.zeabur.app",
+      serverURL: "https://tkgwikiwaline.mufeng086.com/",
       dark: 'auto',
       commentSorting: 'hottest',
       meta: ['nick', 'mail'],
