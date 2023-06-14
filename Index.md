@@ -6,7 +6,7 @@ bgImage: https://pic.imgdb.cn/item/648568de1ddac507cc66bd27.webp
 bgImageDark: https://pic.imgdb.cn/item/648568de1ddac507cc66bd56.webp
 actions:
   - text: 站点指南
-    link: /make/Start.html
+    link: /guide/Start.html
     type: primary
 
   - text: 赞助/贡献者

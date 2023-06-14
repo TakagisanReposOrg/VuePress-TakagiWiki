@@ -1,5 +1,5 @@
 ---
-title: 赞助&部分贡献者
+title: 赞助&协作者
 ---
 
 <SiteInfo
