@@ -140,6 +140,10 @@ export default navbar([
         text: "赞助/贡献者",
         link: "Pay.md",
       },
+			{
+				text: "站点贡献者",
+				link: "List.md",
+			},
         ],
   },
 ]);

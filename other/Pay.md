@@ -1,7 +1,7 @@
 ---
 title: 赞助&协作者
+author: false
 ---
-
 <SiteInfo
   name="一只鬆"
   desc="心有多宽，世界就会有多远"
