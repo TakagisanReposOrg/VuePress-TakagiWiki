@@ -1,3 +1,4 @@
 .vuepress/.cache
 .vuepress/.temp
-node_modules
+# Node modules
+**/node_modules/**
