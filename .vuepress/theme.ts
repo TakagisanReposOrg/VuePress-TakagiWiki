@@ -46,10 +46,10 @@ export default hopeTheme({
       //启用自定义容器支持
     },
     comment: {
-      provider: "None",
-      //serverURL: "https://waline-wiki.mufeng086.com/",
-      //emoji: ['//unpkg.com/@waline/emojis@1.1.0/bilibili'],
-      //dark: 'auto',
+      provider: "Artalk",
+      server: "https://artalk.takagi.icu",
+      emoticons: "https://cdn.bootcdn.net/ajax/libs/owo/1.0.2/OwO.min.css"
+				//dark: 'auto',
       //commentSorting: 'hottest',
       //meta: ['nick', 'mail'],
       //requiredMeta: ['nick'],
