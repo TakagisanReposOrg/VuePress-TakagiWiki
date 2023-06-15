@@ -8,7 +8,7 @@ author: false
   url="https://www.takagi.icu/pay"
 logo="https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp"
 	repo="https://github.com/yzsong06"
-preview="https://img.zcool.cn/community/013c9459e08304a80121ae0c371ae5.jpg@3000w_1l_0o_100sh.jpg"
+preview="https://img95.699pic.com/photo/40140/9926.gif_wh860.gif"
 />
 
 <SiteInfo
