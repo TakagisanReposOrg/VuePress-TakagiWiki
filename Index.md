@@ -29,7 +29,7 @@ features:
   - title: 动画
     icon: video
     details: 《擅长捉弄的高木同学》番剧动画
-    link: /video/
+    link: /anime/
 
   - title: 角色
     icon: user
