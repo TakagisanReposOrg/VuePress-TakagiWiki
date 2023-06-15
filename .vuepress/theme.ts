@@ -47,7 +47,7 @@ export default hopeTheme({
     },
     comment: {
       provider: "Waline",
-      serverURL: "https://waline.takagi.icu/",
+      serverURL: "https://waline-1-j6551192.deta.app/",
       emoji: ['//unpkg.com/@waline/emojis@1.1.0/bilibili'],
       dark: 'auto',
       commentSorting: 'hottest',
@@ -57,6 +57,13 @@ export default hopeTheme({
       wordLimit: 0,
       pageSize: 5,
       copyright: true,
+      SMTP_SERVICE: "QQex",
+      SMTP_USER: "feedback@takagi3.cn",
+      SMTP_PASS: "bR63oscHFEizEyNs",
+      SMTP_SECURE: true,
+      SITE_NAME: "高木同学资料站",
+      SITE_URL: "https://wiki.takagi3.cn",
+      AUTHOR_EMAIL: "mufeng086@gmail.com",
     },
     components: {
       // 你想使用的组件
