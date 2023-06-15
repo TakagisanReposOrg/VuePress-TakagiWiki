@@ -57,7 +57,6 @@ export default hopeTheme({
       wordLimit: 0,
       pageSize: 5,
       copyright: true,
-      recaptchaV3Key: "6LddA5cmAAAAAEHTA18Jt_4m8EpllBxfZMmmBefo",
     },
     components: {
       // 你想使用的组件
