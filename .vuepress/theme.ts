@@ -57,7 +57,6 @@ export default hopeTheme({
       wordLimit: 0,
       pageSize: 5,
       copyright: true,
-      TURNSTILE_KEY: "0x4AAAAAAAGKZc7RtgMEVKjk",
     },
     components: {
       // 你想使用的组件
