@@ -46,18 +46,18 @@ export default hopeTheme({
       //启用自定义容器支持
     },
     comment: {
-      provider: "Artalk",
-      server: "https://artalk.takagi.icu",
-      emoticons: "https://cdn.bootcdn.net/ajax/libs/owo/1.0.2/OwO.min.css"
-				//dark: 'auto',
-      //commentSorting: 'hottest',
-      //meta: ['nick', 'mail'],
-      //requiredMeta: ['nick'],
-      //login: "enable",
-      //wordLimit: 0,
-      //pageSize: 5,
-      //copyright: true,
-      //recaptchaV3Key: "6LddA5cmAAAAAEHTA18Jt_4m8EpllBxfZMmmBefo",
+      provider: "Waline",
+      serverURL: "https://waline.takagi.icu/",
+      emoji: ['//unpkg.com/@waline/emojis@1.1.0/bilibili'],
+      dark: 'auto',
+      commentSorting: 'hottest',
+			meta: ['nick', 'mail'],
+      requiredMeta: ['nick'],
+      login: "enable",
+      wordLimit: 0,
+      pageSize: 5,
+      copyright: true,
+      recaptchaV3Key: "6LddA5cmAAAAAEHTA18Jt_4m8EpllBxfZMmmBefo",
     },
     components: {
       // 你想使用的组件
