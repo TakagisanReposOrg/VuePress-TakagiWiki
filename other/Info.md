@@ -4,10 +4,10 @@ author: false
 comment: false
 ---
 ::: tip
-站点中使用了新版浏览器技术，如果你的浏览器访问时出现问题，请更换最新浏览器访问
+站点中部分使用了新版浏览器所支持的技术，如果你的浏览器访问站点时出现问题，请更换最新浏览器访问
 :::
 ## **站点依赖相关**
-本项目使用了[Vuepress](https://vuepress.vuejs.org/zh/)作为文档站点构建工具，使用主题为[Vuepress Hope](https://theme-hope.vuejs.press)  
+本项目使用了[Vuepress](https://vuepress.vuejs.org/zh/)作为文档站点构建工具，使用主题为[Vuepress Hope](https://theme-hope.vuejs.press)，同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持  
 使用到的其他插件或依赖：
 1. [Vuepress-Plugin-Mdenhance](https://plugin-md-enhance.vuejs.press/zh/)：为站点启用更多Markdown语法与新功能
 2. [Waline](https://waline.js.org)：为站点启用评论功能
