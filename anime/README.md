@@ -8,7 +8,7 @@ comment: false
   name="第一季"
   desc="《擅长捉弄的高木同学》第一季"
   url="https://wiki.takagi3.cn/anime/S1.html"
-	preview="https://image2.b-ch.com/ttl2/5875/5875001a.jpg?impolicy=fitin&ww=960&hh=540"
+	preview="https://pic.imgdb.cn/item/648c0e2c1ddac507cc2223e0.webp"
 />
 
 <SiteInfo
