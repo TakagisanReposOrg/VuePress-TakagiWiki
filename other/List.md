@@ -1,6 +1,6 @@
 ---
 title: 项目贡献者
-icon: "support"
+icon: "handshake"
 author: false
 ---
 ::: info

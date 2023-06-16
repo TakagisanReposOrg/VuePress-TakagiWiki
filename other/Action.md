@@ -1,6 +1,6 @@
 ---
 title: 站点建设日志
-icon: "activity"
+icon: "list-check"
 author: false
 comment: false
 ---
