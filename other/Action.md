@@ -1,5 +1,6 @@
 ---
 title: 站点建设日志
+icon: "activity"
 author: false
 comment: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: 项目贡献者
+icon: "support"
 author: false
 ---
 ::: info

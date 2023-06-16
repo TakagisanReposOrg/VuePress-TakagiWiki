@@ -66,7 +66,7 @@ export const Sidebar = sidebar({
     },
     {
       text: "其他",
-      icon: "square",
+      icon: "ellipsis",
       prefix: "other/",
       children: "structure",
     },

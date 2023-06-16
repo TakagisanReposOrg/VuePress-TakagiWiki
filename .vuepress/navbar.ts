@@ -109,7 +109,7 @@ export default navbar([
         ],
   },
   {
-    text: "衍生/周边",
+    text: "商品/周边",
     icon: "shopping-cart",
     prefix: "/goods/",
     children: [
@@ -125,7 +125,7 @@ export default navbar([
   },
   {
     text: "其他",
-    icon: "square",
+    icon: "ellipsis",
     prefix: "/other/",
     children: [
       {
