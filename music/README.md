@@ -5,16 +5,16 @@ comment: false
 ---
 
 <SiteInfo
-  name="ED"
-  desc="《擅长捉弄的高木同学》动画片尾曲"
-  url="https://wiki.takagi3.cn/music/ED.html"
+  name="OP & 插曲"
+  desc="《擅长捉弄的高木同学》动画主题曲＆插曲"
+  url="https://wiki.takagi3.cn/music/OP.html"
 	preview=""
 />
 
 <SiteInfo
-  name="OP"
-  desc="《擅长捉弄的高木同学》动画主题曲＆插曲"
-  url="https://wiki.takagi3.cn/music/OP.html"
+  name="ED"
+  desc="《擅长捉弄的高木同学》动画片尾曲"
+  url="https://wiki.takagi3.cn/music/ED.html"
 	preview=""
 />
 
