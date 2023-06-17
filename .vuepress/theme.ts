@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "logo.png",
+  logo: "https://npm.elemecdn.com/filetakagiwikicn/source/wiki/logo.webp",
 
   fullscreen: true,
 
