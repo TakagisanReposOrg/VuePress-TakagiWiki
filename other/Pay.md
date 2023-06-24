@@ -11,7 +11,7 @@ author: false
 <SiteInfo
   name="一只鬆"
   desc="心有多宽，世界就会有多远"
-  url="https://www.takagi.icu/pay"
+  url="https://www.takagi.icu/pay.html"
 logo="https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp"
 	repo="https://github.com/yzsong06"
 preview="https://img95.699pic.com/photo/40140/9926.gif_wh860.gif"
