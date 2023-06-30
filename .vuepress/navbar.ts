@@ -144,6 +144,10 @@ export default navbar([
 				text: "站点贡献者",
 				link: "List.md",
 			},
+			{
+				text: "内容版权相关",
+				link: "License.md",
+			},
         ],
   },
 ]);

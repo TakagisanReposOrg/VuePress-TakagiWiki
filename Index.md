@@ -52,7 +52,7 @@ features:
     link: /guide/
 
   - title: 其他
-    icon: square
+    icon: ellipsis
     details: 其他有关建设本资料站的相关支持
     link: /other/
 
@@ -71,7 +71,4 @@ footer: 《擅长捉弄的高木同学》自建资料站 | <script async src="//
 
 另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：[组织地址](https://github.com/TakagisanArchiveRepos)
 
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本站所有内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。<br/>
-涉及对于本站的资料引用等的行为，均须遵循此版权开放协议，在引用内容的适当位置注明引用来源（例如本站的地址等）。
+本站对内容的处理遵循两版开放内容协议。[详情](https://wiki.takagi3.cn/other/license.html)
