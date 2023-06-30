@@ -13,9 +13,9 @@ author: 轻虹空雨
 本作在移动端平台 マンガワン(MangaOne) 平台连载。截至2023年6月7日，已更新279话。
 单行本：日文版已发行18册，由台湾尖端出版社出版的繁体中文版（台版）已发行10册。
 
-| 作者推特-章节彩图（2023.6.7）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
+| 作者推特-章节彩图（2023.6.28）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|[![pCnhfbD.md.jpg](https://s1.ax1x.com/2023/06/14/pCnhfbD.md.jpg)](https://imgse.com/i/pCnhfbD)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
+|[![FzrcvZTaAAE-TpU7fd673d92c1896c2.md.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/06/28/FzrcvZTaAAE-TpU7fd673d92c1896c2.md.jpg)](https://shareimg.takagi3.cn/image/Zj3w)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
 
 <br/>
 动画改编情况：
@@ -311,4 +311,6 @@ author: 轻虹空雨
 | 278  | ドーナツ             | 甜甜圈           | 甜甜圈            | 2023.5.31    |
 | 279  | タンポポ             | 蒲公英           | 蒲公英            | 2023.6.7    |
 | 280  | 読み聞かせ             | 讲故事           | 讲故事           | 2023.6.14    |
+| 281  | ブランコ             | 摇摆           | 摇摆           | 2023.6.21    |
+| 282  | 夏             | 夏日           | 夏日           | 2023.6.28    |
 
