@@ -12,7 +12,8 @@ comment: false
 ### 核心支持 
 [VuePress](https://vuepress.js.org)和[VitePress](https://vitepress.dev/)为我们的两个项目  
 [高木同学资料站（VuePress)](https://wiki.takagi3.cn)  
-[高木站点导航（VitePress）](https://takagi3.cn)提供了核心框架驱动支持  
+[高木站点导航（VitePress）](https://takagi3.cn)  
+提供了核心框架驱动支持  
 ### 部署支持
 [Vercel](https://vercel.com)为我们提供了站点部署托管环境支持，同时得益于Vercel在中国大陆地区较好的访问速度，为我们节约了一笔宝贵的CDN加速支出费用
 ## **站点额外支持**
