@@ -26,4 +26,4 @@ comment: false
 4. [Deta Space](https://deta.space)：站点部分插件与依赖资源部署于Deta Space
 
 ## **内容引用与版权相关**
-见 <HopeIcon icon="copyright" color="#096dd9" /> **内容版权相关**：[跳转](https://wiki.takagi3.cn/other/License.html)
+见 <HopeIcon icon="copyright" color="blue" /> **内容版权相关**：[跳转](https://wiki.takagi3.cn/other/License.html)
