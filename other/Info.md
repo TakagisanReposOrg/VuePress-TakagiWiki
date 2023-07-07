@@ -8,15 +8,21 @@ comment: false
 站点中部分使用了新版浏览器所支持的技术，如果你的浏览器访问站点时出现问题，请更换最新浏览器访问
 :::
 
-## **站点依赖相关**
-本项目使用了[Vuepress](https://vuepress.vuejs.org/zh/)作为文档站点构建工具，使用主题为[Vuepress Hope](https://theme-hope.vuejs.press)，同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持  
+## **站点核心支持**
+### 核心支持 
+[VuePress](https://vuepress.js.org)和[VitePress](https://vitepress.dev/)为我们的两个项目  
+[高木同学资料站（VuePress)](https://wiki.takagi3.cn)  
+[高木站点导航（VitePress）](https://takagi3.cn)提供了核心框架驱动支持  
+### 部署支持
+[Vercel](https://vercel.com)为我们提供了站点部署托管环境支持，同时得益于Vercel在中国大陆地区较好的访问速度，为我们节约了一笔宝贵的CDN加速支出费用
+## **站点额外支持**
+使用相关主题为[VuePress Hope](https://theme-hope.vuejs.press)，
+同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持，DocSearch作为外部搜索可以加速访客访问本站点的速度，
 使用到的其他插件或依赖：
 1. [Vuepress-Plugin-Mdenhance](https://plugin-md-enhance.vuejs.press/zh/)：为站点启用更多Markdown语法与新功能
 2. [Waline](https://waline.js.org)：为站点启用评论功能
 3. [Vuepress-Plugin-Components](https://plugin-components.vuejs.press/)：为站点激活了嵌入组件的功能  
-## **站点环境相关**
-1. [Vercel](https://vercel.com)：站点部署于Vercel，为中国大陆地区访客提供访问加速
-2. [Deta Space](https://deta.space)：站点部分插件与依赖资源依赖于Deta Space
+4. [Deta Space](https://deta.space)：站点部分插件与依赖资源部署于Deta Space
 
 ## **内容引用相关**
 
