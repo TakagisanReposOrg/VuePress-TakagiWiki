@@ -15,7 +15,7 @@ author: 轻虹空雨
 
 | 作者推特-章节彩图（2023.7.5）                                | 日版最新单行本-18卷                                          | 台版最新单行本-10卷                                          |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|[![F0M01HMaUAACxjT584617bd5a76b917.md.jpg](https://picture-takagi.oss-cn-zhangjiakou.aliyuncs.com/2023/07/05/F0M01HMaUAACxjT584617bd5a76b917.md.jpg)](https://shareimg.takagi3.cn/image/cnzc)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
+|[![F0zw_4kaIAIIY3Ge40eb84d6b9f75e8.md.jpg](https://transfer.dsating.com/2023/07/12/F0zw_4kaIAIIY3Ge40eb84d6b9f75e8.md.jpg)](https://shareimg.takagi3.cn/image/gS05)|![sale-jp-vol18.jpg](https://pic.imgdb.cn/item/648169b21ddac507cc76f13e.jpg)|![sale-tw-vol-10.jpg](https://pic.imgdb.cn/item/648169bb1ddac507cc770199.jpg)|
 
 <br/>
 动画改编情况：
@@ -314,4 +314,4 @@ author: 轻虹空雨
 | 281  | ブランコ             | 摇摆           | 摇摆           | 2023.6.21    |
 | 282  | 夏             | 夏日           | 夏日           | 2023.6.28    |
 | 283  | 誕生日             | 生日           | 生日           | 2023.7.5    |
-
+| 284 | 推理ゲーム | 推理游戏 | 推理游戏 | 2023.7.12 |
