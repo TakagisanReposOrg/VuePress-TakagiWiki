@@ -27,3 +27,8 @@ comment: false
 
 ## **内容引用与版权相关**
 见 <HopeIcon icon="copyright" color="blue" /> **内容版权相关**：[跳转](https://wiki.takagi3.cn/other/License.html)
+
+## **联络我们**
+若您在使用中出现什么问题，或是有什么意见建议，您有多种方式来告诉我们：
+- 【通用】：[Github 仓库](https://github.com/TakagiWikiSitesCN/Vuepress-TakagiWiki)提交 issue、[联络邮箱](mailto:feedback@takagi3.cn)、[反馈文档](https://docs.qq.com/form/page/DTlRZSU9RVE1YcEZW?u=3f2a61a5441245c7831c8b16bf0b34d4)
+- 部分页面问题：对应页面下方评论区（若当前页未开启评论，也可通过上述方式）
