@@ -8,7 +8,7 @@ author: false
 
 ## 前言
 
-Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/MuFeng086) 所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagisanArchiveRepos/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagisanArchiveRepos/Vuepress-TakagiWiki)）。
+Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/MuFeng086) 所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagisanReposOrg/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki)）。
 
 站点建设速度目前来看并不快，主要也是我们这个项目其实人也不多（目前主要就我跟牧丰和南栀），而且在分工上基本就是我管站点框架功能或者优化站点，牧丰可能比较全能（Doge）、而南栀主要只是写内容。主要也是因为我并不是很擅长写文档内容。
 
@@ -37,7 +37,7 @@ Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立�
 
 由于我们对于数据内容稳定性的要求，对于短期编辑者我们无法给予便捷的直接编辑源仓库文档的权限，请按照以下步骤进行：
 
-1. 请将站点托管的Github仓库 [点击跳转](https://github.com/TakagisanArchiveRepos/VuePress-TakagiWiki) fork（复刻）至你的Github账号下，在复刻后的个人仓库内自主编辑。
+1. 请将站点托管的Github仓库 [点击跳转](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki) fork（复刻）至你的Github账号下，在复刻后的个人仓库内自主编辑。
 2. 编辑完成后点击“关于”栏左侧的contribute（贡献）按钮，点击open pull request（提交拉取请求），编辑好本次提交的简介，可在右侧选择受理人和本次编辑内容的类型。
 3. 提交完成后，源仓库这边会收到拉取请求，您只要等待这边确认合并分支。您提交的分支内容将于源仓库主分支合并并自动触发网站重部署，这样一次内容编辑就完成了。
 
@@ -56,7 +56,7 @@ Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立�
 
 **3. 你提建议我们做**
 
-若您实在因一些原因不好以上述方式实际参与本站内容的贡献和改进，您也可以通过[Github仓库](https://github.com/TakagisanArchiveRepos/VuePress-TakagiWiki)的两个内容板块、[反馈邮箱](mailto:feedback@takagi3.cn)、内容专页下方评论区等向我们提出内容建议，我们来帮你将内容落实。
+若您实在因一些原因不好以上述方式实际参与本站内容的贡献和改进，您也可以通过[Github仓库](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki)的两个内容板块、[反馈邮箱](mailto:feedback@takagi3.cn)、内容专页下方评论区等向我们提出内容建议，我们来帮你将内容落实。
 
 ------
 ## 一些问题
