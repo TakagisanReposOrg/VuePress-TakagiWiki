@@ -1,7 +1,7 @@
 {
-  "name": "vuepress-theme-hope",
+  "name": "takagi-vuepress",
   "version": "2.0.0",
-  "description": "Site for vuepress-theme-hope",
+  "description": "vuepress-takagisite",
   "repository": "git@github.com:yzsong06/TakagiWikiSiteCNVue.git",
   "author": "yzsong06 <yzsong06@outlook.com>",
   "license": "MIT",
