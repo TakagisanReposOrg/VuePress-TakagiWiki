@@ -1,5 +1,6 @@
 ---
 title: 原高木同学
+article: false
 author: 轻虹空雨
 ---
 ::: info

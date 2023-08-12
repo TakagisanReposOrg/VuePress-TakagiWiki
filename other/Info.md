@@ -1,6 +1,7 @@
 ---
 title: 关于站点
 icon: "info"
+article: false
 author: false
 comment: false
 ---

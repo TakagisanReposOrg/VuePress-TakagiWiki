@@ -1,6 +1,7 @@
 ---
 title: 赞助链接
 icon: "circle-dollar-to-slot"
+article: false
 author: false
 ---
 ::: info

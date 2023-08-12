@@ -1,5 +1,6 @@
 ---
 title: 原声带OST
+article: false
 author: 轻虹空雨
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: 主题曲（OP）& 插曲
+article: false
 author: 轻虹空雨
 ---
 

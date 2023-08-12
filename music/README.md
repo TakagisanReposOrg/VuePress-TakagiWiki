@@ -1,6 +1,7 @@
 ---
 title: 音乐
 author: false
+article: false
 comment: false
 ---
 

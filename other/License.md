@@ -1,6 +1,7 @@
 ---
 title: 内容版权相关
 icon: "copyright"
+article: false
 author: false
 comment: false
 ---

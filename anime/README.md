@@ -2,6 +2,7 @@
 title: 动画
 author: false
 comment: false
+article: false
 ---
 
 <SiteInfo

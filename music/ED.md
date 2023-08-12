@@ -1,5 +1,6 @@
 ---
 title: 动画片尾曲（ED）
+article: false
 author: 轻虹空雨
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: 心动记录”手游 - 独占翻唱曲
+article: false
 author: 轻虹空雨
 ---
 
