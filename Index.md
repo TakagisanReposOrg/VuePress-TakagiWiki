@@ -1,6 +1,7 @@
 ---
 home: true
 icon: home
+article: false
 hexoText: 高木同学自建资料站
 bgImage: https://pic.imgdb.cn/item/648568de1ddac507cc66bd27.webp
 bgImageDark: https://pic.imgdb.cn/item/648568de1ddac507cc66bd56.webp

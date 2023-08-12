@@ -17,17 +17,23 @@ export default hopeTheme({
   fullscreen: true,
 
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
-
+  blog:{
+    name: "TkgRepoOrg",
+    roundAvatar: true,
+    description: "聚合一切与《高木同学》有关的开源项目",
+    medias: {
+      GitHub: "https://github.com/TakagisanReposOrg",
+    },
+  },
   // navbar
   navbar,
-
+  
   // sidebar
   sidebar: Sidebar,
 
   footer: "《擅长捉弄的高木同学》自建资料站",
   copyright: "站点部署及框架运维 © 一只鬆",
   displayFooter: true,
-
   // page meta
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
@@ -54,6 +60,7 @@ export default hopeTheme({
       pageSize: 5,
       copyright: true,
     },
+    
     components: {
       // 你想使用的组件
       components: [

@@ -1,6 +1,9 @@
 import { navbar } from "vuepress-theme-hope";
 export default navbar([
-
+  {
+  text: "资料站",
+  icon: "book",
+  children: [
   {
     text: "音乐",
     icon: "music",
@@ -149,5 +152,8 @@ export default navbar([
 				link: "License.md",
 			},
         ],
+      },
+    ],
   },
+  "/blog/",
 ]);

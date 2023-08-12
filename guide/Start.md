@@ -1,5 +1,6 @@
 ---
 title: 站点指南
+article: false
 author: false
 ---
 ::: tip
