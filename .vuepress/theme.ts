@@ -3,11 +3,11 @@ import navbar from "./navbar.js";
 import { Sidebar } from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://wiki.takagi.icu",
+  hostname: "https://wiki.takagi3.cn",
 
   author: {
     name: "一只鬆",
-    url: "https://www.takagi.icu",
+    url: "https://blog.sotkg.cn",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -28,17 +28,13 @@ export default hopeTheme({
   copyright: "站点部署及框架运维 © 一只鬆",
   displayFooter: true,
 
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-    },
-  },
-
   // page meta
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
   plugins: {
+    blog: true,
+    //激活博客功能支持
     mdEnhance: {
       card: true,
       //启用卡片支持
