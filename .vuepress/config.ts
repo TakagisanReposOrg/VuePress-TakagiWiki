@@ -5,7 +5,7 @@ import theme from "./theme.js";
 export default defineUserConfig({
 	base: "/",
 	lang: "zh-CN",
-	title: "高木资料站",
+	title: "高木Wiki信息站",
 
 	theme,
 	plugins: [

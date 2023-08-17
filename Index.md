@@ -2,7 +2,9 @@
 home: true
 icon: home
 article: false
-hexoText: 高木同学自建资料站
+hexoText: Wiki信息站
+tagline: false
+heroFullScreen: true
 bgImage: https://pic.imgdb.cn/item/648568de1ddac507cc66bd27.webp
 bgImageDark: https://pic.imgdb.cn/item/648568de1ddac507cc66bd56.webp
 actions:
@@ -17,6 +19,11 @@ actions:
     link: https://github.com/TakagisanReposOrg/VuePress-TakagiWiki
 
 features:
+  - title: 博客
+    icon: blog
+    details: 我们的GitHub组织博客
+    link: /blog/
+
   - title: 音乐
     icon: music
     details: 高木动画音乐及手游音乐
@@ -62,6 +69,7 @@ footer: 《擅长捉弄的高木同学》自建资料站 | <script async src="//
 ---
 
 ---
+::: center
 
 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。  
 
@@ -73,3 +81,5 @@ footer: 《擅长捉弄的高木同学》自建资料站 | <script async src="//
 另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：[组织地址](https://github.com/TakagisanReposOrg)
 
 本站对内容的处理遵循两版开放内容协议。[详情](https://wiki.takagi3.cn/other/license.html)
+
+:::

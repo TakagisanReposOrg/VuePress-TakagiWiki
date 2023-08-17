@@ -46,6 +46,8 @@ export default hopeTheme({
       //启用卡片支持
       container: true,
       //启用自定义容器支持
+      align: true,
+      //启用自定义对齐支持
     },
     comment: {
       provider: "Waline",
