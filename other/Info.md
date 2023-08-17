@@ -19,7 +19,7 @@ comment: false
 [Vercel](https://vercel.com)为我们提供了站点部署托管环境支持，同时得益于Vercel在中国大陆地区较好的访问速度，为我们节约了一笔宝贵的CDN加速支出费用
 ## **站点额外支持**
 使用相关主题为[VuePress Hope](https://theme-hope.vuejs.press)，
-同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持，DocSearch作为外部搜索可以加速访客访问本站点的速度，
+同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持，DocSearch作为外部搜索可以加速访客在本站点的查找需求内容的速度，
 使用到的其他插件或依赖：
 1. [Vuepress-Plugin-Mdenhance](https://plugin-md-enhance.vuejs.press/zh/)：为站点启用更多Markdown语法与新功能
 2. [Waline](https://waline.js.org)：为站点启用评论功能
