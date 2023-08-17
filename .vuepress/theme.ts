@@ -69,6 +69,11 @@ export default hopeTheme({
         "SiteInfo",
       ],
     },
+    feed:{
+      rss: true,
+      atom: true,
+      
+    },
 
     // uncomment these if you want a pwa
     // pwa: {
