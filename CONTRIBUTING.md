@@ -9,7 +9,7 @@ article: false
 
 由于我们对于数据内容稳定性的要求，对于短期编辑者我们无法给予便捷的直接编辑源仓库文档的权限，请按照以下步骤进行：
 
-1. 请将站点托管的Github仓库 [点击跳转](https://github.com/TakagisanArchiveRepos/VuePress-TakagiWiki) fork（复刻）至你的Github账号下，在复刻后的个人仓库内自主编辑。
+1. 请将站点托管的Github仓库 [点击跳转](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki) fork（复刻）至你的Github账号下，在复刻后的个人仓库内自主编辑。
 2. 编辑完成后点击“关于”栏左侧的contribute（贡献）按钮，点击open pull request（提交拉取请求），编辑好本次提交的简介，可在右侧选择受理人和本次编辑内容的类型。
 3. 提交完成后，源仓库这边会收到拉取请求，您只要等待这边确认合并分支。您提交的分支内容将于源仓库主分支合并并自动触发网站重部署，这样一次内容编辑就完成了。
 
@@ -28,7 +28,7 @@ article: false
 
 **3. 你提建议我们做**
 
-若您实在因一些原因不好以上述方式实际参与本站内容的贡献和改进，您也可以通过[Github仓库](https://github.com/TakagisanArchiveRepos/VuePress-TakagiWiki)的两个内容板块、[反馈邮箱](mailto:feedback@takagi3.cn)、内容专页下方评论区等向我们提出内容建议，我们来帮你将内容落实。
+若您实在因一些原因不好以上述方式实际参与本站内容的贡献和改进，您也可以通过[Github仓库](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki)的两个内容板块、[反馈邮箱](mailto:feedback@takagi3.cn)、内容专页下方评论区等向我们提出内容建议，我们来帮你将内容落实。
 
 ------
 ## 一些问题
