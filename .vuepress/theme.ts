@@ -15,6 +15,7 @@ export default hopeTheme({
   logo: "https://npm.elemecdn.com/filetakagiwikicn/source/wiki/logo.webp",
 
   fullscreen: true,
+  pure: true,
 
   repo: "TakagiWikiSitesCN/Vuepress-TakagiWiki",
   blog:{
@@ -30,7 +31,6 @@ export default hopeTheme({
   
   // sidebar
   sidebar: Sidebar,
-
   footer: "《擅长捉弄的高木同学》自建资料站",
   copyright: "站点部署及框架运维 © 一只鬆",
   displayFooter: true,
