@@ -5,7 +5,9 @@ import theme from "./theme.js";
 export default defineUserConfig({
 	base: "/",
 	lang: "zh-CN",
-	
+	head: [
+		['script', { async: true, src: 'https://umami.sotkg.cn/script.js', 'data-website-id': '40188d84-6ee7-4205-b974-478c03bf9bfc' }]
+	  ],
 
 	theme,
 	plugins: [

@@ -31,7 +31,7 @@ export default hopeTheme({
   
   // sidebar
   sidebar: Sidebar,
-  footer: "《擅长捉弄的高木同学》自建资料站",
+  footer: "《擅长捉弄的高木同学》Wiki信息站",
   copyright: "站点部署及框架运维 © 一只鬆",
   displayFooter: true,
   // page meta

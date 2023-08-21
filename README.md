@@ -2,8 +2,8 @@
 home: true
 title: 高木Wiki信息站
 
-footer: 《擅长捉弄的高木同学》自建资料站 | <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span> 
+footer: 《擅长捉弄的高木同学》Wiki信息站 | <a href="https://umami.sotkg.cn/share/DZNpuogGcuAqoPeU/%E9%AB%98%E6%9C%A8Wiki%E4%BF%A1%E6%81%AF%E7%AB%99">站点访问统计</a>
+
 ---
 
 ---
