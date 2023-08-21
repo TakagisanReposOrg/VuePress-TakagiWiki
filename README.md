@@ -11,7 +11,7 @@ footer: 《擅长捉弄的高木同学》Wiki信息站 | <a href="https://umami.
   <div class="home-content">
     <img src="/logo.png" alt="Circle Image" class="home-image">
     <h1 class="home-title">高木Wiki信息站</h1>
-    <a href="/guides/Start.html" class="home-button badge">进入文档</a>
+    <a href="/guide/Start.html" class="home-button badge">进入文档</a>
     <p class="home-description"></p>
   </div>
   <div class="home-bg"></div>
