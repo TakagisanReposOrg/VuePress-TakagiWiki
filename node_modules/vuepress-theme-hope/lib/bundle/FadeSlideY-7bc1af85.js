@@ -1,2 +1,0 @@
-import{defineComponent as a,h as u,Transition as d}from"vue";let n=null,e=null;const m={wait:()=>n,pending:()=>{n=new Promise(l=>e=l)},resolve:()=>{e==null||e(),n=null,e=null}},t=()=>m;var c=a({name:"FadeSlideY",slots:Object,setup(l,{slots:o}){const{resolve:s,pending:i}=t();return()=>u(d,{name:"fade-slide-y",mode:"out-in",onBeforeEnter:s,onBeforeLeave:i},()=>{var r;return(r=o.default)==null?void 0:r.call(o)})}});export{c as n,t as u};
-//# sourceMappingURL=FadeSlideY-7bc1af85.js.map
