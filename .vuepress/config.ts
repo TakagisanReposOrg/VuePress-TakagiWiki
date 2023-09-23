@@ -6,7 +6,7 @@ export default defineUserConfig({
 	base: "/",
 	lang: "zh-CN",
 	head: [
-		['script', { async: true, src: 'https://umami.sotkg.cn/script.js', 'data-website-id': '40188d84-6ee7-4205-b974-478c03bf9bfc' }]
+		['script', { async: true, src: 'https://analytics.takagi3.top/script.js', 'data-website-id': 'fb17f2d1-05da-47b4-9191-29e3440a0d24' }]
 	  ],
 
 	theme,
