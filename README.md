@@ -2,7 +2,7 @@
 home: true
 title: 高木Wiki信息站
 
-footer: 《擅长捉弄的高木同学》Wiki信息站 | <a href="https://umami.sotkg.cn/share/DZNpuogGcuAqoPeU/%E9%AB%98%E6%9C%A8Wiki%E4%BF%A1%E6%81%AF%E7%AB%99">站点访问统计</a>
+footer: 《擅长捉弄的高木同学》Wiki信息站 | <span id="cdn"></span>
 
 ---
 
