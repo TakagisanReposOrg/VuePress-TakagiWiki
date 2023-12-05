@@ -2,7 +2,7 @@
 home: true
 title: 高木Wiki信息站
 
-footer: 《擅长捉弄的高木同学》Wiki信息站 | <span id="cdn"></span>
+footer: 《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span id="cdn"></span>
 
 ---
 

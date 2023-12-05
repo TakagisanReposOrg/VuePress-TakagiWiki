@@ -33,7 +33,7 @@ export default hopeTheme({
   // footer
   
   
-  footer: "《擅长捉弄的高木同学》Wiki信息站",
+  footer: "《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span id='cdn'></span>",
   copyright: "站点部署及框架运维 © 一只鬆",
   displayFooter: true,
   // page meta
