@@ -15,7 +15,7 @@ author: false
   url="https://blog.sotkg.cn/pay"
 logo="https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp"
 	repo="https://github.com/yzsong06"
-preview="photo/yzsong06blog.png"
+preview="https://urlscan.io/liveshot/?width=1280&height=720&url=https://blog.sotkg.cn"
 />
 
 <SiteInfo

@@ -15,8 +15,8 @@ comment: false
 [高木同学资料站（VuePress)](https://wiki.takagi3.cn)  
 [高木站点导航（VitePress）](https://takagi3.cn)  
 提供了核心框架驱动支持  
-### 部署支持
-[Vercel](https://vercel.com)为我们提供了站点部署托管环境支持，同时得益于Vercel在中国大陆地区较好的访问速度，为我们节约了一笔宝贵的CDN加速支出费用
+### 外围支持
+我们使用了[Cloudflare](https://cloudflare.com)为访问者提供了CDN支持。
 ## **站点额外支持**
 使用相关主题为[VuePress Hope](https://theme-hope.vuejs.press)，
 同时使用[Docsearch](https://docsearch.algolia.com/)为本站提供文档搜索支持，DocSearch作为外部搜索可以加速访客在本站点的查找需求内容的速度，
