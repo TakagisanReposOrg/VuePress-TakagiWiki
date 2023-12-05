@@ -1,11 +1,7 @@
 ---
 home: true
 title: 高木Wiki信息站
-
-footer: 《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span id="cdn"></span>
-
 ---
-
 ---
 <div class="home-container">
   <div class="home-content">
@@ -18,7 +14,6 @@ footer: 《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span
 </div>
 
 ::: center
-
 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。  
 
 项目发起者、主要编辑者之一：[@轻虹空雨](https://mufeng086.com) <br/>
