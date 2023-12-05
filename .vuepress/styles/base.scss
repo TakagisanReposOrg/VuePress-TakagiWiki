@@ -1,0 +1,34 @@
+body:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.2;
+    z-index: -1;
+    content: '';
+    position: fixed;
+    background: url('https://pic.imgdb.cn/item/649985c21ddac507cc5eb508.jpg') center / cover;
+  }
+  
+  table {
+    text-align: center !important;
+  }
+  
+  table,
+  table tr:nth-child(2n) {
+    background: transparent !important;
+  }
+  
+  table td {
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+  }
+  
+  table th {
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+  }
+  
+  h2 {
+    border-color: transparent !important;
+  }
