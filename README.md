@@ -18,7 +18,9 @@ title: 高木Wiki信息站
 
 项目发起者、主要编辑者之一：[@轻虹空雨](https://mufeng086.com) <br/>
 仓库实际所有人、资料站站长&运维：[@一只鬆](https://blog.sotkg.cn)
+站点联合维护者名单：[@南栀](https://litkg.com)，[@WaterApple](https://waterapple09.com)
 
+在此处向所有本站的贡献者们致谢。
 本站点基于VuePress部署，原[Hexo部署项目](https://github.com/TakagisanReposOrg/Hexo-TakagiWiki)已封档，项目已转移给Vuepress继续运营。
 
 另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：[组织地址](https://github.com/TakagisanReposOrg)
