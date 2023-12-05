@@ -39,12 +39,20 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
   plugins: {
+    components: {
+			// 你想使用的组件
+			components: [
+			  "BiliBili",
+			  "PDF",
+			  "Share",
+			  "SiteInfo",
+			  "VPCard",
+			],
+		  },
     blog: true,
     //激活博客功能支持
     mdEnhance: {
-      card: true,
-      //启用卡片支持
-      container: true,
+      hint: true,
       //启用自定义容器支持
       align: true,
       //启用自定义对齐支持
@@ -63,12 +71,6 @@ export default hopeTheme({
       copyright: true,
     },
     
-    components: {
-      // 你想使用的组件
-      components: [
-        "SiteInfo",
-      ],
-    },
     feed:{
       rss: true,
       atom: true,
