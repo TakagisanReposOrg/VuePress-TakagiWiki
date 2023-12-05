@@ -1,12 +1,13 @@
 ---
 home: true
 title: 高木Wiki信息站
+footer: "《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span id='cdn'>正在获取中...</span>"
 ---
 ---
 <div class="home-container">
   <div class="home-content">
-    <img src="/logo.png" alt="Circle Image" class="home-image">
-    <h1 class="home-title">高木Wiki信息站</h1>
+    <img src="/logo.png" alt="站点主页Logo" class="home-image">
+    <h1 class="home-title">高木FanWiki</h1>
     <a href="/guide/Start.html" class="home-button badge">进入文档</a>
     <p class="home-description"></p>
   </div>
