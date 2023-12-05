@@ -4,7 +4,7 @@ export const Sidebar = sidebar({
   "/": [
     {
       text: "博客",
-      link: "/blog/",
+      link: "https://club.takagi3.cn/blog",
       icon: "blog",
     },
     {

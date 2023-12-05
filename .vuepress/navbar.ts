@@ -1,7 +1,7 @@
 import { navbar } from "vuepress-theme-hope";
 export default navbar([
   {
-  text: "资料站",
+  text: "高木资料站",
   icon: "book",
   children: [
   {
@@ -155,5 +155,9 @@ export default navbar([
       },
     ],
   },
-  "/blog/",
+  {
+    text: "木创社博客",
+    link: "https://club.takagi3.cn/blog",
+    icon: "blog",
+  },
 ]);

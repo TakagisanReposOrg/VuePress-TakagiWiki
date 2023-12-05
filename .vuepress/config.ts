@@ -6,8 +6,13 @@ export default defineUserConfig({
 	base: "/",
 	lang: "zh-CN",
 	head: [
-		['script', { async: true, src: 'https://analytics.takagi3.top/script.js', 'data-website-id': 'fb17f2d1-05da-47b4-9191-29e3440a0d24' }]
-	  ],
+		['script', { async: true, src: 'https://analytics.takagi3.top/script.js', 'data-website-id': 'fb17f2d1-05da-47b4-9191-29e3440a0d24' }],
+		['script', { src: './assets/js/cdnfoot.js'}],
+		['script', { async: true, src: 'https://cdn.staticfile.org/jquery/3.7.1/jquery.min.js'}],
+		["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    	["link",{ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },],
+		["link",{href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",rel: "stylesheet",},],
+  ],
 
 	theme,
 	plugins: [
