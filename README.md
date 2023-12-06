@@ -1,6 +1,6 @@
 ---
 home: true
-title: 高木Wiki信息站
+title: 高木综合Wiki站
 footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span id='cdn'>正在获取中...</span>"
 ---
 ---
