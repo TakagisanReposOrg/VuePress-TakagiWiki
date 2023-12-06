@@ -1,13 +1,13 @@
 ---
 home: true
 title: 高木Wiki信息站
-footer: "《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<span id='cdn'>正在获取中...</span>"
+footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span id='cdn'>正在获取中...</span>"
 ---
 ---
 <div class="home-container">
   <div class="home-content">
-    <img src="/logo.png" alt="站点主页Logo" class="home-image">
-    <h1 class="home-title">高木FanWiki</h1>
+    <img src="https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp" alt="站点主页Logo" class="home-image">
+    <h1 class="home-title">高木综合Wiki站</h1>
     <a href="/guide/Start.html" class="home-button badge">进入文档</a>
     <p class="home-description"></p>
   </div>
@@ -15,13 +15,15 @@ footer: "《擅长捉弄的高木同学》Wiki信息站 | 当前CDN节点：<spa
 </div>
 
 ::: center
-本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》相关信息资料站。  
+本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 
 
 项目发起者、主要编辑者之一：[@轻虹空雨](https://mufeng086.com) <br/>
 仓库实际所有人、资料站站长&运维：[@一只鬆](https://blog.sotkg.cn)
+
 站点联合维护者名单：[@南栀](https://litkg.com)，[@WaterApple](https://waterapple09.com)
 
-在此处向所有本站的贡献者们致谢。
+在此向所有本站的贡献者们致谢。
+
 本站点基于VuePress部署，原[Hexo部署项目](https://github.com/TakagisanReposOrg/Hexo-TakagiWiki)已封档，项目已转移给Vuepress继续运营。
 
 另外，资料站项目各源仓库及附属仓库目前已合为Github组织进行整合管理：[组织地址](https://github.com/TakagisanReposOrg)
