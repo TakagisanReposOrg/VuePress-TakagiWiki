@@ -7,11 +7,12 @@ footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span i
 <div class="home-container">
   <div class="home-content">
     <img src="https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp" alt="站点主页Logo" class="home-image">
-    <h1 class="home-title">高木综合Wiki站</h1>
+    <h2 class="home-title">高木综合Wiki站</h2>
+    <p class="home-description">“捉弄”缩短了二人之间的距离</p>
     <a href="/guide/Start.html" class="home-button badge">进入文档</a>
-    <p class="home-description"></p>
+    <br>
+    <a href="/other/Action.html" class="home-button badge">更新日志</a>
   </div>
-  <div class="home-bg"></div>
 </div>
 
 ::: center
