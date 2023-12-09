@@ -21,7 +21,7 @@
   }
   
   .home-image:hover {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
   
   
@@ -29,7 +29,7 @@
     margin-top: 10px;
     margin-bottom: 0px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     padding: 5px;
   }
   
@@ -42,12 +42,12 @@
   }
   
   .home-button {
-    margin-top: 5px;
+    margin-top: 2px;
     color: #db7093;
   }
   
   .badge {
-    display: inline-block;
+    display: flex;
     padding: 15px 30px;
     font-size: large;
     background-color: #db7093;
@@ -55,6 +55,6 @@
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
-  }
+  } 
   
   
