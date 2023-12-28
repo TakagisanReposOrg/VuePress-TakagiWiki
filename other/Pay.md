@@ -19,11 +19,11 @@ preview="https://urlscan.io/liveshot/?width=1280&height=720&url=https://blog.sot
 />
 
 <SiteInfo
-  name="轻虹空雨"
+  name="木雨与风"
   desc="热爱依然，生活仍然"
-  url="https://mufeng086.com/support"
-logo="https://pic.imgdb.cn/item/645c58bc0d2dde577762b1fc.jpg"
-	repo="https://github.com/MuFeng086"
+  url="https://mufeng086.com"
+logo="https://pic.mufeng086.com/i/2023/12/20/hcu3br.webp"
+	repo="https://github.com/RainBreezeMF"
 preview="https://urlscan.io/liveshot/?width=1280&height=720&url=https://mufeng086.com"
 />
 
