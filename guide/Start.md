@@ -9,7 +9,7 @@ author: false
 
 ## 前言
 
-Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/MuFeng086) 所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagisanReposOrg/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki)）。
+Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目建立有一段时间了，它的雏形项目最早则是由[牧丰（轻虹空雨)](https://github.com/RainBreezeMF) 所发起建立的基于Hexo框架的自建资料站项目（[Hexo站点Github仓库](https://github.com/TakagisanReposOrg/Hexo-TakagiWiki)），在经过约半年的建设后，在我的建议与亲自操刀改进下，目前更换为了基于Vuepress的资料站（[本站点仓库](https://github.com/TakagisanReposOrg/VuePress-TakagiWiki)）。
 
 站点建设速度目前来看并不快，主要也是我们这个项目其实人也不多（目前主要就我跟牧丰和南栀），而且在分工上基本就是我管站点框架功能或者优化站点，牧丰可能比较全能（Doge）、而南栀主要只是写内容。主要也是因为我并不是很擅长写文档内容。
 
