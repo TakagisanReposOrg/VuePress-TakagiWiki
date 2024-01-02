@@ -12,15 +12,15 @@ author: false
 <SiteInfo
   name="一只鬆"
   desc="心有多宽，世界就会有多远"
-  url="https://blog.sotkg.cn/pay"
+  url="https://blog.sotkg.link/pay"
 logo="https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp"
 	repo="https://github.com/yzsong06"
-preview="https://urlscan.io/liveshot/?width=1280&height=720&url=https://blog.sotkg.cn"
+preview="https://urlscan.io/liveshot/?width=1280&height=720&url=https://blog.sotkg.link"
 />
 
 <SiteInfo
   name="木雨与风"
-  desc="热爱依然，生活仍然"
+  desc="以自己的一切面对世间"
   url="https://mufeng086.com"
 logo="https://pic.mufeng086.com/i/2023/12/20/hcu3br.webp"
 	repo="https://github.com/RainBreezeMF"

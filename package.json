@@ -21,6 +21,7 @@
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
     "@waline/client": "^2.15.8",
+    "vidstack": "1",
     "vuepress-plugin-components": "2.0.0-rc.2",
     "vuepress-plugin-md-enhance": "2.0.0-rc.2"
   }

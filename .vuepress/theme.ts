@@ -7,7 +7,7 @@ export default hopeTheme({
 
   author: {
     name: "一只鬆",
-    url: "https://blog.sotkg.cn",
+    url: "https://blog.sotkg.link",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -49,6 +49,7 @@ export default hopeTheme({
 			  "Share",
 			  "SiteInfo",
 			  "VPCard",
+        "VidStack",
 			],
 		  },
     blog: true,
@@ -57,6 +58,7 @@ export default hopeTheme({
       hint: true,
       //启用自定义容器支持
       align: true,
+      tabs: true,
       //启用自定义对齐支持
     },
     comment: {
