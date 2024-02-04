@@ -49,7 +49,7 @@ export default hopeTheme({
 			  "Share",
 			  "SiteInfo",
 			  "VPCard",
-        "VidStack",
+			  "VidStack",
 			],
 		  },
     blog: true,
