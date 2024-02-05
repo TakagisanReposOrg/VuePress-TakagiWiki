@@ -1,5 +1,5 @@
 ---
-title: 站点指南
+title: 贡献指南
 article: false
 author: false
 ---
