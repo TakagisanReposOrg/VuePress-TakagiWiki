@@ -10,7 +10,7 @@ author: false
 :::
 
 ::: details 个人信息格式
-必填：昵称、个人简介、博客或个人主页的链接、个人头像（以图片链接形式）<br/>
+必填：昵称、个人简介、链接（个人主页/博客/b站空间）、个人头像（文件发给管理员/提供图片链接）<br/>
 可选：个人Github链接、个人主页的图标或预览icon/自定义图片（以图片链接形式）作为个人卡片的背景
 :::
 
@@ -42,8 +42,11 @@ author: false
   link="https://waterapple09.com"
   background="rgba(253, 230, 138, 0.15)"
 />
+<VPCard
+  title="-和光-同尘_"
+  desc="故事的结局一定是好的，如果不好那一定是还没走到最后"
+  logo="https://pic.mufeng086.com/i/2024/02/05/gpd7fd.webp"
+  link="https://space.bilibili.com/1276377538"
+  background="rgba(253, 230, 138, 0.15)"
+/>
 
-
-::: tip
-为防止意外事件，本站评论区采用审核后显示模式。因此不用疑惑于页面刷新后您的评论消失的问题。
-:::
