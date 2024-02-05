@@ -58,6 +58,7 @@ export default hopeTheme({
       hint: true,
       //启用自定义容器支持
       align: true,
+      mermaid: true,
       tabs: true,
       //启用自定义对齐支持
     },
