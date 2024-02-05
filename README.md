@@ -9,7 +9,7 @@ footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span i
     <img src="https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp" alt="站点主页Logo" class="home-image">
     <h2 class="home-title">高木综合Wiki站</h2>
     <p class="home-description">“捉弄”缩短了二人之间的距离</p>
-    <a href="/guide/Start.html" class="home-button badge">进入文档</a>
+    <a href="/guide/Home.html" class="home-button badge">进入文档</a>
     <br>
     <a href="/other/Action.html" class="home-button badge">更新日志</a>
   </div>
@@ -19,7 +19,7 @@ footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span i
 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 
 
 项目发起者、主要编辑者之一：[@木雨与风（原@轻虹空雨/牧丰086）](https://mufeng086.com) <br/>
-仓库实际所有人、资料站站长&运维：[@一只鬆](https://blog.sotkg.link)
+仓库实际所有人、资料站站长&运维：[@一只鬆](https://sotkg.link)
 
 站点联合维护者名单：[@南栀](https://litkg.com)，[@WaterApple](https://waterapple09.com)
 
