@@ -19,7 +19,7 @@ footer: "《擅长捉弄的高木同学》综合Wiki | 当前CDN节点：<span i
 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 
 
 项目发起者、主要编辑者之一：[@木雨与风（原@轻虹空雨/牧丰086）](https://mufeng086.com) <br/>
-仓库实际所有人、资料站站长&运维：[@一只鬆](https://blog.sotkg.link)
+仓库实际所有人、资料站站长&运维：[@一只鬆](https://sotkg.link)
 
 站点联合维护者名单：[@南栀](https://litkg.com)，[@WaterApple](https://waterapple09.com)
 

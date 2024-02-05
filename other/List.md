@@ -16,9 +16,9 @@ author: false
 
 <VPCard
   title="一只鬆"
-  desc="届ける言葉を今は育ててる"
+  desc="心有多宽，世界就有多远"
   logo="https://npm.elemecdn.com/yzsong06@latest/source/image/avator.webp"
-  link="https://blog.sotkg.link/"
+  link="https://sotkg.link/"
   background="rgba(253, 230, 138, 0.15)"
 />
 <VPCard
