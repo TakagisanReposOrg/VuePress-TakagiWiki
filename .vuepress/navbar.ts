@@ -156,8 +156,8 @@ export default navbar([
     ],
   },
   {
-    text: "木创社博客",
-    link: "https://club.takagi3.cn/blog",
+    text: "贡献者列表",
+    link: "/other/list",
     icon: "blog",
   },
 ]);
