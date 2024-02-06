@@ -19,7 +19,12 @@ export const Sidebar = sidebar({
       icon: "music",
       prefix: "music/",
       link: "music/",
-      children: "structure",
+      children: [
+        "ED.md",
+        "OP.md",
+        "OST.md",
+        "GAME.md",
+      ],
     },
     {
       text: "漫画",
