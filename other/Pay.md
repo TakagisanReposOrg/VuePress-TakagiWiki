@@ -13,3 +13,4 @@ author: false
 
 **木雨与风**（项目发起&主要维护者）：[https://mufeng086.com/about/](https://mufeng086.com/about/) （点击底部“充电”获取二维码）
 
+**南栀**（内容编辑之一）：[赞赏码](https://bu.dusays.com/2024/02/06/65c1af9c58d56.png) 

@@ -30,7 +30,7 @@ author: false
 />
 <VPCard
   title="南栀"
-  desc="高木同学天下第一！"
+  desc="无限进步"
   logo="http://q.qlogo.cn/headimg_dl?dst_uin=2360372707&spec=640&img_type=png"
   link="https://litkg.com/"
   background="rgba(253, 230, 138, 0.15)"
@@ -38,7 +38,7 @@ author: false
 <VPCard
   title="WaterApple"
   desc="届ける言葉を今は育ててる"
-  logo="https://waterapple09.com/wp-content/uploads/2023/05/v2-fb221a6bb99ca9f92873e453d62b030d_r.jpg"
+  logo="https://cn-sy1.rains3.com/waterapple-wp/2023/09/b_3348da795ccd5e95f5ba5f78e1d278d0.png"
   link="https://waterapple09.com"
   background="rgba(253, 230, 138, 0.15)"
 />
