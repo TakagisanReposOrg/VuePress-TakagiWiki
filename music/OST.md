@@ -3,7 +3,10 @@ title: 原声带OST
 article: false
 author: 轻虹空雨
 ---
-
+:::info 提示
+由于曲目过多，本页不提供直接试听链接。<br>
+不过下方提供了他人搬运的视频，有需要可跳转前往。
+:::
 （创作：堤博明）
 
 ::: tabs
@@ -14,7 +17,9 @@ author: 轻虹空雨
 
 **动画第一季原声带**
 
-![专辑封面](/music-album-cover/s1-ed.webp)
+![专辑封面](/music-album-cover/s1-ost.webp)
+
+试听（B站 @擅长捉弄の高木同学）：[点击跳转](https://www.bilibili.com/video/BV1PW411G7QW?vd_source=07e72bf30f2bff4e321de26db9b64d86)
 
 |季度|日文曲名|中文译名|
 |:--|:--|:--|
@@ -79,7 +84,9 @@ author: 轻虹空雨
 
 **动画第二季原声带**
 
-![专辑封面](/music-album-cover/s2-ed.webp)
+![专辑封面](/music-album-cover/s2-ost.webp)
+
+试听（B站 @天使动漫）：[点击跳转](https://www.bilibili.com/video/BV1AJ411u7nR?vd_source=07e72bf30f2bff4e321de26db9b64d86)
 
 |季度|日文曲名|中文译名|原唱|归属|
 |:--|:--|:--|:--|:--|
@@ -157,9 +164,9 @@ author: 轻虹空雨
 
 **动画第三季原声带**
 
-![专辑封面](/music-album-cover/s3&movie-ed.webp)
+![专辑封面](/music-album-cover/s3-ost.webp)
 
-（*S3ED4《学園天国》由高橋李依主唱，多位角色声优合唱）
+试听（B站 @天使动漫）：[点击跳转](https://www.bilibili.com/video/BV1Hr4y1V7MQ?vd_source=07e72bf30f2bff4e321de26db9b64d86)
 
 |季度|日文曲名|中文译名|原唱|归属|
 |:--|:--|:--|:--|:--|
@@ -200,7 +207,6 @@ author: 轻虹空雨
 |S3|西片クエスト|西片任务|
 |S3|夢かどうか|是不是梦|
 
-*剧场版ED的使用：日本本土影院自6月10日上映起按周循环轮换，日本以外地区影院以及流媒体版本均为ED3，光碟正片片尾为ED1。
 
 @tab 剧场版
 
@@ -208,7 +214,9 @@ author: 轻虹空雨
 
 **剧场版原声带**
 
-![专辑封面](/music-album-cover/s3&movie-ed.webp)
+![专辑封面](/music-album-cover/movie-ost.webp)
+
+试听（B站 @KarenFusion）：[点击跳转](https://www.bilibili.com/video/BV1KF411c7fR?vd_source=07e72bf30f2bff4e321de26db9b64d86)
 
 |季度|日文曲名|中文译名|原唱|归属|
 |:--|:--|:--|:--|:--|
