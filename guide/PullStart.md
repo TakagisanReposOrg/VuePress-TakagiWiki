@@ -15,12 +15,12 @@ Hi,我是[一只鬆](https://github.com/yzsong06)，这个资料站项目自2023
 
 ### 项目现状
 
-有关站点渲染的原理可以用一幅图直观解释
+有关本站运行的架构可以用一幅图直观解释
 
 ```mermaid
 block-beta
     columns 3
-    Github仓库修改 blockArrowId6<[" "]>(right) 云函数渲染站点静态文件
+    Github仓库修改 blockArrowId6<[" "]>(right) Serverless生成文件
     space:2 down<[" "]>(down)
     用户查看站点 left<[" "]>(left) Database[("CDN缓存分发站点")]
 
