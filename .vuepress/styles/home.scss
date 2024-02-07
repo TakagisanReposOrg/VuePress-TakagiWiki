@@ -22,25 +22,13 @@
   );  
 
   // home page
-.vp-project-home {
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @media (min-width: 959px) {
-    background: url("/img/bg3.svg") no-repeat calc(50% + 420px) -90px;
-  }
-
-  h2 {
-    border-bottom: none;
-  }
-}
 
 .vp-hero-info {
   display: block;
   text-align: center;
 
   .vp-hero-image {
-    max-height: 150px;
+    max-height: 200px;
     margin: 0 auto;
   }
 }
