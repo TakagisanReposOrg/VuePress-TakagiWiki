@@ -9,24 +9,16 @@ export default hopeTheme({
 
   author: {
     name: "一只鬆",
-    url: "https://blog.sotkg.link",
+    url: "https://sotkg.link",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp",
-
-  fullscreen: true,
+  //锁定站点深色模式
+  darkmode: "enable",
 
   repo: "TakagisanReposOrg/Vuepress-TakagiWiki",
-  blog:{
-    name: "TkgRepoOrg",
-    roundAvatar: true,
-    description: "聚合一切与《高木同学》有关的开源项目",
-    medias: {
-      GitHub: "https://github.com/TakagisanReposOrg",
-    },
-  },
   // navbar
   navbar,
   
@@ -60,6 +52,7 @@ export default hopeTheme({
       hint: true,
       //启用自定义容器支持
       align: true,
+      //启用mermaid图表支持
       mermaid: true,
       tabs: true,
       //启用自定义对齐支持
