@@ -1,7 +1,7 @@
 ---
 home: true
 title: 高木轻Wiki站
-footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 >"
+footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 "
 heroFullScreen: true
 heroImageDark: https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp
 heroText: 高木轻Wiki站
@@ -13,11 +13,19 @@ actions:
   - text: 更新日志
     link: /other/Action.html
     type: primary
+head:
+  - - meta
+    - name: keywords
+      content: 高木Wiki,轻Wiki,VuePress,木创社,Takagi-San,擅长捉弄的高木同学
+  - - meta
+    - name: description
+      content: 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站
+
 ---
 ---
 
 ::: center
-本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 
+本站是基于VuePress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 
 
 项目发起者、主要编辑者之一：[@木雨与风（原@轻虹空雨/牧丰086）](https://mufeng086.com) <br/>
 仓库实际所有人、资料站站长&运维：[@一只鬆](https://sotkg.link)
