@@ -1,60 +1,86 @@
+  $theme-color: #21d789;
 
-.home-container {
-    position: relative;
-    height: 100vh;
+  $text-color: (
+    light: #2c3e50,
+    dark: #9e9e9e,
+  );
+  
+  $bg-color: (
+    light: #fff,
+    dark: #0c1117,
+  );
+  
+  $bg-color-secondary: (
+    light: #f8f8f8,
+    dark: #333,
+  );
+  
+  // shadow
+  $box-shadow: (
+    light: #f0f1f2,
+    dark: #303030,
+  );  
+
+  // home page
+
+.vp-hero-info {
+  display: block;
+  text-align: center;
+
+  .vp-hero-image {
+    max-height: 200px;
+    margin: 0 auto;
   }
-  
-  .home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+}
+
+#main-description {
+  max-width: 100%;
+  font-size: 20px;
+  color: #fff;
+  font-family: sans-serif;
+  font-variation-settings:
+    "wght" 700,
+    "BEVL" 100;
+}
+
+.vp-actions {
+  margin-left: -10px;
+}
+
+.vp-action.primary {
+  color: #fff;
+}
+
+.vp-features {
+  &:first-child {
+    border-top: none;
   }
-  
-  .home-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+}
+
+.vp-feature-item {
+  &:hover {
+    background-color: #30303360;
   }
-  
-  .home-image:hover {
-    transform: rotate(720deg);
-  }
-  
-  
-  .home-title {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-weight: bold;
-    font-size: 35px;
-    padding: 5px;
-  }
-  
-  .home-description {
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-  }
-  
-  .home-button {
-    margin-top: 2px;
-    color: #db7093;
-  }
-  
-  .badge {
-    display: flex;
-    padding: 15px 30px;
-    font-size: large;
-    background-color: #db7093;
-    border-radius: 999px;
+
+  .vp-feature-title {
     color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  } 
-  
-  
+    font-family: sans-serif;
+    font-variation-settings:
+      "wght" 700,
+      "BEVL" 100;
+  }
+
+  .vp-feature-details {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+#main-title {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-variation-settings:
+    "wght" 700,
+    "BEVL" 100;
+  -webkit-text-fill-color: #ffffff;
+}

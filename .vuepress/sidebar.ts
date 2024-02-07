@@ -3,9 +3,9 @@ import { sidebar } from "vuepress-theme-hope";
 export const Sidebar = sidebar({
   "/": [
     {
-      text: "博客",
-      link: "https://club.takagi3.cn/blog",
-      icon: "blog",
+      text: "主页",
+      link: "/",
+      icon: "home",
     },
     {
       text: "指南",
