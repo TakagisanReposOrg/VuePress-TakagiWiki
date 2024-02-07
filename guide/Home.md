@@ -17,3 +17,12 @@ author: false
 你可以通过“侧边栏”或“导航栏”进入对应的Wiki分区，目前本站正处于`持续建设阶段`。
 ### 贡献者
 请前往[快速贡献指南](/guide/PullStart.html)查看为本站做出贡献的方式！
+
+## 概览
+|名称|职务|个人主页|
+|:--|:--|:--|
+|木雨与风|项目发起者&编辑者|https://mufeng086.com|
+|一只鬆|项目运维&联合站长|https://sotkg.link|
+|南栀|内容编辑者|https://litkg.com|
+|WaterApple|内容贡献者|https://waterapple09.com|
+|IceYear|内容贡献者|https://iceyear.eu.org|
