@@ -1,20 +1,20 @@
 ---
 home: true
-title: 高木综合Wiki站
-footer: "《擅长捉弄的高木同学》综合Wiki | 木创社站点编号No.01 "
-
+title: 高木轻Wiki站
+footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 >"
+heroFullScreen: true
+heroImageDark: https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp
+heroText: 高木轻Wiki站
+tagline: “捉弄”缩短了二人之间的距离
+actions:
+  - text: 进入文档
+    link: /guide/Home.html
+    type: primary
+  - text: 更新日志
+    link: /other/Action.html
+    type: primary
 ---
 ---
-<div class="home-container">
-  <div class="home-content">
-    <img src="https://pic.imgdb.cn/item/65702291c458853aef1fcc8c.webp" alt="站点主页Logo" class="home-image">
-    <h2 class="home-title">高木综合Wiki站</h2>
-    <p class="home-description">“捉弄”缩短了二人之间的距离</p>
-    <a href="/guide/Home.html" class="home-button badge">进入文档</a>
-    <br>
-    <a href="/other/Action.html" class="home-button badge">更新日志</a>
-  </div>
-</div>
 
 ::: center
 本站是基于Vuepress静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站。 

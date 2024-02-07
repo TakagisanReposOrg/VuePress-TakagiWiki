@@ -2,6 +2,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import { Sidebar } from "./sidebar.js";
 
+
+
 export default hopeTheme({
   hostname: "https://wiki.takagi3.cn",
 
@@ -33,12 +35,12 @@ export default hopeTheme({
   // footer
   
   
-  footer: "《擅长捉弄的高木同学》综合Wiki | 木创社站点编号No.01 ",
+  footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 ",
   copyright: "站点部署 © 木创社｜本站站长 © 一只鬆",
   displayFooter: true,
   // page meta
   metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
+    editLink: "在 GitHub 上编辑本页",
   },
   plugins: {
     components: {

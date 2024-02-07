@@ -23,7 +23,7 @@ export default defineUserConfig({
 					placeholder: "搜索文档",
 					translations: {
 						button: {
-							buttonText: "搜索文档",
+							buttonText: "好耶，是搜索框！",
 						},
 					},
 				},
