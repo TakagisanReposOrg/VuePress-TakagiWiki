@@ -79,3 +79,7 @@ start = "typescript-language-server --stdio"
 
 [deployment]
 run = ["sh", "-c", "pnpm dev"]
+
+[[ports]]
+localPort = 8080
+externalPort = 80
