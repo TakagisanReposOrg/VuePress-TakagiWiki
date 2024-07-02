@@ -9,7 +9,7 @@ author: false
 点击卡片右下角Github图标将跳转至对应个人的Github个人资料页。
 :::
 
-**一只鬆**（框架建设者）：[https://tkgso.fun/pay.html](https://tkgso.fun/pay.html)
+**一只鬆**（框架建设者）：[https://blog.tkgso.fun/pay](https://blog.tkgso.fun/pay)
 
 **木雨与风**（项目发起&主要维护者）：[https://mufeng086.com/about/](https://mufeng086.com/about/) （点击底部“充电”获取二维码）
 

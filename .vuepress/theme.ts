@@ -27,8 +27,8 @@ export default hopeTheme({
   // footer
   
   
-  footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 ",
-  copyright: "站点部署 © 木创社｜本站站长 © 一只鬆",
+  footer: "《擅长捉弄的高木同学》轻Wiki站 | 木创社·木语星No.01",
+  copyright: "站点部署 © 木创社｜本站运营 © 木语星",
   displayFooter: true,
   // page meta
   metaLocales: {
