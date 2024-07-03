@@ -58,23 +58,6 @@ export const Sidebar = sidebar({
       ],
     },
     {
-      text: "衍生/社群",
-      icon: "users",
-      prefix: "derivative/",
-      children: [
-        "Related-Book",
-        "Related-Software",
-        "FanGroup",
-        "Related-Creation",
-      ],
-    },
-    {
-      text: "商品/周边",
-      icon: "shopping-cart",
-      prefix: "goods/",
-      children: "structure",
-    },
-    {
       text: "其他",
       icon: "ellipsis",
       prefix: "other/",

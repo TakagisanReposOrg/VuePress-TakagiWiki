@@ -8,8 +8,8 @@ export default hopeTheme({
   hostname: "https://wiki.takagi3.cn",
 
   author: {
-    name: "一只鬆",
-    url: "https://sotkg.link",
+    name: "木语星",
+    url: "https://takagi3.top",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -46,8 +46,6 @@ export default hopeTheme({
 			  "VidStack",
 			],
 		  },
-    blog: true,
-    //激活博客功能支持
     mdEnhance: {
       hint: true,
       //启用自定义容器支持
