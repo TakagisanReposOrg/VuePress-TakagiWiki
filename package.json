@@ -2,27 +2,26 @@
   "name": "mcsclub-tkgwiki",
   "version": "2.0.0",
   "description": "vuepress-tkgwiki-mcsclub",
-  "repository": "git@github.com:yzsong06/TakagiWikiSiteCNVue.git",
-  "author": "yzsong06 <yzsong06@outlook.com>",
+  "author": "PaloMiku <palomiku@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev .",
-    "start": "vuepress dev .",
-    "build": "vuepress build .",
-    "clean-dev": "vuepress dev  --clean-cache",
+    "dev": "vuepress dev docs",
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "clean-dev": "vuepress dev docs --clean-cache",
     "update": "dlx vp-update"
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-rc.0",
-    "vue": "^3.4.15",
+    "vue": "^3.4.35",
     "vuepress": "2.0.0-rc.0",
     "vuepress-theme-hope": "2.0.0-rc.2"
   },
   "devDependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
-    "@waline/client": "^2.15.8",
-    "mermaid": "^10.8.0",
-    "vidstack": "^1.10.4",
+    "artalk": "^2.8.7",
+    "mermaid": "^10.9.1",
+    "vidstack": "^1.12.0",
     "vuepress-plugin-components": "2.0.0-rc.2",
     "vuepress-plugin-md-enhance": "2.0.0-rc.2"
   }

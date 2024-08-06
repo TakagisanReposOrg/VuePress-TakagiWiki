@@ -8,8 +8,8 @@ export default hopeTheme({
   hostname: "https://wiki.takagi3.cn",
 
   author: {
-    name: "一只鬆",
-    url: "https://sotkg.link",
+    name: "木创社",
+    url: "https://takagi3.top",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -28,7 +28,7 @@ export default hopeTheme({
   
   
   footer: "《擅长捉弄的高木同学》轻Wiki | 木创社站点编号No.01 ",
-  copyright: "站点部署 © 木创社｜本站站长 © 一只鬆",
+  copyright: "站点部署 © 木创社｜维护小组 © 木语星",
   displayFooter: true,
   // page meta
   metaLocales: {
@@ -59,7 +59,7 @@ export default hopeTheme({
     },
     comment: {
       provider: "Waline",
-      serverURL: "https://waline-1-j6551192.deta.app/",
+      serverURL: "waline-1-v2731856.deta.app",
       emoji: ['//npm.onmicrosoft.cn/@waline/emojis@1.1.0/bilibili'],
       dark: 'auto',
       commentSorting: 'hottest',

@@ -1,10 +1,6 @@
 import { navbar } from "vuepress-theme-hope";
 export default navbar([
   {
-  text: "高木资料站",
-  icon: "book",
-  children: [
-  {
     text: "音乐",
     icon: "music",
     prefix: "/music/",
@@ -154,10 +150,4 @@ export default navbar([
         ],
       },
     ],
-  },
-  {
-    text: "贡献者列表",
-    link: "/other/list",
-    icon: "blog",
-  },
-]);
+);
