@@ -389,7 +389,7 @@ const META = {
   'role/meta.json': { title: '角色', pages: ['Takagi-OG', 'Takagi-OH'] },
   'derivative/meta.json': {
     title: '衍生/社群',
-    pages: ['McsClub', 'Related-Book', 'Related-Software', 'Related-Creation', 'FanGroup'],
+    pages: ['McsClub', 'Related-Book', 'Related-Software'],
   },
   'goods/meta.json': { title: '商品/周边', pages: ['Offical', 'Officalip'] },
   'other/meta.json': {
