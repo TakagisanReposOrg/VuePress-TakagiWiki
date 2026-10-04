@@ -17,6 +17,15 @@ const heroImage = '/assets/logo.webp';
       content="本站是基于 Astro + Fumadocs 静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站"
     />
     <meta name="keywords" content="高木Wiki,轻Wiki,Astro,木创社,Takagi-San,擅长捉弄的高木同学" />
+    {/* build.format 为 'file'，根路由的 pathname 是 /index.html，
+        但首页的规范地址应是裸域名根路径 */}
+    <link
+      rel="canonical"
+      href={new URL(
+        Astro.url.pathname === '/index.html' ? '/' : Astro.url.pathname,
+        Astro.site ?? 'https://wiki.takagi3.cn',
+      )}
+    />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -2,9 +2,23 @@
 interface Props {
   title: string;
   description?: string;
+  /** 覆盖默认规范地址，默认取当前路由的实际 URL */
+  canonical?: string;
 }
 
-const { title, description = '《擅长捉弄的高木同学》轻Wiki站' } = Astro.props;
+const {
+  title,
+  description = '《擅长捉弄的高木同学》轻Wiki站',
+  canonical,
+} = Astro.props;
+
+// 规范地址以实际路由为准；Astro.site 来自 astro.config.mjs 的 site 配置。
+// 旧站统一使用 .html 后缀（build.format: 'file'），Astro.url.pathname 已含该后缀，
+// 因此这里得到的正是对外可访问的地址。
+const canonicalURL = new URL(
+  canonical ?? Astro.url.pathname,
+  Astro.site ?? 'https://wiki.takagi3.cn',
+);
 ---
 
 <html lang="zh-CN">
@@ -14,6 +28,7 @@ const { title, description = '《擅长捉弄的高木同学》轻Wiki站' } = A
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
