@@ -2,6 +2,11 @@
 
 日期：2026-10-04　|　分支：`astro7-fumadocs`
 
+> ## ⚠ 本文已被后续修正部分取代
+>
+> 本文是**迁移当时的设计记录**，保留原貌以备追溯。经上线前的一轮核查，其中若干
+> 决策在实现阶段被推翻或细化。**不要直接照本文实现**，具体见文末「后续修正」。
+
 ## 背景与目标
 
 现有站点为《擅长捉弄的高木同学》轻 Wiki（中文，部署于 `wiki.takagi3.cn`），基于
@@ -78,3 +83,39 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
 2. `astro preview` + curl 抽查旧式 `.html` URL、分区根 redirects、搜索 API。
 3. 渲染页面视觉检查（visual judge）：首页、文档页、深色模式、卡片页无布局破损。
 4. 仓库中不再残留 vuepress 依赖与 `docs/.vuepress`。
+
+---
+
+## 后续修正（2026-10-05 上线前核查）
+
+本文若干决策在实现后被修正，以下一律以实际代码为准。
+
+### 会导致功能失效的修正
+
+| 本文原描述 | 实际情况 |
+|---|---|
+| 搜索索引 `api/search.ts` | 实际为 `api/search.json.ts` |
+| 检索「Web component」方式挂载 Waline | **错**。`@waline/client` 不注册 `<waline-comment>` 自定义元素（`./component` 导出的是 Vue 组件，`./comment` 只导出计数工具），按本文实现会得到一个不渲染任何内容的未知元素。已改为 `init({ el })` |
+| `<SiteInfo>` → `<Card>`、`<VPCard>` → `<Card>` | 调整为保留两个包装组件（`site-info.tsx` / `vp-card.tsx`），内部用自建的 `card-h2.tsx`。Fumadocs 的 Card 标题渲染为 `<h3>`，与页面 `<h1>` 之间会缺 `<h2>` |
+| 部署用 `withastro/action` | 改为自行 `pnpm install` + `pnpm verify` + `actions/upload-pages-artifact`。`withastro/action` 在未显式初始化 pnpm 的 runner 上会报 `No pnpm version is specified` |
+
+### 构建与依赖
+
+- pnpm 11 不再读取 `package.json` 的 `pnpm` 字段，也不再满足于 `onlyBuiltDependencies`；
+  安装脚本须在 `pnpm-workspace.yaml` 的 `allowBuilds` 中显式声明为 `true`，
+  否则 `pnpm install` 以退出码 1 失败。
+- `http-cache-semantics` 经 astro 传递引入，存在 high 级漏洞 GHSA-ch52-4w7c-c8xp，
+  已用 `overrides` 固定到 `^4.3.0`。
+
+### 新增的工程设施（本文撰写时尚不存在）
+
+- `scripts/audit.mjs`（`pnpm check`）：14 类产物审计，进 CI 门禁
+- `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试
+- `scripts/check-external.mjs`（`pnpm check:ext`）：站外引用可达性
+- 工作流增加 `pull_request` 触发，审计不再只覆盖 `push: main`
+
+### 尚未落地
+
+本文「部署」一节假设 GitHub Pages 已启用，实际上**至今未启用**（`has_pages: false`），
+因此流水线虽在 CI 上通过，deploy 作业始终失败。
+
