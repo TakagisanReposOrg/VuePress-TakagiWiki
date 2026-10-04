@@ -3,20 +3,25 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 贡献者按站点指南走 fork → PR 流程，且仓库 ruleset「Manage」强制走 PR，
+  # 因此审计必须覆盖 pull_request，否则只能在合并之后才发现问题 —— 那时
+  # main 已被污染，拦得住部署、拦不住坏合并。
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,19 +43,25 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # pnpm verify = pnpm build && pnpm check
-      # 审计不通过（退出码 1）时本作业失败，产物不会被部署。
+      # 审计不通过（退出码 1）时本作业失败。
       # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 / 静态资源缺失
       - name: Build and audit
         run: pnpm verify
 
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
+    # PR 只做校验，不发布
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
