@@ -1,0 +1,8 @@
+# 高木同学轻 Wiki（Takagi-san Light Wiki）
+
+《擅长捉弄的高木同学》（からかい上手の高木さん）主题轻量 Wiki，由木创社（Takagi Project）维护。
+
+- 主域名：https://wiki.takagi3.cn
+- 内容分区：指南 / 音乐 / 漫画 / 动画 / 角色 / 衍生社群 / 商品周边 / 其他
+- 页面为 `.html` 结尾的静态页，例如 https://wiki.takagi3.cn/guide/index.html
+- 站点地图：https://wiki.takagi3.cn/sitemap-index.xml

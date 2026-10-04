@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 import { unified } from '@astrojs/markdown-remark';
 import {
   rehypeCode,
@@ -38,6 +39,7 @@ export default defineConfig({
       extendMarkdownConfig: true,
       syntaxHighlight: false,
     }),
+    sitemap(),
   ],
   vite: {
     plugins: [tailwindcss()],
