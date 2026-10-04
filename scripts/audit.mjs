@@ -101,6 +101,10 @@ for (const f of htmls) {
   }
   if (/&lt;(Callout|SiteInfo|Mermaid|VPCard|Tabs)\b/.test(html))
     add('组件', `${url} 出现被转义的组件标签（可能未在 components 映射中注册）`);
+  // VuePress 时代的 ::: 容器语法在 Fumadocs 下不生效，会原样显示为正文
+  if (/<p>:::\s*\w+/.test(html))
+    add('组件', `${url} 出现未转换的 ::: 容器语法（应改用 <Callout type="..."> 组件）`);
+  if (/<code>:::<\/code>/.test(html)) add('组件', `${url} 正文含 ::: 标记`);
 
   /* --- 站内死链 --- */
   const selfDir = dirname(url);
