@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+:root {
+  /* 木创社主题色（沿用原 hope theme 的 #db7093） */
+  --color-fd-primary: #db7093;
+  --font-body: 'Noto Serif SC', 'Noto Sans SC', serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+}
+
+.dark {
+  --color-fd-primary: #e795b3;
+}

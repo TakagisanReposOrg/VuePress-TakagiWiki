@@ -1,0 +1,75 @@
+---
+import '@/styles/global.css';
+
+const title = '高木轻Wiki站';
+const tagline = '“捉弄”缩短了二人之间的距离';
+const heroImage = '/assets/logo.webp';
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta
+      name="description"
+      content="本站是基于 Astro + Fumadocs 静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站"
+    />
+    <meta name="keywords" content="高木Wiki,轻Wiki,Astro,木创社,Takagi-San,擅长捉弄的高木同学" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script is:inline>
+      const t = localStorage.getItem('theme');
+      const dark =
+        t === 'dark' ||
+        ((t === null || t === 'system') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    </script>
+  </head>
+  <body class="min-h-screen">
+    <main
+      class="flex min-h-screen flex-col items-center justify-center px-6 text-center"
+    >
+      <img
+        src={heroImage}
+        alt={title}
+        width="160"
+        height="160"
+        class="mb-8 rounded-3xl shadow-lg"
+      />
+      <h1 class="text-4xl font-bold sm:text-5xl">{title}</h1>
+      <p class="text-fd-muted-foreground mt-4 text-lg">{tagline}</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/guide/Home.html"
+          class="text-fd-primary-foreground bg-fd-primary rounded-xl px-6 py-3 font-medium transition-opacity hover:opacity-90"
+        >
+          进入文档
+        </a>
+        <a
+          href="/other/Action.html"
+          class="border rounded-xl px-6 py-3 font-medium transition-colors hover:bg-fd-muted"
+        >
+          更新日志
+        </a>
+      </div>
+    </main>
+    <footer class="text-fd-muted-foreground pb-8 text-center text-sm">
+      <p>《擅长捉弄的高木同学》轻Wiki站 | 木创社站点编号No.01</p>
+      <p class="mt-1">
+        站点部署 © 木创社｜维护小组 © 木语星
+      </p>
+    </footer>
+    <script>
+      // 首页也提供与文档页一致的主题切换
+      const btn = document.getElementById('theme-toggle');
+      btn?.addEventListener('click', () => {
+        const dark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = '《擅长捉弄的高木同学》轻Wiki站' } = Astro.props;
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script is:inline>
+      // 提前应用主题，避免深色模式闪屏（与 fumadocs 的 'theme' 存储键一致）
+      const t = localStorage.getItem('theme');
+      const dark =
+        t === 'dark' ||
+        ((t === null || t === 'system') &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    </script>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <slot />
+  </body>
+</html>

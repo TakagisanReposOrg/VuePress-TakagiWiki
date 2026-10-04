@@ -1,28 +1,43 @@
 {
-  "name": "mcsclub-tkgwiki",
-  "version": "2.0.0",
-  "description": "vuepress-tkgwiki-mcsclub",
+  "name": "takagi-wiki",
+  "version": "3.0.0",
+  "description": "takagi-wiki-astro7-fumadocs-mcsclub",
   "author": "PaloMiku <palomiku@outlook.com>",
   "license": "MIT",
+  "type": "module",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    }
+  },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "start": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "clean-dev": "vuepress dev docs --clean-cache",
-    "update": "dlx vp-update"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && node scripts/postbuild.mjs",
+    "preview": "astro preview",
+    "migrate": "node scripts/migrate-content.mjs"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workbox-build"
+    ]
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-rc.0",
-    "vue": "^3.4.35",
-    "vuepress": "2.0.0-rc.0",
-    "vuepress-theme-hope": "2.0.0-rc.2"
-  },
-  "devDependencies": {
-    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
-    "artalk": "^2.8.7",
-    "mermaid": "^10.9.1",
-    "vidstack": "^1.12.0",
-    "vuepress-plugin-components": "2.0.0-rc.2",
-    "vuepress-plugin-md-enhance": "2.0.0-rc.2"
+    "@astrojs/markdown-remark": "^7.3.1",
+    "@astrojs/mdx": "^8.0.2",
+    "@astrojs/react": "^7.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@waline/client": "^3.16.0",
+    "astro": "^7.3.5",
+    "fumadocs-core": "^16.15.18",
+    "fumadocs-ui": "^16.15.18",
+    "mermaid": "^12.1.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3"
   }
 }

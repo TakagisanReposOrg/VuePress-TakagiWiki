@@ -1,0 +1,122 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import { Docs } from '@/components/docs';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import SiteInfo from '@/components/site-info';
+import VPCard from '@/components/vp-card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { Tabs, Tab } from '@/components/tabs';
+import '@/styles/global.css';
+import { source } from '@/lib/source';
+import Layout from '@/components/layout.astro';
+import type { TOCItemType } from 'fumadocs-core/toc';
+
+interface Props {
+  page: CollectionEntry<'docs'>;
+}
+
+export async function getStaticPaths() {
+  return source.getPages().map((page) => ({
+    params: {
+      slug: page.slugs.length > 0 ? page.slugs.join('/') : undefined,
+    },
+    props: { page: page.data._raw },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content, headings } = await render(page);
+// 兼容旧站的 .html URL（如 /music/ED.html）
+const rawSlug =
+  typeof Astro.params.slug === 'string' ? Astro.params.slug : '';
+const slugs = rawSlug.replace(/\.html$/, '').split('/').filter(Boolean);
+const docsPage = source.getPage(slugs);
+if (!docsPage) {
+  return Astro.redirect('/404.html');
+}
+
+const toc: TOCItemType[] = headings.map((heading) => ({
+  depth: heading.depth,
+  title: heading.text,
+  url: '#' + heading.slug,
+}));
+
+const components = {
+  ...defaultMdxComponents,
+  SiteInfo,
+  VPCard,
+  Callout,
+  Card,
+  Cards,
+  Tabs,
+  Tab,
+};
+---
+
+<Layout title={page.data.title} description={page.data.description}>
+  <meta property="og:image" content="/assets/image/icon/512.png" />
+  <Docs
+    tree={source.getPageTree()}
+    pathname={Astro.url.pathname}
+    params={Astro.params}
+    page={{
+      toc,
+      breadcrumb: { enabled: true },
+    }}
+    client:load
+  >
+    <h1 class="font-semibold text-3xl">{page.data.title}</h1>
+    <div class="prose flex-1">
+      <Content components={components} />
+    </div>
+    <div id="waline" class="mt-12"></div>
+  </Docs>
+  <script>
+    // Waline 评论（沿用原站 serverURL，web 组件方式零框架依赖）
+    const walineEl = document.getElementById('waline');
+    if (walineEl) {
+      const isDark = document.documentElement.classList.contains('dark');
+      import('@waline/client/comment').then(() => {
+        const el = document.createElement('waline-comment');
+        el.setAttribute('serverURL', 'waline-1-v2731856.deta.app');
+        el.setAttribute('emoji', '//npm.onmicrosoft.cn/@waline/emojis@1.1.0/bilibili');
+        el.setAttribute('meta', 'nick,mail');
+        el.setAttribute('requiredMeta', 'nick');
+        if (isDark) el.setAttribute('dark', 'auto');
+        else el.removeAttribute('dark');
+        el.setAttribute('commentSorting', 'hottest');
+        el.setAttribute('pageSize', '5');
+        walineEl.appendChild(el);
+      });
+    }
+  </script>
+  <script>
+    // mermaid 图表：惰性加载，仅在页面存在 mermaid 代码块时渲染
+    const blocks = document.querySelectorAll<HTMLElement>(
+      'pre > code.language-mermaid',
+    );
+    if (blocks.length > 0) {
+      const { default: mermaid } = await import('mermaid');
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'neutral',
+        fontFamily: 'Noto Serif SC, sans-serif',
+      });
+      let i = 0;
+      for (const el of blocks) {
+        const source = el.textContent ?? '';
+        const container = document.createElement('div');
+        container.className = 'my-6 overflow-x-auto text-center';
+        el.parentElement?.replaceWith(container);
+        try {
+          const { svg } = await mermaid.render('mermaid-' + i++, source);
+          container.innerHTML = svg;
+        } catch (e) {
+          container.textContent = source;
+          console.error(e);
+        }
+      }
+    }
+  </script>
+</Layout>

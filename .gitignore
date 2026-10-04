@@ -1,3 +1,17 @@
-docs/.vuepress/.cache
-docs/.vuepress/.temp
+# build output
+dist/
+# generated types
+.astro/
+# dependencies
 node_modules/
+# logs
+*.log
+# environment
+.env
+.env.production
+# macOS
+.DS_Store
+# IDE
+.idea/
+# local security-scan tool state
+.mimosa/
