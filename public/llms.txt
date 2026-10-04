@@ -3,6 +3,22 @@
 《擅长捉弄的高木同学》（からかい上手の高木さん）主题轻量 Wiki，由木创社（Takagi Project）维护。
 
 - 主域名：https://wiki.takagi3.cn
-- 内容分区：指南 / 音乐 / 漫画 / 动画 / 角色 / 衍生社群 / 商品周边 / 其他
-- 页面为 `.html` 结尾的静态页，例如 https://wiki.takagi3.cn/guide/index.html
+- 内容分区：指南 / 音乐 / 漫画 / 动画 / 角色 / 衍生、社群 / 商品、周边 / 其他
 - 站点地图：https://wiki.takagi3.cn/sitemap-index.xml
+
+## 页面地址
+
+页面为 `.html` 结尾的静态页。各分区的入口页如下（均为真实内容页，非跳转中转）：
+
+- 文档引导：https://wiki.takagi3.cn/guide/Home.html
+- 音乐：https://wiki.takagi3.cn/music/ED.html
+- 漫画：https://wiki.takagi3.cn/manga/Takagi-OG.html
+- 动画：https://wiki.takagi3.cn/anime.html
+- 角色：https://wiki.takagi3.cn/role/Takagi-OG.html
+- 衍生、社群：https://wiki.takagi3.cn/derivative/McsClub.html
+- 商品、周边：https://wiki.takagi3.cn/goods/Offical.html
+- 其他：https://wiki.takagi3.cn/other/Info.html
+
+## 说明
+
+部分分区目录（如 `/guide/`、`/manga/`）会重定向到对应的 `.html` 页面，引用时建议直接使用上列的完整地址。

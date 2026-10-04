@@ -161,12 +161,29 @@ if (!smFiles.length) {
 
 /* ========== 6. 站点元文件 ========== */
 for (const [name, min] of [['llms.txt', 100], ['robots.txt', 20]]) {
+  let text;
   try {
-    const t = await readFile(join(DIST, name), 'utf8');
-    if (t.trim().length < min) add('元文件', `${name} 内容过短 (${t.trim().length} 字符)`);
-    if (name === 'robots.txt' && !/User-agent:/i.test(t)) add('元文件', 'robots.txt 缺少 User-agent');
+    text = await readFile(join(DIST, name), 'utf8');
   } catch {
     add('元文件', `${name} 不存在`);
+    continue;
+  }
+  if (text.trim().length < min) add('元文件', `${name} 内容过短 (${text.trim().length} 字符)`);
+  if (name === 'robots.txt' && !/User-agent:/i.test(text)) add('元文件', 'robots.txt 缺少 User-agent');
+
+  // 元文件里给出的绝对地址必须真的存在，否则等于给 AI 代理指了一条死路
+  for (const m of text.matchAll(new RegExp(`${ORIGIN}(/[^\\s)"'>]*)`, 'g'))) {
+    const p = m[1];
+    const target = p.endsWith('/') ? p + 'index.html' : p;
+    if (distSet.has(target) || distSet.has(target + '.html') || distSet.has(target + '/index.html')) {
+      // 命中了 postbuild 生成的 meta-refresh 跳转桩：可用但会让抓取方多跳一次
+      try {
+        if (/http-equiv="refresh"/.test(await readFile(join(DIST, target), 'utf8')))
+          add('元文件', `${name} 引用了跳转中转页，建议改用真实内容页: ${p}`);
+      } catch { /* 上面已判定存在 */ }
+      continue;
+    }
+    add('元文件', `${name} 引用了不存在的地址: ${p}`);
   }
 }
 
