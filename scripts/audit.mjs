@@ -36,7 +36,9 @@ const exists = async (p) => {
 };
 
 const issues = [];
+const warns = [];
 const add = (cat, msg) => issues.push([cat, msg]);
+const warn = (cat, msg) => warns.push([cat, msg]);
 
 /* ========== 1. 页树漂移 ========== */
 // 根 meta.json 的条目是目录名，分区 meta.json 的条目是页面基名。
@@ -187,8 +189,37 @@ for (const [name, min] of [['llms.txt', 100], ['robots.txt', 20]]) {
   }
 }
 
+/* ========== 7. 孤儿静态资源（提示级，不阻断） ========== */
+// 残留的模板演示图、废弃素材只会白白占用部署体积。
+// CNAME / robots.txt / llms.txt 由托管平台与爬虫消费，不由 HTML 引用，属正常。
+const PLATFORM_FILES = new Set(['CNAME', 'robots.txt', 'llms.txt']);
+try {
+  const htmlText = (
+    await Promise.all(htmls.map(async (f) => (await readFile(f, 'utf8')).replace(/&amp;/g, '&')))
+  ).join('\n');
+  for (const f of await walk(join(ROOT, 'public'))) {
+    const rel = relative(join(ROOT, 'public'), f).replace(/\\/g, '/');
+    if (PLATFORM_FILES.has(rel)) continue;
+    if (!htmlText.includes('/' + rel))
+      warn('孤儿资源', `public/${rel}  未被任何页面引用（${Math.round((await readFile(f)).length / 1024)} KB）`);
+  }
+} catch {
+  warn('孤儿资源', '未找到 public/ 目录，跳过检查');
+}
+
 /* ========== 报告 ========== */
 console.log(`审计范围: ${htmls.length} 个 HTML / ${srcPages.length} 个源页面\n`);
+
+if (warns.length) {
+  const byCat = {};
+  for (const [c, m] of warns) (byCat[c] ??= new Set()).add(m);
+  for (const [cat, set] of Object.entries(byCat)) {
+    console.log(`⚠ ${cat} (${set.size})  — 提示级，不影响构建结果`);
+    [...set].forEach((x) => console.log('   ' + x));
+  }
+  console.log('');
+}
+
 if (!issues.length) {
   console.log('✅ 全部通过，无问题');
 } else {
