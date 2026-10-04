@@ -17,6 +17,8 @@
     "start": "astro dev",
     "build": "astro build && node scripts/postbuild.mjs",
     "preview": "astro preview",
+    "check": "node scripts/audit.mjs",
+    "verify": "pnpm build && pnpm check",
     "migrate": "node scripts/migrate-content.mjs"
   },
   "pnpm": {

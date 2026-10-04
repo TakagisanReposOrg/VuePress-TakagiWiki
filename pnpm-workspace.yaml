@@ -1,3 +1,13 @@
+# 4.3.0 刚发布，会被本仓库的供应链「新版本冷静期」策略拦下；
+# 此处显式放行，因为它正是为修复下方记录的 high 级漏洞而发布。
+minimumReleaseAgeExclude:
+  - http-cache-semantics@4.3.0
+
 onlyBuiltDependencies:
   - esbuild
   - sharp
+
+overrides:
+  # 传递依赖经 astro 引入；<=4.2.0 存在 high 级漏洞 GHSA-ch52-4w7c-c8xp
+  # （http-cache-semantics 的 max-stale 处理可能泄露跨用户缓存响应），修复版本为 >=4.3.0
+  http-cache-semantics: ^4.3.0
