@@ -13,8 +13,10 @@ pnpm dev       # 本地开发 http://localhost:4321
 pnpm build     # 构建到 dist/（含 postbuild 旧链接兼容处理）
 pnpm preview   # 预览构建产物
 pnpm check     # 审计 dist/：页树漂移 / SEO 元信息 / sitemap 覆盖度 /
-               # 站内死链 / 组件残留 / 静态资源缺失，有问题则退出码 1
+               # 站内死链 / 组件残留 / 静态资源缺失 / 可访问性，有问题则退出码 1
 pnpm verify    # = build + check，CI 使用的组合
+pnpm test:audit  # 审计规则自身的元测试（注入缺陷验证能否捕获，含负例）
+pnpm test:search # 搜索索引回归：中文检索命中与组件源码残留检查
 ```
 
 ## 内容编辑

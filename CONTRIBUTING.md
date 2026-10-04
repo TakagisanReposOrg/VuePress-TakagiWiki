@@ -31,8 +31,8 @@ pnpm install
 pnpm verify     # = build + check，与 CI 跑的是同一套
 ```
 
-审计规则本身的回归测试用 `pnpm test:audit`；站外链接可达性用 `pnpm check:ext`
-（需要网络，不进 CI）。
+审计规则本身的回归测试用 `pnpm test:audit`；搜索索引回归用 `pnpm test:search`；
+站外链接可达性用 `pnpm check:ext`（需要网络，不进 CI）。
 
 ### 3. 只想提建议
 
