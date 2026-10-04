@@ -79,6 +79,16 @@ const distFiles = await walk(DIST);
 const htmls = distFiles.filter((f) => f.endsWith('.html'));
 const distSet = new Set(distFiles.map((f) => rel(f, DIST)));
 
+// 锚点校验需要知道每页有哪些 id
+const idsByPage = new Map();
+for (const f of htmls) {
+  const c = await readFile(f, 'utf8');
+  const ids = new Set();
+  for (const m of c.matchAll(/\sid="([^"]+)"/g)) ids.add(m[1]);
+  for (const m of c.matchAll(/<a[^>]+name="([^"]+)"/g)) ids.add(m[1]);
+  idsByPage.set(rel(f, DIST), ids);
+}
+
 const isStub = (html) => /http-equiv="refresh"/.test(html);
 
 for (const f of htmls) {
@@ -120,19 +130,67 @@ for (const f of htmls) {
   if (/<p>:::\s*\w+/.test(withoutCode))
     add('组件', `${url} 出现未转换的 ::: 容器语法（应改用 <Callout type="..."> 组件）`);
 
-  /* --- 站内死链 --- */
+  /* --- 站内死链与锚点 --- */
   const selfDir = dirname(url);
   // 同时覆盖站内相对链接与指向自身域名的绝对链接（后者此前是盲区）
   for (const m of html.matchAll(
-    new RegExp(`href="(?:${ORIGIN})?(/[^"#?]*)"`, 'g'),
+    new RegExp(`href="(?:${ORIGIN})?(/[^"#?]*)(#[^"]*)?"`, 'g'),
   )) {
     const t = decodeURIComponent(m[1]);
-    if (t === '/') continue;
-    if (
-      distSet.has(t) || distSet.has(t + '.html') || distSet.has(t + '/index.html') ||
-      distSet.has(t.replace(/\/$/, '') + '/index.html')
-    ) continue;
-    add('死链', `${url} -> ${t}`);
+    const hash = m[2] ? decodeURIComponent(m[2].slice(1)) : null;
+    if (t === '/') {
+      if (hash) add('锚点', `${url} -> /#${hash}  根页面无此 id`);
+      continue;
+    }
+    const resolved = [t, t + '.html', t + '/index.html', t.replace(/\/$/, '') + '/index.html']
+      .map((c) => (c.endsWith('/') ? c + 'index.html' : c))
+      .find((c) => distSet.has(c));
+    if (!resolved) {
+      add('死链', `${url} -> ${t}`);
+      continue;
+    }
+    if (hash) {
+      const ids = idsByPage.get(resolved);
+      if (ids && !ids.has(hash)) add('锚点', `${url} -> ${t}#${hash}  目标页无此 id`);
+    }
+  }
+
+  /* --- 可访问性：链接文本 --- */
+  // 无文本、或「点击这里」这类对读屏用户毫无信息的链接文本
+  const VAGUE = /^(点击(这里|此处|跳转|进入)?|这里|此处|跳转|链接|更多|查看|read more|click here|here|more|link)$/i;
+  for (const m of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const [, attrs, inner] = m;
+    if (/\bdownload\b/i.test(attrs)) continue; // 下载类链接以资源名作文本
+    const href = attrs.match(/href="([^"]*)"/)?.[1] ?? '';
+    if (/^(#|javascript:|mailto:|tel:)/i.test(href)) continue;
+    // 图标式链接（如导航栏的 GitHub）文本在 aria-label / title 上
+    const aria = attrs.match(/\baria-label="([^"]+)"/)?.[1]
+      ?? attrs.match(/\btitle="([^"]+)"/)?.[1] ?? '';
+    const text = (aria || inner)
+      .replace(/<img[^>]*\balt="([^"]*)"[^>]*>/gi, '$1')
+      .replace(/<[^>]+>/g, '')
+      .replace(/&[a-z]+;|&#\d+;/gi, '')
+      .trim();
+    if (!text) add('可访问性', `${url} 存在无文本链接：${href.slice(0, 46)}`);
+    else if (VAGUE.test(text))
+      add('可访问性', `${url} 链接文本「${text}」含义不明：${href.slice(0, 46)}`);
+  }
+
+  /* --- 可访问性：表格表头 --- */
+  for (const m of html.matchAll(/<table\b[\s\S]*?<\/table>/gi)) {
+    if (!/<th\b/i.test(m[0]))
+      add('可访问性', `${url} 存在没有表头单元格（<th>）的表格，读屏无法说明各列含义`);
+  }
+
+  /* --- 可访问性：标题层级 --- */
+  let prevLevel = 0;
+  for (const m of html.matchAll(/<h([1-6])\b/gi)) {
+    const lv = Number(m[1]);
+    if (prevLevel && lv > prevLevel + 1) {
+      add('可访问性', `${url} 标题层级由 h${prevLevel} 跳至 h${lv}（应逐级递进）`);
+      break; // 一页只报一次，避免级联噪声
+    }
+    prevLevel = lv;
   }
 
   /* --- 图片资源 --- */

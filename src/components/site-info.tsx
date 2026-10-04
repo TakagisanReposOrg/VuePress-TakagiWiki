@@ -1,4 +1,4 @@
-import { Card } from 'fumadocs-ui/components/card';
+import { CardH2 } from './card-h2';
 
 /**
  * 兼容原 VuePress `<SiteInfo>` 组件的卡片：
@@ -16,7 +16,7 @@ export default function SiteInfo({
   preview?: string;
 }) {
   return (
-    <Card
+    <CardH2
       title={name}
       description={desc}
       href={url}
@@ -30,6 +30,6 @@ export default function SiteInfo({
           loading="lazy"
         />
       ) : null}
-    </Card>
+    </CardH2>
   );
 }

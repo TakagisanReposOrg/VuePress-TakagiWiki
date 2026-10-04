@@ -1,4 +1,4 @@
-import { Card } from 'fumadocs-ui/components/card';
+import { CardH2 } from './card-h2';
 
 /**
  * 兼容原 VuePress `<VPCard>` 组件的头像卡片：
@@ -18,7 +18,7 @@ export default function VPCard({
   background?: string;
 }) {
   return (
-    <Card
+    <CardH2
       title={title}
       description={desc}
       href={link}
@@ -33,6 +33,6 @@ export default function VPCard({
           loading="lazy"
         />
       ) : null}
-    </Card>
+    </CardH2>
   );
 }
