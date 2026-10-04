@@ -176,6 +176,21 @@ for (const f of htmls) {
       add('可访问性', `${url} 链接文本「${text}」含义不明：${href.slice(0, 46)}`);
   }
 
+  /* --- 混合内容（http:// 资源） --- */
+  // 本站为 https 站点。src 上的 http:// 会被浏览器直接拦截，图片根本不显示；
+  // href 上的 http:// 只是导航，浏览器允许跳转，仅作提示。
+  for (const m of html.matchAll(/<[a-z]+\b[^>]*\ssrc="(http:\/\/[^"]+)"/gi))
+    add('混合内容', `${url} 的 <${m[0].match(/^<([a-z]+)/i)[1]}> 使用 http:// 资源，线上会被浏览器拦截：${m[1].slice(0, 56)}`);
+  for (const m of html.matchAll(/<a\b[^>]*\shref="(http:\/\/[^"]+)"/gi))
+    warn('混合内容', `${url} 存在 http:// 跳转链接（不拦截，但会提示不安全）：${m[1].slice(0, 56)}`);
+
+  /* --- 页内锚点 --- */
+  const ownIds = idsByPage.get(url) ?? new Set();
+  for (const m of html.matchAll(/href="#([^"]+)"/g)) {
+    const t = decodeURIComponent(m[1]);
+    if (!ownIds.has(t)) add('锚点', `${url} -> #${t}  本页无此 id`);
+  }
+
   /* --- 可访问性：表格表头 --- */
   for (const m of html.matchAll(/<table\b[\s\S]*?<\/table>/gi)) {
     if (!/<th\b/i.test(m[0]))

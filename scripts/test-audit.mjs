@@ -65,7 +65,10 @@ const mk = (body, metaTitle) => `<!DOCTYPE html><html lang="zh-CN"><head><title>
 const cases = [
   ['站内死链',           mk('<a href="/guide/NoSuch.html">x</a>'), null],
   ['绝对自域名死链',     mk('<a href="https://wiki.takagi3.cn/guide/Nope.html">x</a>'), null],
-  ['死锚点',             mk('<a href="/probe-target.html#no-such-anchor">x</a>'), null],
+  ['死锚点（跨页）',      mk('<a href="/probe-target.html#no-such-anchor">x</a>'), null],
+  ['死锚点（页内）',      mk('<a href="#no-such-anchor">x</a>'), null],
+  ['混合内容：图片',     mk('<img src="http://example.com/a.png" alt="a">'), null],
+  ['混合内容：链接',     mk('<a href="http://example.com/page">外链</a>'), null],
   ['图片缺 alt',         mk('<img src="/music-album-cover/s1-ed.webp">'), null],
   ['图片地址不存在',     mk('<img src="/music-album-cover/nope.webp" alt="a">'), null],
   ['未转换的 ::: 语法',  mk('<p>::: warning 提示</p>'), null],
@@ -76,6 +79,8 @@ const cases = [
   ['表格缺少表头',       mk('<table><tbody><tr><td>x</td></tr></tbody></table>'), null],
   ['空链接文本',         mk('<a href="/probe-target.html"></a>'), null],
   ['含义不明的链接文本', mk('<a href="/probe-target.html">点击这里</a>'), null],
+  ['图标链接（负例，不应报出）', mk('<a href="/probe-target.html" aria-label="图标链接"><svg></svg></a>'), false],
+  ['装饰图 alt=""（负例，不应报出）', mk('<img src="/music-album-cover/s1-ed.webp" alt="">'), false],
 ];
 
 // 让页树能识别该分区，否则先被「未被 meta.json 收录」掩盖
@@ -83,19 +88,30 @@ writeFileSync(join(PROBE_SRC, 'meta.json'), JSON.stringify({ title: '探针分�
 writeFileSync(join(PROBE_SRC, 'index.mdx'), '---\ntitle: "探针"\n---\n', 'utf8');
 
 const results = [];
-for (const [name, html] of cases) {
+for (const [name, html, expectCatch] of cases) {
   writeFileSync(PROBE_DIST, html, 'utf8');
   const hits = auditForProbe();
-  results.push({ name, caught: hits.length > 0, msg: hits[0] ?? '' });
+  // expectCatch 为 false 表示这是「不应被报出」的负例
+  const shouldCatch = expectCatch !== false;
+  const ok = shouldCatch ? hits.length > 0 : hits.length === 0;
+  results.push({
+    name,
+    ok,
+    msg: ok ? (hits[0] ?? '').slice(0, 56) : shouldCatch ? '' : `误报: ${hits[0] ?? ''}`.slice(0, 56),
+  });
 }
 
 console.log('==== 审计规则元测试结果 ====\n');
-let blind = 0;
+let blind = 0, falsePositive = 0;
 for (const r of results) {
-  console.log(`  ${r.caught ? '✅ 已捕获' : '❌ 盲区  '}  ${r.name.padEnd(20)} ${r.msg.slice(0, 62)}`);
-  if (!r.caught) blind++;
+  const isBlind = !r.ok && r.msg === '';
+  const isFp = r.msg.startsWith('误报');
+  if (isBlind) blind++;
+  if (isFp) falsePositive++;
+  const tag = r.ok ? '✅ 通过' : isBlind ? '❌ 盲区' : '⚠ 误报';
+  console.log(`  ${tag}  ${r.name.padEnd(20)} ${r.msg}`);
 }
-console.log(`\n  共 ${results.length} 项，盲区 ${blind} 项`);
+console.log(`\n  共 ${results.length} 项 —— 盲区 ${blind} 项，误报 ${falsePositive} 项`);
 
 // 清理
 rmSync(PROBE_DIST, { force: true });
