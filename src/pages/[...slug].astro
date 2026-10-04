@@ -73,50 +73,34 @@ const components = {
     <div id="waline" class="mt-12"></div>
   </Docs>
   <script>
-    // Waline 评论（沿用原站 serverURL，web 组件方式零框架依赖）
-    const walineEl = document.getElementById('waline');
-    if (walineEl) {
-      const isDark = document.documentElement.classList.contains('dark');
-      import('@waline/client/comment').then(() => {
-        const el = document.createElement('waline-comment');
-        el.setAttribute('serverURL', 'waline-1-v2731856.deta.app');
-        el.setAttribute('emoji', '//npm.onmicrosoft.cn/@waline/emojis@1.1.0/bilibili');
-        el.setAttribute('meta', 'nick,mail');
-        el.setAttribute('requiredMeta', 'nick');
-        if (isDark) el.setAttribute('dark', 'auto');
-        else el.removeAttribute('dark');
-        el.setAttribute('commentSorting', 'hottest');
-        el.setAttribute('pageSize', '5');
-        walineEl.appendChild(el);
+    // Waline 评论。
+    // 注意：@waline/client 并不注册 <waline-comment> 自定义元素
+    // （./component 导出的是 Vue 组件，./comment 只导出评论计数工具），
+    // 必须通过 init() 显式挂载，否则创建出来的只是不渲染任何内容的未知元素。
+    import('@waline/client').then(({ init }) => {
+      if (!document.getElementById('waline')) return;
+      const isDark = () => document.documentElement.classList.contains('dark');
+      const instance = init({
+        el: '#waline',
+        serverURL: 'waline-1-v2731856.deta.app',
+        emoji: ['//npm.onmicrosoft.cn/@waline/emojis@1.1.0/bilibili'],
+        meta: ['nick', 'mail'],
+        requiredMeta: ['nick'],
+        commentSorting: 'hottest',
+        pageSize: 5,
+        dark: isDark() ? 'dark' : 'light',
+        login: 'enable',
+        wordLimit: 0,
+        noCopyright: false,
       });
-    }
-  </script>
-  <script>
-    // mermaid 图表：惰性加载，仅在页面存在 mermaid 代码块时渲染
-    const blocks = document.querySelectorAll<HTMLElement>(
-      'pre > code.language-mermaid',
-    );
-    if (blocks.length > 0) {
-      const { default: mermaid } = await import('mermaid');
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: 'neutral',
-        fontFamily: 'Noto Serif SC, sans-serif',
+      // 主题切换后同步评论框配色
+      const observer = new MutationObserver(() => {
+        instance?.update({ dark: isDark() ? 'dark' : 'light' });
       });
-      let i = 0;
-      for (const el of blocks) {
-        const source = el.textContent ?? '';
-        const container = document.createElement('div');
-        container.className = 'my-6 overflow-x-auto text-center';
-        el.parentElement?.replaceWith(container);
-        try {
-          const { svg } = await mermaid.render('mermaid-' + i++, source);
-          container.innerHTML = svg;
-        } catch (e) {
-          container.textContent = source;
-          console.error(e);
-        }
-      }
-    }
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    });
   </script>
 </Layout>

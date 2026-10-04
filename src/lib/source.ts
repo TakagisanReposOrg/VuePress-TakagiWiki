@@ -8,8 +8,20 @@ export const source = loader({
   baseUrl: '/',
 });
 
+/**
+ * MDX 中的自定义组件会被原样写进搜索索引，导致搜索结果摘要出现
+ * `<SiteInfo name="第二季" desc="…" />` 这类标记。
+ * 先剥掉组件标记再交给 structure()：自闭合组件整段移除，
+ * 成对组件只去掉开闭标签、保留其中的正文（如 Callout 内的提示文字）。
+ */
+function stripMdxComponents(body: string): string {
+  return body
+    .replace(/<([A-Z][A-Za-z0-9]*)\b[^>]*\/>/g, '')
+    .replace(/<\/?([A-Z][A-Za-z0-9]*)\b[^>]*>/g, '');
+}
+
 export function getStructuredData(entry: CollectionEntry<'docs'>): StructuredData {
-  return structure(entry.body);
+  return structure(stripMdxComponents(entry.body));
 }
 
 async function createMySource() {
