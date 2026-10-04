@@ -99,12 +99,16 @@ for (const f of htmls) {
   for (const tag of ['SiteInfo', 'VPCard', 'Callout', 'Mermaid', 'Tabs']) {
     if (new RegExp(`<${tag}[\\s/>]`).test(html)) add('组件', `${url} 残留未解析的 <${tag}>`);
   }
-  if (/&lt;(Callout|SiteInfo|Mermaid|VPCard|Tabs)\b/.test(html))
-    add('组件', `${url} 出现被转义的组件标签（可能未在 components 映射中注册）`);
+  // 行内代码 / 代码块里的组件标签是文档刻意展示的字面量，不算解析失败，
+  // 因此先剔除这些区域再判断是否出现了真正未转换的标签。
+  const withoutCode = html
+    .replace(/<code[\s\S]*?<\/code>/g, '')
+    .replace(/<pre[\s\S]*?<\/pre>/g, '');
+  if (/&lt;\/?(Callout|SiteInfo|Mermaid|VPCard|Tabs)\b/.test(withoutCode))
+    add('组件', `${url} 正文出现被转义的组件标签（可能未在 components 映射中注册）`);
   // VuePress 时代的 ::: 容器语法在 Fumadocs 下不生效，会原样显示为正文
-  if (/<p>:::\s*\w+/.test(html))
+  if (/<p>:::\s*\w+/.test(withoutCode))
     add('组件', `${url} 出现未转换的 ::: 容器语法（应改用 <Callout type="..."> 组件）`);
-  if (/<code>:::<\/code>/.test(html)) add('组件', `${url} 正文含 ::: 标记`);
 
   /* --- 站内死链 --- */
   const selfDir = dirname(url);
