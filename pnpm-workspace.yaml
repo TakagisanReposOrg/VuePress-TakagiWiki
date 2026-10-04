@@ -3,9 +3,12 @@
 minimumReleaseAgeExclude:
   - http-cache-semantics@4.3.0
 
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
+# pnpm 11 起，只有在 allowBuilds 中显式声明为 true 的包才允许执行安装脚本，
+# 未声明的依赖脚本会被忽略并使 pnpm install 以退出码 1 失败。
+# 旧的 onlyBuiltDependencies / package.json 的 pnpm 字段已不再生效。
+allowBuilds:
+  esbuild: true
+  sharp: true
 
 overrides:
   # 传递依赖经 astro 引入；<=4.2.0 存在 high 级漏洞 GHSA-ch52-4w7c-c8xp

@@ -15,31 +15,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      # 页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 / 静态资源缺失
-      - run: pnpm verify
-
   build:
-    needs: check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, and upload site
-        uses: withastro/action@v3
+
+      # 必须显式声明 pnpm 版本：runner 上没有默认的 pnpm，
+      # withastro/action 在缺少这一步时会报 "No pnpm version is specified."
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # pnpm verify = pnpm build && pnpm check
+      # 审计不通过（退出码 1）时本作业失败，产物不会被部署。
+      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 / 静态资源缺失
+      - name: Build and audit
+        run: pnpm verify
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     needs: build
