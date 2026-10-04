@@ -19,22 +19,24 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # 显式锁定 ubuntu-24.04：ubuntu-latest 将在 2026-10-19 迁移到 Ubuntu 26，
+    # 发布流水线不宜在未验证的 OS 上自动跳转
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # 必须显式声明 pnpm 版本：runner 上没有默认的 pnpm，
       # withastro/action 在缺少这一步时会报 "No pnpm version is specified."
       - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 11
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: pnpm
@@ -44,8 +46,8 @@ jobs:
 
       # pnpm verify = pnpm build && pnpm check
       # 审计不通过（退出码 1）时本作业失败。
-      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 /
-      #       静态资源缺失 / 混合内容 / 可访问性
+      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 锚点 /
+      #       组件残留 / 静态资源缺失 / 混合内容 / 可访问性
       - name: Build and audit
         run: pnpm verify
 
@@ -58,7 +60,7 @@ jobs:
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -66,7 +68,7 @@ jobs:
     # PR 只做校验，不发布
     if: github.event_name != 'pull_request'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
@@ -76,4 +78,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
