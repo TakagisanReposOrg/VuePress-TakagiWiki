@@ -108,8 +108,11 @@ for (const f of htmls) {
 
   /* --- 站内死链 --- */
   const selfDir = dirname(url);
-  for (const m of html.matchAll(/href="(\/[^"#?]*)"/g)) {
-    const t = m[1];
+  // 同时覆盖站内相对链接与指向自身域名的绝对链接（后者此前是盲区）
+  for (const m of html.matchAll(
+    new RegExp(`href="(?:${ORIGIN})?(/[^"#?]*)"`, 'g'),
+  )) {
+    const t = decodeURIComponent(m[1]);
     if (t === '/') continue;
     if (
       distSet.has(t) || distSet.has(t + '.html') || distSet.has(t + '/index.html') ||
