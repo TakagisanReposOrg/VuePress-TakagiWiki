@@ -97,6 +97,14 @@ for (const f of htmls) {
     if (!/rel="canonical"/.test(html)) add('SEO', `${url} 缺少 canonical`);
   }
 
+  /* --- 可访问性：图片替代文本 --- */
+  // 装饰性图片也应有 alt=""（空值表示纯装饰），完全没有 alt 属性则会被
+  // 读屏软件读出文件名，属于可访问性缺陷。
+  const imgs = [...html.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
+  const bare = imgs.filter((t) => !/\balt\s*=/.test(t));
+  if (bare.length)
+    add('可访问性', `${url} 有 ${bare.length} 个 <img> 缺少 alt 属性${bare.length === 1 ? '：' + (bare[0].match(/src="([^"]*)"/)?.[1] ?? '') : ''}`);
+
   /* --- 组件未解析 --- */
   for (const tag of ['SiteInfo', 'VPCard', 'Callout', 'Mermaid', 'Tabs']) {
     if (new RegExp(`<${tag}[\\s/>]`).test(html)) add('组件', `${url} 残留未解析的 <${tag}>`);
