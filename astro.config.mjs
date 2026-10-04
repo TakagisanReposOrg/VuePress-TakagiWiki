@@ -21,6 +21,14 @@ const remarkPlugins = [
 ];
 const rehypePlugins = [rehypeCode];
 
+// 站点使用 build.format: 'file'，规范地址带 .html 后缀，sitemap 需同步
+function serializeSitemap(item) {
+  return {
+    ...item,
+    url: item.url.endsWith('/') ? item.url : item.url + '.html',
+  };
+}
+
 export default defineConfig({
   site: 'https://wiki.takagi3.cn',
   output: 'static',
@@ -39,7 +47,7 @@ export default defineConfig({
       extendMarkdownConfig: true,
       syntaxHighlight: false,
     }),
-    sitemap(),
+    sitemap({ serialize: serializeSitemap }),
   ],
   vite: {
     plugins: [tailwindcss()],
