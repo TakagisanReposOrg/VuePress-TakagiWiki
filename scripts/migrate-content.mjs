@@ -29,6 +29,32 @@ const srcDocs = path.join(repoRoot, 'docs');
 const outDocs = path.join(repoRoot, 'content', 'docs');
 const outPublic = path.join(repoRoot, 'public');
 
+// ---------- 安全护栏 ----------
+// 这是一次性迁移脚本，且具破坏性：它会先整目录删除 content/docs 再重新生成。
+// 护栏必须放在任何 walk()/readdirSync() 之前，否则报错会先于提示抛出。
+// 两种情况一律直接退出，避免误跑导致内容不可恢复地丢失：
+//   1) 迁移源 docs/ 不存在（VuePress 旧站已在迁移时删除，脚本已不可能成功）
+//   2) 目标 content/docs 已有内容（内容此后经人工编辑与补充，覆盖即丢失）
+const force = process.argv.includes('--force');
+
+if (!existsSync(srcDocs)) {
+  console.error(
+    '[中止] 未找到迁移源目录 docs/。\n' +
+      '       VuePress 旧站内容已在迁移时删除，本脚本无法再运行。\n' +
+      '       如确需重建内容，请从 Git 历史取回旧目录后再执行。',
+  );
+  process.exit(1);
+}
+
+if (existsSync(outDocs) && readdirSync(outDocs).length > 0 && !force) {
+  console.error(
+    '[中止] 目标目录 content/docs/ 已有内容，本脚本会先清空它再重建。\n' +
+      '       现有内容包含迁移后的人工编辑与补充，覆盖后无法恢复。\n' +
+      '       确认要覆盖请显式加 --force 参数。',
+  );
+  process.exit(1);
+}
+
 // ---------- 收集文件 ----------
 function walk(dir) {
   const out = [];
