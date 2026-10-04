@@ -44,9 +44,17 @@ jobs:
 
       # pnpm verify = pnpm build && pnpm check
       # 审计不通过（退出码 1）时本作业失败。
-      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 / 静态资源缺失
+      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 组件残留 /
+      #       静态资源缺失 / 混合内容 / 可访问性
       - name: Build and audit
         run: pnpm verify
+
+      # 以下两项均只依赖 dist/，不联网，结果确定
+      - name: Test audit rules
+        run: pnpm test:audit
+
+      - name: Test search index
+        run: pnpm test:search
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'

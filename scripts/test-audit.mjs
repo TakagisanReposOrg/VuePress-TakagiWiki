@@ -10,23 +10,28 @@
  * 用法：pnpm test:audit   （需先 pnpm build）
  * 脚本会自行注入并清理探针文件。
  */
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const ROOT = 'D:/Takagi/VuePress-TakagiWiki';
 const DIST = join(ROOT, 'dist');
-const PROBE_SRC = join(ROOT, 'content/docs/probe-section');
 const PROBE_DIST = join(DIST, 'probe-section.html');
 const PROBE_HTML = join(DIST, 'probe-target.html');
 
-mkdirSync(PROBE_SRC, { recursive: true });
+if (!existsSync(DIST)) {
+  console.error('未找到 dist/，请先执行 pnpm build');
+  process.exit(2);
+}
+
+const cleanup = () => {
+  for (const p of [PROBE_DIST, PROBE_HTML]) rmSync(p, { force: true });
+};
 
 // 目标页：被探针链接的参照页
 const targetHtml = `<!DOCTYPE html><html lang="zh-CN"><head><title>t</title>
 <meta name="description" content="d"><link rel="canonical" href="https://wiki.takagi3.cn/probe-target.html">
 </head><body><h1>目标页</h1><h2 id="real-anchor">小节</h2></body></html>`;
-writeFileSync(PROBE_HTML, targetHtml, 'utf8');
 
 const runAudit = () => {
   try {
@@ -83,22 +88,28 @@ const cases = [
   ['装饰图 alt=""（负例，不应报出）', mk('<img src="/music-album-cover/s1-ed.webp" alt="">'), false],
 ];
 
-// 让页树能识别该分区，否则先被「未被 meta.json 收录」掩盖
-writeFileSync(join(PROBE_SRC, 'meta.json'), JSON.stringify({ title: '探针分区', pages: ['index'] }), 'utf8');
-writeFileSync(join(PROBE_SRC, 'index.mdx'), '---\ntitle: "探针"\n---\n', 'utf8');
+// 探针只写入 dist/（构建产物），不触碰 content/ 源目录。
+// 「未被 meta.json 收录」与「未收录进 sitemap」这两条与用例无关，
+// auditForProbe() 会将其排除，因此无需在源目录里造一个分区。
 
 const results = [];
-for (const [name, html, expectCatch] of cases) {
-  writeFileSync(PROBE_DIST, html, 'utf8');
-  const hits = auditForProbe();
-  // expectCatch 为 false 表示这是「不应被报出」的负例
-  const shouldCatch = expectCatch !== false;
-  const ok = shouldCatch ? hits.length > 0 : hits.length === 0;
-  results.push({
-    name,
-    ok,
-    msg: ok ? (hits[0] ?? '').slice(0, 56) : shouldCatch ? '' : `误报: ${hits[0] ?? ''}`.slice(0, 56),
-  });
+try {
+  writeFileSync(PROBE_HTML, targetHtml, 'utf8');
+  for (const [name, html, expectCatch] of cases) {
+    writeFileSync(PROBE_DIST, html, 'utf8');
+    const hits = auditForProbe();
+    // expectCatch 为 false 表示这是「不应被报出」的负例
+    const shouldCatch = expectCatch !== false;
+    const ok = shouldCatch ? hits.length > 0 : hits.length === 0;
+    results.push({
+      name,
+      ok,
+      msg: ok ? (hits[0] ?? '').slice(0, 56) : shouldCatch ? '' : `误报: ${hits[0] ?? ''}`.slice(0, 56),
+    });
+  }
+} finally {
+  // 无论是否抛错都必须清理，否则 dist/ 会残留探针文件
+  cleanup();
 }
 
 console.log('==== 审计规则元测试结果 ====\n');
@@ -113,8 +124,5 @@ for (const r of results) {
 }
 console.log(`\n  共 ${results.length} 项 —— 盲区 ${blind} 项，误报 ${falsePositive} 项`);
 
-// 清理
-rmSync(PROBE_DIST, { force: true });
-rmSync(PROBE_HTML, { force: true });
-rmSync(PROBE_SRC, { recursive: true, force: true });
+cleanup();
 console.log('\n  探针文件已清理');
