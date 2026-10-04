@@ -11,10 +11,13 @@
  * 脚本会自行注入并清理探针文件。
  */
 import { readdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 
-const ROOT = 'D:/Takagi/VuePress-TakagiWiki';
+// 必须从脚本自身位置推导，不能硬编码绝对路径 —— 否则只在作者本机可用，
+// 换到 CI / 其他克隆就会找不到 dist/
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 const PROBE_DIST = join(DIST, 'probe-section.html');
 const PROBE_HTML = join(DIST, 'probe-target.html');
