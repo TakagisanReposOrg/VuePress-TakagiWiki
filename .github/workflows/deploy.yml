@@ -51,12 +51,15 @@ jobs:
       - name: Build and audit
         run: pnpm verify
 
-      # 以下两项均只依赖 dist/，不联网，结果确定
+      # 以下三项均只依赖 dist/ 或源码，不联网，结果确定
       - name: Test audit rules
         run: pnpm test:audit
 
       - name: Test search index
         run: pnpm test:search
+
+      - name: Test description derivation
+        run: pnpm test:description
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'

@@ -109,8 +109,9 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
 
 ### 新增的工程设施（本文撰写时尚不存在）
 
-- `scripts/audit.mjs`（`pnpm check`）：11 大类、40 处规则，进 CI 门禁
-- `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试，28 项
+- `scripts/audit.mjs`（`pnpm check`）：11 大类、41 处规则，进 CI 门禁
+- `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试，31 项
+- `scripts/test-description.mjs`（`pnpm test:description`）：description 派生逻辑单元测试，19 项
 - `scripts/check-external.mjs`（`pnpm check:ext`）：站外引用可达性
 - 工作流增加 `pull_request` 触发，审计不再只覆盖 `push: main`
 
@@ -128,6 +129,12 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
   已降为 `##`（参考资料为 `###`）。
 - **旧链接跳转页**原本缺 viewport，且六个跳转桩共用「Redirecting…」标题。
   已补 viewport 并沿用目标页真实标题。
+- **三十个内容页共用同一条 meta description**。frontmatter 基本只写 `title`，
+  缺省时全部落到 `layout.astro` 的同一个兜底值。已改为「frontmatter 优先，
+  缺省则由 `src/lib/description.ts` 从正文首段派生」，并为挑段落规则单列了
+  单元测试——该规则被真实内容坑过两次：markdown 允许标题后紧跟正文（早期实现
+  把「标题 + 段落」整块跳过），以及 `<SiteInfo />` 组件常跨多行（只识别首行时
+  后面的属性会被当成正文，描述里直接漏出 `name=` `url=` 源码）。
 
 ### 尚未落地
 

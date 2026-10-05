@@ -82,9 +82,12 @@ const distSet = new Set(distFiles.map((f) => rel(f, DIST)));
 
 // 锚点校验需要知道每页有哪些 id
 const idsByPage = new Map();
-// 标题去重。同一标题若出现在两个规范地址不同的页面上，属于真正的内容重复；
+// 标题与描述去重。同一文案若出现在两个规范地址不同的页面上，属于真正的内容重复；
 // 规范地址相同的则是旧站 URL 兼容（同一页的两个入口），刻意合并，不算问题。
 const titleSeen = new Map();
+const descSeen = new Map();
+// 与 src/lib/description.ts 的 SITE_DESCRIPTION 一致
+const SITE_DESCRIPTION = '《擅长捉弄的高木同学》轻Wiki站';
 for (const f of htmls) {
   const c = await readFile(f, 'utf8');
   const ids = new Set();
@@ -127,15 +130,21 @@ for (const f of htmls) {
     if (!/name="twitter:card"/.test(head)) add('SEO', `${url} 缺少 twitter:card`);
 
     // 社交元信息重复登记
-    if (title) {
-      const canonical = head.match(/rel="canonical" href="([^"]*)"/)?.[1] ?? '';
-      const seen = titleSeen.get(title);
-      if (!seen) titleSeen.set(title, { canonical, url });
-      // 标题相同但 canonical 不同 = 两页各被当成独立内容，是真正的重复；
-      // canonical 相同的则是旧站 URL 兼容（同一页的两个入口），刻意合并，不算问题。
-      else if (seen.canonical !== canonical)
-        add('SEO', `${url} 标题「${title}」与 ${seen.url} 相同但规范地址不同，属于内容重复`);
+    const canonical = head.match(/rel="canonical" href="([^"]*)"/)?.[1] ?? '';
+    for (const [text, seen, label] of [
+      [title, titleSeen, '标题'],
+      [desc, descSeen, 'description'],
+    ]) {
+      if (!text) continue;
+      const prior = seen.get(text);
+      if (!prior) seen.set(text, { canonical, url });
+      else if (prior.canonical !== canonical)
+        add('SEO', `${url} ${label} 与 ${prior.url} 相同但规范地址不同，属于内容重复`);
     }
+    // 缺省时会落到 layout 的兜底值，等于全站共用一句模板话。
+    // 正常页面应由 frontmatter 显式声明，或从正文首段自动派生。
+    if (desc === SITE_DESCRIPTION)
+      add('SEO', `${url} description 仍是全站兜底值，未起到描述作用（请在 frontmatter 写 description）`);
   }
 
   /* --- 可访问性：一级标题唯一 --- */

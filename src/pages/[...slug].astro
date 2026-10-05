@@ -9,6 +9,7 @@ import { Card, Cards } from 'fumadocs-ui/components/card';
 import '@/styles/global.css';
 import { source } from '@/lib/source';
 import Layout from '@/components/layout.astro';
+import { resolveDescription } from '@/lib/description';
 import type { TOCItemType } from 'fumadocs-core/toc';
 
 interface Props {
@@ -49,9 +50,12 @@ const components = {
   Card,
   Cards,
 };
+// 内容页大多没写 description，直接用兜底值会让全站三十个页面共用一句模板话，
+// 因此缺省时从正文首段派生
+const description = resolveDescription(page.data.description, page.body);
 ---
 
-<Layout title={page.data.title} description={page.data.description}>
+<Layout title={page.data.title} description={description}>
   <Docs
     tree={source.getPageTree()}
     pathname={Astro.url.pathname}

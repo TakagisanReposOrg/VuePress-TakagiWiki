@@ -117,6 +117,7 @@ const cases = [
       .replace(/<meta property="og:title"[^>]*>\n?/, '')
       .replace('</head>', '</head><meta property="og:title" content="探针">'), null],
   ['缺少 twitter:card',   mk('<p>ok</p>').replace(/<meta name="twitter:card"[^>]*>\n?/, ''), null],
+  ['description 为全站兜底值', mk('<p>ok</p>').replace('content="探针描述"', 'content="《擅长捉弄的高木同学》轻Wiki站"'), null],
 ];
 
 // 探针只写入 dist/（构建产物），不触碰 content/ 源目录。
@@ -143,23 +144,25 @@ try {
   cleanup();
 }
 
-/* ---- 标题去重：需要两个页面同时在场，单独跑 ---- */
-// PROBE_DUP 只在这两组用例期间存在。否则它的标题会与每个用例的探针页冲突，
+/* ---- 标题 / 描述去重：需要两个页面同时在场，单独跑 ---- */
+// PROBE_DUP 只在这些用例期间存在。否则它的标题与描述会与每个用例的探针页冲突，
 // 把所有用例都变成「已捕获」，测试就失去判别力。
 const dupPage = (canonical) => `<!DOCTYPE html><html lang="zh-CN"><head><title>探针</title>
 <meta name="description" content="探针描述"><link rel="canonical" href="${canonical}">
 ${socialMeta}</head><body><h1>探针</h1><p>正文</p></body></html>`;
 
-for (const [name, canonical, expectCatch] of [
-  ['标题重复', 'https://wiki.takagi3.cn/probe-dup.html', null],
-  ['标题重复但 canonical 相同（负例）', 'https://wiki.takagi3.cn/probe-section.html', false],
+for (const [name, keyword, canonical, expectCatch] of [
+  ['标题重复', '标题', 'https://wiki.takagi3.cn/probe-dup.html', null],
+  ['标题重复但 canonical 相同（负例）', '标题', 'https://wiki.takagi3.cn/probe-section.html', false],
+  ['description 重复', 'description', 'https://wiki.takagi3.cn/probe-dup.html', null],
+  ['description 重复但 canonical 相同（负例）', 'description', 'https://wiki.takagi3.cn/probe-section.html', false],
 ]) {
   try {
     writeFileSync(PROBE_HTML, targetHtml, 'utf8');
     writeFileSync(PROBE_DUP, dupPage(canonical), 'utf8');
     writeFileSync(PROBE_DIST, mk('<p>正文</p>'), 'utf8');
     const hits = auditForProbe();
-    const dup = hits.filter((h) => h.includes('重复'));
+    const dup = hits.filter((h) => h.includes(keyword) && h.includes('重复'));
     const shouldCatch = expectCatch !== false;
     const ok = shouldCatch ? dup.length > 0 : dup.length === 0;
     results.push({

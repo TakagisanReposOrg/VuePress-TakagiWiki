@@ -21,6 +21,7 @@
     "verify": "pnpm build && pnpm check",
     "test:audit": "node scripts/test-audit.mjs",
     "test:search": "node scripts/test-search.mjs",
+    "test:description": "node scripts/test-description.mjs",
     "check:ext": "node scripts/check-external.mjs",
     "migrate": "node scripts/migrate-content.mjs"
   },

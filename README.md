@@ -17,12 +17,17 @@ pnpm check     # 审计 dist/：页树漂移 / SEO 与社交分享卡片 / sitem
 pnpm verify    # = build + check，CI 使用的组合
 pnpm test:audit  # 审计规则自身的元测试（注入缺陷验证能否捕获，含负例）
 pnpm test:search # 搜索索引回归：中文检索命中与组件源码残留检查
+pnpm test:description # description 自动派生的单元测试
 ```
 
 ## 内容编辑
 
 - 文档位于 `content/docs/`，使用 MDX（`.mdx`）；各分区的顺序与命名由同名 `meta.json` 控制。
 - 每个文件需在 frontmatter 提供 `title`，可选 `authors`、`description`。
+- **`description` 建议显式书写**。缺省时会由 `src/lib/description.ts` 从正文首段
+  自动派生（跳过标题、表格、列表、代码块、组件与锚点导航，剥掉内联 Markdown，
+  截到 160 字以内）。但自动派生挑不出合适的句子时会退回全站兜底值，
+  审计会直接报错。纯组件页（如 `<Cards>` 索引页）尤其需要手写。
 - 可用组件（已全局注册，`Mermaid` 会由迁移脚本自动注入 import）：
   - `<Callout type="info|idea|success|warn|warning|error" title="…">` 提示容器
   - `<Card>` / `<Cards>` 卡片
