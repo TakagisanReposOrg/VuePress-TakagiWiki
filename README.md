@@ -46,6 +46,8 @@ pnpm test:description # description 自动派生的单元测试
 - 全站静态搜索（Orama，索引由 `src/pages/api/search.json.ts` 构建输出）
 - Waline 评论（`src/pages/[...slug].astro`，沿用原 serverURL）
 - 深浅色模式、GitHub 编辑入口、旧链接自动兼容（`scripts/postbuild.mjs`）
+- `llms.txt`（给 AI 代理的页面索引，由 `scripts/postbuild.mjs` 读页树自动生成，
+  覆盖全部内容页并附各页描述；页树与产物不一致时构建会直接失败）
 
 ## 部署
 

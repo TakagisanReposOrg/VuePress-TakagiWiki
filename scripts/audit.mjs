@@ -277,6 +277,8 @@ for (const f of htmls) {
 
 /* ========== 3. sitemap 覆盖度 ========== */
 const smFiles = distFiles.filter((f) => /sitemap-\d+\.xml$/.test(f));
+// llms.txt 的覆盖度检查要复用它，故提到外层
+let inSm = new Set();
 if (!smFiles.length) {
   add('sitemap', '未找到 sitemap-N.xml');
 } else {
@@ -286,7 +288,7 @@ if (!smFiles.length) {
       locs.push(m[1].replace(ORIGIN, ''));
     }
   }
-  const inSm = new Set(locs);
+  inSm = new Set(locs);
   for (const f of htmls) {
     const url = rel(f, DIST);
     if (url === '/404.html' || url === '/index.html' || url.endsWith('/index.html')) continue;
@@ -324,6 +326,17 @@ for (const [name, min] of [['llms.txt', 100], ['robots.txt', 20]]) {
       continue;
     }
     add('元文件', `${name} 引用了不存在的地址: ${p}`);
+  }
+
+  // llms.txt 的全部价值在于「让 AI 代理知道该读哪一页」，漏收就等于没做。
+  // 判据取 sitemap：站点对外宣称的每一页都应当能被 llms.txt 指到。
+  // （不用「所有 HTML」是因为 llms.txt 由页树生成，不含旧目录兼容用的
+  //   /xxx/index.html 中转页。）
+  if (name === 'llms.txt') {
+    for (const u of inSm) {
+      if (u === '/') continue;
+      if (!text.includes(u)) add('元文件', `llms.txt 未收录站点地图中的页面: ${u}`);
+    }
   }
 }
 

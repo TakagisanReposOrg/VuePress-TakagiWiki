@@ -109,7 +109,7 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
 
 ### 新增的工程设施（本文撰写时尚不存在）
 
-- `scripts/audit.mjs`（`pnpm check`）：11 大类、41 处规则，进 CI 门禁
+- `scripts/audit.mjs`（`pnpm check`）：11 大类、42 处规则，进 CI 门禁
 - `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试，31 项
 - `scripts/test-description.mjs`（`pnpm test:description`）：description 派生逻辑单元测试，19 项
 - `scripts/check-external.mjs`（`pnpm check:ext`）：站外引用可达性
@@ -135,6 +135,10 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
   单元测试——该规则被真实内容坑过两次：markdown 允许标题后紧跟正文（早期实现
   把「标题 + 段落」整块跳过），以及 `<SiteInfo />` 组件常跨多行（只识别首行时
   后面的属性会被当成正文，描述里直接漏出 `name=` `url=` 源码）。
+- **`llms.txt` 原本是手写清单，只覆盖 9 个地址**（站点有 28 个内容页），
+  AI 代理读完仍需自己爬站。已改为由 `scripts/postbuild.mjs` 读 `content/docs`
+  的 `meta.json` 自动生成，顺序与分组取自页树，因此不会与站内内容脱节；
+  页树与产物不一致时构建直接失败。
 
 ### 尚未落地
 
