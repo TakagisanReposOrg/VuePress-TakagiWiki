@@ -6,7 +6,7 @@
  * - 其余分区与指南：生成 meta-refresh 跳转页，把 /guide/ 等旧目录 URL
  *   指向对应的 .html 页面。
  */
-import { copyFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
+import { copyFileSync, mkdirSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -22,8 +22,20 @@ const REDIRECTS = {
   other: '/other/Info.html',
 };
 
-function redirectPage(url) {
-  return `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>Redirecting…</title><meta http-equiv="refresh" content="0; url=${url}"><link rel="canonical" href="${url}"></head><body>Redirecting to <a href="${url}">${url}</a></body></html>\n`;
+function redirectPage(url, title) {
+  return `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title}</title><meta http-equiv="refresh" content="0; url=${url}"><link rel="canonical" href="${url}"></head><body>Redirecting to <a href="${url}">${url}</a></body></html>\n`;
+}
+
+// 沿用目标页的 <title>，避免所有跳转桩共用「Redirecting…」造成全站标题重复
+function titleOf(target) {
+  try {
+    return (
+      readFileSync(path.join(dist, target), 'utf8').match(/<title>([^<]*)<\/title>/)?.[1]?.trim() ||
+      'Redirecting…'
+    );
+  } catch {
+    return 'Redirecting…';
+  }
 }
 
 for (const sec of COPIES) {
@@ -36,6 +48,6 @@ for (const sec of COPIES) {
 
 for (const [sec, url] of Object.entries(REDIRECTS)) {
   mkdirSync(path.join(dist, sec), { recursive: true });
-  writeFileSync(path.join(dist, sec, 'index.html'), redirectPage(url));
+  writeFileSync(path.join(dist, sec, 'index.html'), redirectPage(url, titleOf(url)));
   console.log(`[ok] /${sec}/ -> ${url} (redirect)`);
 }

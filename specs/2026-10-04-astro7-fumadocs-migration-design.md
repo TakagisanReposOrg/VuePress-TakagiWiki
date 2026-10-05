@@ -109,10 +109,25 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
 
 ### 新增的工程设施（本文撰写时尚不存在）
 
-- `scripts/audit.mjs`（`pnpm check`）：14 类产物审计，进 CI 门禁
-- `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试
+- `scripts/audit.mjs`（`pnpm check`）：11 大类、40 处规则，进 CI 门禁
+- `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试，28 项
 - `scripts/check-external.mjs`（`pnpm check:ext`）：站外引用可达性
 - 工作流增加 `pull_request` 触发，审计不再只覆盖 `push: main`
+
+### 后补的 SEO 与文档结构修正
+
+以下四项不在原设计中，是上线前逐页核查产物时补上的：
+
+- **社交分享卡片原本无效**。`og:image` 写在页面组件的 `<slot>` 里，会被渲染到
+  `<body>` 起始处，而 Twitter / Facebook / Slack 只解析 `<head>`。已统一移入
+  `layout.astro` 的 `<head>`，并补齐 `og:title` / `og:description` / `og:url` /
+  `og:image`（绝对地址）与 Twitter Card。首页、404 页同步处理。
+- **404 页缺 `noindex`**。托管平台会把 `404.html` 用于任何未命中路由，薄内容页
+  若被索引会稀释站点质量。
+- **「漫画」三个条目用 `#` 写小节**，导致每页 4～7 个 `<h1>`，小节也进不了目录。
+  已降为 `##`（参考资料为 `###`）。
+- **旧链接跳转页**原本缺 viewport，且六个跳转桩共用「Redirecting…」标题。
+  已补 viewport 并沿用目标页真实标题。
 
 ### 尚未落地
 

@@ -12,7 +12,7 @@ pnpm install
 pnpm dev       # 本地开发 http://localhost:4321
 pnpm build     # 构建到 dist/（含 postbuild 旧链接兼容处理）
 pnpm preview   # 预览构建产物
-pnpm check     # 审计 dist/：页树漂移 / SEO 元信息 / sitemap 覆盖度 /
+pnpm check     # 审计 dist/：页树漂移 / SEO 与社交分享卡片 / sitemap 覆盖度 /
                # 站内死链 / 组件残留 / 静态资源缺失 / 可访问性，有问题则退出码 1
 pnpm verify    # = build + check，CI 使用的组合
 pnpm test:audit  # 审计规则自身的元测试（注入缺陷验证能否捕获，含负例）
@@ -31,6 +31,9 @@ pnpm test:search # 搜索索引回归：中文检索命中与组件源码残留�
 - 需要分区展示长内容时（如按季度、按语言），用 `##` 小节 + 页首锚点导航即可。
   早期提供的 `<Tabs>` / `<Tab>` 组件在 Astro 的 MDX 运行时下无法按 `<Tab>`
   边界拆分面板（面板数恒为 1，标签点击无反应），已于 2026-10-05 移除。
+- **正文不要用 `#` 写小节**。页面标题已由布局输出一个 `<h1>`，正文再出现 `#`
+  会造成一页多个一级标题，读屏用户会听到多个「标题一级」，小节也进不了目录。
+  顶层小节一律用 `##`，其下用 `###`。
 - 站内链接请使用 `/music/ED.html` 形式（与旧站 URL 一致）。
 
 ## 功能

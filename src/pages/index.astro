@@ -4,6 +4,17 @@ import '@/styles/global.css';
 const title = '高木轻Wiki站';
 const tagline = '“捉弄”缩短了二人之间的距离';
 const heroImage = '/assets/logo.webp';
+const description =
+  '本站是基于 Astro + Fumadocs 静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站';
+// build.format 为 'file'，根路由的 pathname 是 /index.html，
+// 但首页的规范地址应是裸域名根路径
+const site = Astro.site ?? 'https://wiki.takagi3.cn';
+const canonicalURL = new URL(
+  Astro.url.pathname === '/index.html' ? '/' : Astro.url.pathname,
+  site,
+);
+// 与文档页保持一致：社交卡片写在 <head> 内，图片用绝对地址
+const ogImage = new URL(heroImage, site);
 ---
 
 <html lang="zh-CN">
@@ -14,18 +25,24 @@ const heroImage = '/assets/logo.webp';
     <meta name="title" content={title} />
     <meta
       name="description"
-      content="本站是基于 Astro + Fumadocs 静态文档框架搭建的《擅长捉弄的高木同学》及其周边相关信息资料站"
+      content={description}
     />
     <meta name="keywords" content="高木Wiki,轻Wiki,Astro,木创社,Takagi-San,擅长捉弄的高木同学" />
-    {/* build.format 为 'file'，根路由的 pathname 是 /index.html，
-        但首页的规范地址应是裸域名根路径 */}
     <link
       rel="canonical"
-      href={new URL(
-        Astro.url.pathname === '/index.html' ? '/' : Astro.url.pathname,
-        Astro.site ?? 'https://wiki.takagi3.cn',
-      )}
+      href={canonicalURL}
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

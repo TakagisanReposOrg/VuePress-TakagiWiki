@@ -21,6 +21,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 const PROBE_DIST = join(DIST, 'probe-section.html');
 const PROBE_HTML = join(DIST, 'probe-target.html');
+// 标题去重规则需要两个页面同时在场才能触发，单独用它跑两组用例
+const PROBE_DUP = join(DIST, 'probe-dup.html');
 
 if (!existsSync(DIST)) {
   console.error('未找到 dist/，请先执行 pnpm build');
@@ -28,13 +30,24 @@ if (!existsSync(DIST)) {
 }
 
 const cleanup = () => {
-  for (const p of [PROBE_DIST, PROBE_HTML]) rmSync(p, { force: true });
+  for (const p of [PROBE_DIST, PROBE_HTML, PROBE_DUP]) rmSync(p, { force: true });
 };
 
+// 社交分享卡片基线。新规则（viewport / og:* / twitter:card）会检查这些，
+// 探针页若不先补齐，18 个旧用例都会被新规则命中，测试就失去判别力。
+const socialMeta = `<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="高木轻Wiki站">
+<meta property="og:title" content="探针">
+<meta property="og:description" content="探针描述">
+<meta property="og:url" content="https://wiki.takagi3.cn/probe-section.html">
+<meta property="og:image" content="https://wiki.takagi3.cn/assets/logo.webp">
+<meta name="twitter:card" content="summary">`;
+
 // 目标页：被探针链接的参照页
-const targetHtml = `<!DOCTYPE html><html lang="zh-CN"><head><title>t</title>
+const targetHtml = `<!DOCTYPE html><html lang="zh-CN"><head><title>目标页</title>
 <meta name="description" content="d"><link rel="canonical" href="https://wiki.takagi3.cn/probe-target.html">
-</head><body><h1>目标页</h1><h2 id="real-anchor">小节</h2></body></html>`;
+${socialMeta}</head><body><h1>目标页</h1><h2 id="real-anchor">小节</h2></body></html>`;
 
 const runAudit = () => {
   try {
@@ -68,7 +81,7 @@ const auditForProbe = () => {
 /** 每个用例：name -> [content, distHtml]，返回产物页 */
 const mk = (body, metaTitle) => `<!DOCTYPE html><html lang="zh-CN"><head><title>${metaTitle ?? '探针'}</title>
 <meta name="description" content="探针描述"><link rel="canonical" href="https://wiki.takagi3.cn/probe-section.html">
-</head><body><h1>探针</h1>${body}</body></html>`;
+${socialMeta}</head><body><h1>探针</h1>${body}</body></html>`;
 
 const cases = [
   ['站内死链',           mk('<a href="/guide/NoSuch.html">x</a>'), null],
@@ -83,12 +96,27 @@ const cases = [
   ['未解析的组件标签',   mk('<p>&lt;Callout type="info"&gt;</p>'), null],
   ['缺少 canonical',     mk('<p>ok</p>').replace(/<link rel="canonical"[^>]*>/, ''), null],
   ['缺少 meta description', mk('<p>ok</p>').replace(/<meta name="description"[^>]*>/, ''), null],
-  ['标题层级跳跃 h1→h3', mk('<h1>一</h1><h3>三</h3>'), null],
+  // 用 h2→h4 制造跳级：若写成 h1→h3，会先被上面新增的「多个 h1」规则命中，
+  // 掩盖掉层级跳跃检测本身，测试就再也证明不了那条规则还有效
+  ['标题层级跳跃 h2→h4', mk('<h2>二</h2><h4>四</h4>'), null],
   ['表格缺少表头',       mk('<table><tbody><tr><td>x</td></tr></tbody></table>'), null],
   ['空链接文本',         mk('<a href="/probe-target.html"></a>'), null],
   ['含义不明的链接文本', mk('<a href="/probe-target.html">点击这里</a>'), null],
   ['图标链接（负例，不应报出）', mk('<a href="/probe-target.html" aria-label="图标链接"><svg></svg></a>'), false],
   ['装饰图 alt=""（负例，不应报出）', mk('<img src="/music-album-cover/s1-ed.webp" alt="">'), false],
+  ['元信息齐全（负例，不应报出）', mk('<p>正文</p>'), false],
+
+  // --- 社交分享卡片与标题结构 ---
+  ['多个 h1',             mk('<h1>甲</h1><h1>乙</h1>'), null],
+  ['缺少 viewport',       mk('<p>ok</p>').replace(/<meta name="viewport"[^>]*>\n?/, ''), null],
+  ['缺少 og:title',       mk('<p>ok</p>').replace(/<meta property="og:title"[^>]*>\n?/, ''), null],
+  ['缺少 og:image',       mk('<p>ok</p>').replace(/<meta property="og:image"[^>]*>\n?/, ''), null],
+  ['og:image 相对地址',    mk('<p>ok</p>').replace('https://wiki.takagi3.cn/assets/logo.webp"', 'assets/logo.webp"'), null],
+  // 复现本站真实缺陷：og 标签被渲染到 <head> 之外（当初 og:image 就落在 <body> 起始处）
+  ['og 元信息落在 head 外', mk('<p>ok</p>')
+      .replace(/<meta property="og:title"[^>]*>\n?/, '')
+      .replace('</head>', '</head><meta property="og:title" content="探针">'), null],
+  ['缺少 twitter:card',   mk('<p>ok</p>').replace(/<meta name="twitter:card"[^>]*>\n?/, ''), null],
 ];
 
 // 探针只写入 dist/（构建产物），不触碰 content/ 源目录。
@@ -113,6 +141,39 @@ try {
 } finally {
   // 无论是否抛错都必须清理，否则 dist/ 会残留探针文件
   cleanup();
+}
+
+/* ---- 标题去重：需要两个页面同时在场，单独跑 ---- */
+// PROBE_DUP 只在这两组用例期间存在。否则它的标题会与每个用例的探针页冲突，
+// 把所有用例都变成「已捕获」，测试就失去判别力。
+const dupPage = (canonical) => `<!DOCTYPE html><html lang="zh-CN"><head><title>探针</title>
+<meta name="description" content="探针描述"><link rel="canonical" href="${canonical}">
+${socialMeta}</head><body><h1>探针</h1><p>正文</p></body></html>`;
+
+for (const [name, canonical, expectCatch] of [
+  ['标题重复', 'https://wiki.takagi3.cn/probe-dup.html', null],
+  ['标题重复但 canonical 相同（负例）', 'https://wiki.takagi3.cn/probe-section.html', false],
+]) {
+  try {
+    writeFileSync(PROBE_HTML, targetHtml, 'utf8');
+    writeFileSync(PROBE_DUP, dupPage(canonical), 'utf8');
+    writeFileSync(PROBE_DIST, mk('<p>正文</p>'), 'utf8');
+    const hits = auditForProbe();
+    const dup = hits.filter((h) => h.includes('重复'));
+    const shouldCatch = expectCatch !== false;
+    const ok = shouldCatch ? dup.length > 0 : dup.length === 0;
+    results.push({
+      name,
+      ok,
+      msg: ok
+        ? (dup[0] ?? '').slice(0, 56)
+        : shouldCatch
+          ? ''
+          : `误报: ${dup[0] ?? ''}`.slice(0, 56),
+    });
+  } finally {
+    cleanup();
+  }
 }
 
 console.log('==== 审计规则元测试结果 ====\n');

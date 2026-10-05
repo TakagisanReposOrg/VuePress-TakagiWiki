@@ -19,6 +19,15 @@ const canonicalURL = new URL(
   canonical ?? Astro.url.pathname,
   Astro.site ?? 'https://wiki.takagi3.cn',
 );
+
+// 社交分享卡片。必须写在 <head> 内：写在组件的 slot 里会被 Astro 渲染到
+// <body> 起始处，Twitter / Facebook / Slack 等爬虫只解析 <head>，那样等于没写。
+// 图片地址同样要绝对地址，相对路径在部分抓取端会解析失败。
+const siteName = '高木轻Wiki站';
+const ogImage = new URL(
+  '/assets/logo.webp',
+  Astro.site ?? 'https://wiki.takagi3.cn',
+);
 ---
 
 <html lang="zh-CN">
@@ -29,6 +38,17 @@ const canonicalURL = new URL(
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

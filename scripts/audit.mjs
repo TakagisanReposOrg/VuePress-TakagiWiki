@@ -1,12 +1,13 @@
 /**
  * 站点构建产物审计
  *
- * 覆盖六类检查：页树漂移、SEO 元信息、sitemap 覆盖度、站内死链、
- * 组件未解析残留、静态资源缺失。
+ * 覆盖 11 大类检查：页树漂移、SEO 元信息与社交分享卡片、sitemap 覆盖度、
+ * 站内死链与锚点、组件未解析残留、静态资源缺失、可访问性、混合内容、
+ * 站点元文件、孤儿资源。
  *
  * 依赖 `dist/` 为最新构建产物，用法：
  *   pnpm verify     # build + audit
- *   pnpm audit      # 仅审计现有 dist
+ *   pnpm check      # 仅审计现有 dist
  */
 import { readdir, readFile } from 'node:fs/promises';
 import { join, relative, dirname, basename } from 'node:path';
@@ -81,6 +82,9 @@ const distSet = new Set(distFiles.map((f) => rel(f, DIST)));
 
 // 锚点校验需要知道每页有哪些 id
 const idsByPage = new Map();
+// 标题去重。同一标题若出现在两个规范地址不同的页面上，属于真正的内容重复；
+// 规范地址相同的则是旧站 URL 兼容（同一页的两个入口），刻意合并，不算问题。
+const titleSeen = new Map();
 for (const f of htmls) {
   const c = await readFile(f, 'utf8');
   const ids = new Set();
@@ -97,14 +101,52 @@ for (const f of htmls) {
   const stub = isStub(html);
 
   /* --- SEO --- */
-  if (url !== '/404.html' && !stub) {
-    const title = html.match(/<title>([^<]*)<\/title>/)?.[1]?.trim();
-    const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1]?.trim();
+  // 跳转桩由 postbuild 生成，只有 charset/canonical/refresh，刻意不带社交卡片
+  // 与 viewport 之外的任何元信息，因此整类 SEO 检查都要排除它。
+  const isContentPage = url !== '/404.html' && !stub;
+  if (isContentPage) {
+    const head = html.slice(0, html.indexOf('</head>') + 7);
+    const title = head.match(/<title>([^<]*)<\/title>/)?.[1]?.trim();
+    const desc = head.match(/<meta name="description" content="([^"]*)"/)?.[1]?.trim();
     if (!title) add('SEO', `${url} 缺少 <title>`);
     else if (/undefined|\[object|NaN/.test(title)) add('SEO', `${url} title 异常: ${title}`);
     if (!desc) add('SEO', `${url} 缺少 meta description`);
     if (!/<html[^>]+lang="/.test(html)) add('SEO', `${url} 缺少 <html lang>`);
     if (!/rel="canonical"/.test(html)) add('SEO', `${url} 缺少 canonical`);
+    if (!/name="viewport"/.test(head)) add('SEO', `${url} 缺少 viewport（移动端会按 980px 缩放渲染）`);
+
+    // 社交分享卡片。必须落在 <head> 内：写在 <body> 起始处时，
+    // Twitter / Facebook / Slack 等只解析 <head>，等于完全没写。
+    for (const p of ['og:type', 'og:title', 'og:description', 'og:url', 'og:image']) {
+      if (!new RegExp(`property="${p}"`).test(head))
+        add('SEO', `${url} 缺少 ${p}（分享到社交平台时没有标题/描述/预览图）`);
+    }
+    const ogImage = head.match(/property="og:image" content="([^"]*)"/)?.[1] ?? '';
+    if (ogImage && !/^https?:\/\//.test(ogImage))
+      add('SEO', `${url} og:image 是相对地址，部分抓取端会解析失败: ${ogImage}`);
+    if (!/name="twitter:card"/.test(head)) add('SEO', `${url} 缺少 twitter:card`);
+
+    // 社交元信息重复登记
+    if (title) {
+      const canonical = head.match(/rel="canonical" href="([^"]*)"/)?.[1] ?? '';
+      const seen = titleSeen.get(title);
+      if (!seen) titleSeen.set(title, { canonical, url });
+      // 标题相同但 canonical 不同 = 两页各被当成独立内容，是真正的重复；
+      // canonical 相同的则是旧站 URL 兼容（同一页的两个入口），刻意合并，不算问题。
+      else if (seen.canonical !== canonical)
+        add('SEO', `${url} 标题「${title}」与 ${seen.url} 相同但规范地址不同，属于内容重复`);
+    }
+  }
+
+  /* --- 可访问性：一级标题唯一 --- */
+  // 页面标题由布局输出一个 h1，正文若还用 `#` 写小节就会变成多 h1，
+  // 读屏用户会听到多个「标题一级」，且这些小节进不了右侧目录。
+  if (isContentPage) {
+    const h1s = [...html.matchAll(/<h1\b[^>]*>([\s\S]{0,60}?)<\/h1>/g)];
+    if (h1s.length > 1) {
+      const texts = h1s.map((m) => m[1].replace(/<[^>]+>/g, '').trim()).filter(Boolean);
+      add('可访问性', `${url} 有 ${h1s.length} 个 <h1>（应恰为 1 个）：${texts.slice(0, 3).join(' / ')}`);
+    }
   }
 
   /* --- 可访问性：图片替代文本 --- */
@@ -114,6 +156,12 @@ for (const f of htmls) {
   const bare = imgs.filter((t) => !/\balt\s*=/.test(t));
   if (bare.length)
     add('可访问性', `${url} 有 ${bare.length} 个 <img> 缺少 alt 属性${bare.length === 1 ? '：' + (bare[0].match(/src="([^"]*)"/)?.[1] ?? '') : ''}`);
+
+  /* --- 404 必须 noindex --- */
+  // 托管平台会把 404.html 用于任何未命中路由；它没有 canonical，
+  // 若不显式 noindex，薄内容页会被当作正常页面索引，稀释站点质量。
+  if (url === '/404.html' && !/name="robots"[^>]*noindex/.test(html))
+    add('SEO', `${url} 缺少 <meta name="robots" content="noindex">`);
 
   /* --- 组件未解析 --- */
   for (const tag of ['SiteInfo', 'VPCard', 'Callout', 'Mermaid', 'Tabs']) {
