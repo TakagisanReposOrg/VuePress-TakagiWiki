@@ -3,7 +3,6 @@ title: "原声带OST"
 authors: ["轻虹空雨"]
 ---
 
-import { Tabs, Tab } from '@/components/tabs';
 
 <Callout type="info" title="提示">
 
@@ -13,8 +12,11 @@ import { Tabs, Tab } from '@/components/tabs';
 </Callout>
 （创作：堤博明）
 
-<Tabs client:load items={["动画第一季", "动画第二季", "动画第三季", "剧场版"]}>
-<Tab value="动画第一季">
+{/* 分节导航：原为 Tabs 标签页，因 Astro MDX 无法按 <Tab> 边界拆分面板（面板恒为 1）而无法切换，故改为锚点导航 + 小节 */}
+[动画第一季](#动画第一季) · [动画第二季](#动画第二季) · [动画第三季](#动画第三季) · [剧场版](#剧场版)
+
+## 动画第一季
+
 
 
 **「からかい上手の高木さん」Music Collection**
@@ -83,8 +85,8 @@ import { Tabs, Tab } from '@/components/tabs';
 |S1|席替え|换座位|
 |S1|100％片想い|百分百单恋|
 
-</Tab>
-<Tab value="动画第二季">
+## 动画第二季
+
 
 
 **「からかい上手の高木さん2」Music Collection**
@@ -166,8 +168,8 @@ import { Tabs, Tab } from '@/components/tabs';
 |S2|線香花火|线香烟花|
 
 
-</Tab>
-<Tab value="动画第三季">
+## 动画第三季
+
 
 
 **「からかい上手の高木さん3」Music Collection**
@@ -219,8 +221,8 @@ import { Tabs, Tab } from '@/components/tabs';
 
 
 
-</Tab>
-<Tab value="剧场版">
+## 剧场版
+
 
 
 **劇場版『からかい上手の高木さん』Music Collection**
@@ -255,8 +257,6 @@ import { Tabs, Tab } from '@/components/tabs';
 |Movie|からかい上手の高木さん|擅长捉弄的高木同学|
 |Movie|家族揃って|一家人|
 
-</Tab>
-</Tabs>
 
 
 

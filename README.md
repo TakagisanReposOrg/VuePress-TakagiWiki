@@ -23,12 +23,14 @@ pnpm test:search # 搜索索引回归：中文检索命中与组件源码残留�
 
 - 文档位于 `content/docs/`，使用 MDX（`.mdx`）；各分区的顺序与命名由同名 `meta.json` 控制。
 - 每个文件需在 frontmatter 提供 `title`，可选 `authors`、`description`。
-- 可用组件（已全局注册，`Tabs`/`Mermaid` 会由迁移脚本自动注入 import）：
+- 可用组件（已全局注册，`Mermaid` 会由迁移脚本自动注入 import）：
   - `<Callout type="info|idea|success|warn|warning|error" title="…">` 提示容器
-  - `<Tabs items={['A','B']}>` + `<Tab value="A">` 内容标签页
   - `<Card>` / `<Cards>` 卡片
   - `<SiteInfo name desc url preview />`、`<VPCard title desc logo link background />`（兼容旧站组件）
-  - `<Mermaid chart={"…"} />` 图表（等价于原来的 ` ```mermaid ` 代码块）
+  - `<Mermaid chart={"…"} />` 图表（等价于原来的 mermaid 围栏代码块）
+- 需要分区展示长内容时（如按季度、按语言），用 `##` 小节 + 页首锚点导航即可。
+  早期提供的 `<Tabs>` / `<Tab>` 组件在 Astro 的 MDX 运行时下无法按 `<Tab>`
+  边界拆分面板（面板数恒为 1，标签点击无反应），已于 2026-10-05 移除。
 - 站内链接请使用 `/music/ED.html` 形式（与旧站 URL 一致）。
 
 ## 功能

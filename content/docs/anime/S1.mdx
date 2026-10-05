@@ -3,7 +3,6 @@ title: "第一季"
 authors: ["南栀"]
 ---
 
-import { Tabs, Tab } from '@/components/tabs';
 
 ## 介绍
 **普普通通的男子中学生西片君，与一位古灵精怪的女生高木同学坐在一起，教室后面是他们小动作的空间，青涩校园生活。不过大部分时候都是迟钝的西片君被高木同学的恶作剧挑逗和捉弄，总想着报复回去，却总是在高木同学层出不穷的点子面前失败。她为什么总喜欢捉弄我呢？**
@@ -82,8 +81,11 @@ import { Tabs, Tab } from '@/components/tabs';
 
 ## 配音演员
 
-<Tabs client:load items={["日语", "英语"]}>
-<Tab value="日语">
+{/* 分节导航：原为 Tabs 标签页，因 Astro MDX 无法按 <Tab> 边界拆分面板（面板恒为 1）而无法切换，故改为锚点导航 + 小节 */}
+[日语](#日语) · [英语](#英语)
+
+### 日语
+
 
 
 - 西片：梶裕贵
@@ -103,8 +105,8 @@ import { Tabs, Tab } from '@/components/tabs';
 - 小千：宫本侑芽
 
 
-</Tab>
-<Tab value="英语">
+### 英语
+
 
 
 - 西片：Aaron Dismuke
@@ -119,8 +121,6 @@ import { Tabs, Tab } from '@/components/tabs';
 - 田边老师：Cris George
 
 
-</Tab>
-</Tabs>
 ---
 
 ## 参考资料

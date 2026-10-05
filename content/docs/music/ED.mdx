@@ -3,12 +3,14 @@ title: "动画片尾曲（ED）"
 authors: ["轻虹空雨"]
 ---
 
-import { Tabs, Tab } from '@/components/tabs';
 
 （演唱：高木さん(CV:高橋李依)）
 
-<Tabs client:load items={["动画第一季", "动画第二季", "动画第三季&剧场版"]}>
-<Tab value="动画第一季">
+{/* 分节导航：原为 Tabs 标签页，因 Astro MDX 无法按 <Tab> 边界拆分面板（面板恒为 1）而无法切换，故改为锚点导航 + 小节 */}
+[动画第一季](#动画第一季) · [动画第二季](#动画第二季) · [动画第三季与剧场版](#动画第三季与剧场版)
+
+## 动画第一季
+
 
 
 **「からかい上手の高木さん」Cover Song Collection**
@@ -28,8 +30,8 @@ import { Tabs, Tab } from '@/components/tabs';
 | S1   | 出逢った頃のように     | 仿若相逢时     | Every Little Thing         | S1ED7(E12)    | [试听](https://file1.aurorainic.top/index.php?share/file&user=1&sid=CZhA9jIY) |
 
 
-</Tab>
-<Tab value="动画第二季">
+## 动画第二季
+
 
 
 **「からかい上手の高木さん2」Cover Song Collection**
@@ -51,8 +53,8 @@ import { Tabs, Tab } from '@/components/tabs';
 | S2   | 100万回の「l love you」 | 100万次说“爱你” | Rake                       | （CD特典曲） | [试听](https://file1.aurorainic.top/index.php?share/file&user=1&sid=DCBxsmKe) |
 
 
-</Tab>
-<Tab value="动画第三季&剧场版">
+## 动画第三季与剧场版
+
 
 
 **「からかい上手の高木さん3 & 劇場版」Cover Song Collection**
@@ -81,6 +83,4 @@ import { Tabs, Tab } from '@/components/tabs';
 *剧场版ED的使用：日本本土影院自6月10日上映起按周循环轮换，日本以外地区影院以及流媒体版本均为ED3，光碟正片片尾为ED1。
 
 
-</Tab>
-</Tabs>
 

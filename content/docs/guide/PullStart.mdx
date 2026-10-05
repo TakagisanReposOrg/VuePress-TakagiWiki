@@ -79,10 +79,20 @@ Fork本项目仓库，并进行修改后向本仓库提起合并请，审核通�
 文档使用 MDX 语法，除标准 Markdown 外还全局注册了以下组件，可直接在正文中使用：
 
 - `<Callout type="info|idea|success|warn|warning|error" title="…">` 提示容器
-- `<Tabs items={['A','B']}>` 搭配 `<Tab value="A">` 内容标签页
 - `<Card>` / `<Cards>` 卡片
 - `<SiteInfo name desc url preview />`、`<VPCard title desc logo link background />`
 - `<Mermaid chart={"…"} />` 图表（等价于 Markdown 的 mermaid 围栏代码块）
+
+<Callout type="info" title="分区展示长内容请用小节">
+
+需要按季度、按语言等维度分区展示长内容时，请写成若干 `##` 小节，并在页首加一行
+锚点导航（如 `[动画第一季](#动画第一季) · [动画第二季](#动画第二季)`）。
+
+站点的旧版曾提供 `<Tabs>` / `<Tab>` 标签页组件，但 Astro 的 MDX 运行时会把
+`<Tabs>` 的所有子内容作为单个节点传给组件，导致面板数恒为 1、点击标签无反应，
+该组件已移除。
+
+</Callout>
 
 <Callout type="warning" title="新增页面请务必登记">
 
