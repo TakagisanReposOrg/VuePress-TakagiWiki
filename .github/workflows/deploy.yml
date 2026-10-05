@@ -46,8 +46,9 @@ jobs:
 
       # pnpm verify = pnpm build && pnpm check
       # 审计不通过（退出码 1）时本作业失败。
-      # 覆盖：页树漂移 / SEO 元信息 / sitemap 覆盖度 / 站内死链 / 锚点 /
-      #       组件残留 / 静态资源缺失 / 混合内容 / 可访问性
+      # 覆盖 11 大类：页树漂移 / SEO 元信息与社交分享卡片 / sitemap 覆盖度 /
+      #   站内死链与锚点 / 组件未解析与客户端水合 / 静态资源缺失 /
+      #   可访问性 / 混合内容 / 站点元文件 / 孤儿资源
       - name: Build and audit
         run: pnpm verify
 
