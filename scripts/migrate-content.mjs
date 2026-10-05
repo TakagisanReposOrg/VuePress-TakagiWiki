@@ -4,7 +4,8 @@
  * 用法：pnpm migrate
  * 读取 docs/**.md，转换为 content/docs/**.mdx：
  *  - 容器 ::: tip/info/details → <Callout> / <details>
- *  - ::: tabs + @tab → <Tabs items> + <Tab value>
+ *  - ::: tabs + @tab → 锚点导航 + ## 小节
+ *    （站点原有 <Tabs>/<Tab> 组件在 Astro MDX 下无法按 <Tab> 边界拆分面板，已移除）
  *  - HTML 规范化为合法 JSX（img 自闭合、去 style 字符串、引号属性、<br />）
  *  - 站内链接统一为 .html（与旧站 URL 一致）
  *  - README.md → index.mdx；people/ → role/（修正导航与目录不一致的存量 bug）
@@ -158,16 +159,20 @@ function renderTabs(lines) {
     }
   }
   if (tabs.length === 0) return lines;
+  // 站点原有的 <Tabs>/<Tab> 组件在 Astro 的 MDX 运行时下无法按 <Tab> 边界
+  // 拆分面板（面板数恒为 1，标签点击无反应），已移除。改为「锚点导航 + 小节」，
+  // 与 music/OST.mdx、music/ED.mdx、anime/S1.mdx 的现行写法保持一致。
+  // 标题中的 & 会被 slugger 吞掉导致锚点失效，统一换成「与」。
+  const label = (n) => n.replace(/&/g, '与');
   const out = [];
-  out.push(`<Tabs client:load items={[${tabs.map((t) => JSON.stringify(t.name)).join(', ')}]}>`);
+  out.push(`[${tabs.map((t) => `[${label(t.name)}](#${label(t.name)})`).join(' · ')}]`);
+  out.push('');
   for (const t of tabs) {
-    out.push(`<Tab value=${JSON.stringify(t.name)}>`);
+    out.push(`## ${label(t.name)}`);
     out.push('');
     out.push(...t.lines);
     out.push('');
-    out.push(`</Tab>`);
   }
-  out.push('</Tabs>');
   return out;
 }
 
@@ -386,7 +391,6 @@ for (const file of allFiles) {
 
   // client:load 指令要求在 MDX 内直接导入组件
   const imports = [];
-  if (body.includes('<Tabs ')) imports.push("import { Tabs, Tab } from '@/components/tabs';");
   if (marks.mermaid) imports.push("import Mermaid from '@/components/mermaid';");
   if (imports.length > 0) front.push(...imports, '');
 
