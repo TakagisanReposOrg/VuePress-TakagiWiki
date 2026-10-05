@@ -75,6 +75,24 @@ for (const p of srcPages) {
   if (!declared.has(p)) add('页树', `${rel(p, SRC)} 未被任何 meta.json 收录（侧边栏不可见）`);
 }
 
+/* ========== 1b. 组件客户端水合 ========== */
+// Mermaid 靠 useEffect 绘制，只会被服务端渲染成空容器。若 MDX 里漏写
+// client:load / client:visible，图表会静默消失——产物 HTML 里既没有图，
+// 也没有报错，审计其余任何一条规则都发现不了。
+for (const f of srcPages) {
+  const body = await readFile(f, 'utf8');
+  // 贡献指南里会用反引号展示组件用法（如 `<Mermaid chart={"…"} />`），
+  // 那是文档正文不是真实调用，必须先剔除，否则一律误报
+  const scanable = body
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`\n]*`/g, '');
+  for (const m of scanable.matchAll(/<Mermaid\b([^>]*?)\/?>/g)) {
+    if (!/\bclient:(load|idle|visible|media|only)\b/.test(m[1])) {
+      add('组件', `${rel(f, SRC)} 的 <Mermaid> 缺少 client:* 指令，图表不会被客户端渲染`);
+    }
+  }
+}
+
 /* ========== 2~6. 产物检查 ========== */
 const distFiles = await walk(DIST);
 const htmls = distFiles.filter((f) => f.endsWith('.html'));

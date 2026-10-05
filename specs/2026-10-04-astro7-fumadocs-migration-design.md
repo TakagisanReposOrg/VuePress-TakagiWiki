@@ -109,7 +109,7 @@ GitHub Actions（withastro/action）→ GitHub Pages（自定义域名 `wiki.tak
 
 ### 新增的工程设施（本文撰写时尚不存在）
 
-- `scripts/audit.mjs`（`pnpm check`）：11 大类、42 处规则，进 CI 门禁
+- `scripts/audit.mjs`（`pnpm check`）：11 大类、43 处规则，进 CI 门禁
 - `scripts/test-audit.mjs`（`pnpm test:audit`）：审计规则元测试，31 项
 - `scripts/test-description.mjs`（`pnpm test:description`）：description 派生逻辑单元测试，19 项
 - `scripts/check-external.mjs`（`pnpm check:ext`）：站外引用可达性
